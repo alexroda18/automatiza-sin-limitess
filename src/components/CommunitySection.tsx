@@ -77,8 +77,11 @@ const CommunitySection: React.FC = () => {
               <div className="opacity-0 animate-fadeIn animate-delay-500">
                 <Button 
                   className="inline-flex items-center gap-2 px-8 py-5 bg-blue-600 text-white rounded-full transition-all hover:bg-blue-700 active:scale-[0.98] hover:-translate-y-0.5 shadow-lg shadow-blue-500/30 font-montserrat uppercase text-base"
+                  asChild
                 >
-                  Únete al grupo
+                  <a href="https://chat.whatsapp.com/JTLA1aII7hsJtYyzxomv6q" target="_blank" rel="noopener noreferrer">
+                    Únete al grupo
+                  </a>
                 </Button>
               </div>
             </div>
