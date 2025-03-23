@@ -54,7 +54,7 @@ const CommunitySection: React.FC = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-5 opacity-0 animate-fadeIn">
-                  Únete a la comunidad y obtén ventajas exclusivas
+                  Únete GRATIS a la comunidad y obtén ventajas exclusivas
                 </h2>
                 <p className="text-lg text-muted-foreground opacity-0 animate-fadeIn animate-delay-100">
                   Conecta con emprendedores, creadores y profesionales que están transformando sus negocios con automatizaciones inteligentes.
