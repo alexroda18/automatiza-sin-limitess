@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -105,6 +106,15 @@ export default {
 					foreground: '#000000',
 					secondary: '#f8fcfc',
 					highlight: '#34d4c8',
+				},
+				// Adding the card colors
+				cardColor: {
+					blue1: '#879AFF',
+					blue2: '#6161FF',
+					teal: '#24C4E6',
+					purple: '#673971',
+					pink: '#FF596D',
+					darkBlue: '#1F0F83',
 				}
 			},
 			borderRadius: {

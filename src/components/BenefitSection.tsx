@@ -13,7 +13,7 @@ interface LearningCardProps {
   icon: React.ElementType;
   title: string;
   description: string;
-  bgGradient: string;
+  bgColor: string;
   iconColor: string;
   delay: number;
 }
@@ -22,7 +22,7 @@ const LearningCard: React.FC<LearningCardProps> = ({
   icon: Icon, 
   title, 
   description,
-  bgGradient,
+  bgColor,
   iconColor,
   delay
 }) => {
@@ -32,20 +32,22 @@ const LearningCard: React.FC<LearningCardProps> = ({
         <div className="flip-card-inner h-full w-full">
           {/* Front side */}
           <div 
-            className={`flip-card-front h-full w-full cursor-pointer rounded-xl overflow-hidden shadow-lg ${bgGradient} transition-all duration-300`}
+            className={`flip-card-front h-full w-full cursor-pointer rounded-xl overflow-hidden shadow-lg transition-all duration-300`}
+            style={{ backgroundColor: bgColor }}
           >
             <div className="p-6 h-full flex flex-col">
               <div className={`mb-4 ${iconColor}`}>
                 <Icon size={28} />
               </div>
-              <h3 className="text-white text-xl font-semibold mb-2">{title}</h3>
+              <h3 className="text-white text-xl font-light mb-2">{title}</h3>
             </div>
           </div>
           
           {/* Back side */}
-          <div className={`flip-card-back h-full w-full rounded-xl overflow-hidden shadow-lg ${bgGradient} p-6`}>
+          <div className={`flip-card-back h-full w-full rounded-xl overflow-hidden shadow-lg p-6`}
+               style={{ backgroundColor: bgColor }}>
             <div className="h-full flex flex-col justify-center">
-              <h3 className="text-white text-xl font-semibold mb-4">{title}</h3>
+              <h3 className="text-white text-xl font-light mb-4">{title}</h3>
               <p className="text-white/90 text-sm">{description}</p>
             </div>
           </div>
@@ -61,42 +63,42 @@ const BenefitSection: React.FC = () => {
       icon: Zap, 
       title: "Generar leads automáticamente",
       description: "Atrae y convierte más prospectos con automatizaciones inteligentes para hacer crecer tu negocio.",
-      bgGradient: "bg-gradient-to-br from-purple-500 to-indigo-600",
+      bgColor: "#879AFF",
       iconColor: "text-white"
     },
     { 
       icon: Hammer, 
       title: "Sistematizar operaciones y flujos internos",
       description: "Optimiza y automatiza procesos para mayor eficiencia, reduciendo tareas repetitivas en tu empresa.",
-      bgGradient: "bg-gradient-to-br from-blue-500 to-cyan-600",
+      bgColor: "#6161FF",
       iconColor: "text-white"
     },
     { 
       icon: Share2, 
       title: "Posicionar tu marca en redes sociales",
       description: "Destaca entre la competencia con contenido viral y estrategias optimizadas por IA.",
-      bgGradient: "bg-gradient-to-br from-teal-500 to-emerald-600",
+      bgColor: "#24C4E6",
       iconColor: "text-white"
     },
     { 
       icon: BrainCircuit, 
       title: "Crear agentes de IA personalizados",
       description: "Desarrolla asistentes virtuales inteligentes que trabajen 24/7 para tu negocio.",
-      bgGradient: "bg-gradient-to-br from-pink-500 to-rose-600",
+      bgColor: "#673971",
       iconColor: "text-white"
     },
     { 
       icon: Users, 
       title: "Crear aplicaciones basadas en inteligencia artificial",
       description: "Transforma tu negocio con soluciones tecnológicas avanzadas sin necesidad de programar.",
-      bgGradient: "bg-gradient-to-br from-amber-500 to-orange-600",
+      bgColor: "#FF596D",
       iconColor: "text-white"
     },
     { 
       icon: FileCode, 
       title: "Automatizar contenido y publicaciones en redes",
       description: "Genera contenido de alta calidad automáticamente para todas tus plataformas sociales.",
-      bgGradient: "bg-gradient-to-br from-violet-500 to-purple-700",
+      bgColor: "#1F0F83",
       iconColor: "text-white"
     }
   ];
@@ -116,7 +118,7 @@ const BenefitSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 relative">
         <div className="max-w-screen-xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black opacity-0 animate-fadeIn">
+            <h2 className="text-3xl md:text-4xl font-light mb-6 text-black opacity-0 animate-fadeIn">
               ¿Qué vas a aprender?
             </h2>
           </div>
@@ -128,7 +130,7 @@ const BenefitSection: React.FC = () => {
                 icon={card.icon} 
                 title={card.title}
                 description={card.description}
-                bgGradient={card.bgGradient}
+                bgColor={card.bgColor}
                 iconColor={card.iconColor}
                 delay={index + 2}
               />
