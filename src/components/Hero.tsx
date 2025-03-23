@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
   }, [currentText, currentPhraseIndex, isDeleting]);
 
   return (
-    <section className="relative overflow-hidden pt-28 md:pt-36 pb-20">
+    <section className="relative overflow-hidden pt-28 md:pt-36 pb-20 bg-hero">
       {/* Elementos decorativos con efecto teal */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-teal-400 to-teal-500 rounded-full opacity-30 blur-3xl"></div>
@@ -55,96 +55,91 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
           {/* Columna de texto */}
           <div className="flex-1 space-y-8 opacity-0 animate-fadeIn">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-balance">
-              Automatizaciones únicas para{" "}
-              <span className="text-gradient-teal min-h-[60px] md:min-h-[72px] inline-flex">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-balance text-hero-foreground">
+              Automatizaciones únicas para
+              <br />
+              <span className="text-hero-highlight inline-block h-[60px] md:h-[72px]">
                 {currentText}
                 <span className="animate-pulse">|</span>
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed font-medium">
+            <p className="text-lg md:text-xl text-hero-secondary max-w-2xl leading-relaxed font-medium">
               Si no multiplicamos x10 tu inversión, no estamos haciendo bien nuestro trabajo.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
-              <a href="#automatizaciones" className="btn-teal flex items-center justify-center gap-2 group">
+              <a href="#automatizaciones" className="btn-hero flex items-center justify-center gap-2 group">
                 Ver automatizaciones disponibles
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#comunidad" className="btn-outline-teal">Únete gratis a la comunidad</a>
+              <a href="#comunidad" className="btn-outline-hero">Únete gratis a la comunidad</a>
             </div>
           </div>
 
           {/* Columna de testimonios/reviews */}
           <div className="flex-1 opacity-0 animate-fadeIn animate-delay-200">
             <div className="relative">
-              <div className="p-6 bg-white/70 backdrop-blur-md rounded-2xl shadow-lg border border-teal-100">
+              <div className="p-6 bg-white/30 backdrop-blur-md rounded-2xl shadow-lg border border-hero-highlight/20">
                 <div className="space-y-4">
-                  {/* Review 1 */}
-                  <div className="p-4 bg-white rounded-lg shadow-sm border border-teal-50 transform rotate-1 hover:-rotate-1 transition-transform">
+                  {/* Social Media Review 1 - Twitter */}
+                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-hero-highlight/10 transform rotate-1 hover:-rotate-1 transition-transform">
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-full bg-teal-500 flex-shrink-0 flex items-center justify-center text-white font-bold">
-                        MR
+                      <div className="w-10 h-10 rounded-full bg-[#1DA1F2] flex-shrink-0 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M22 5.8a8.49 8.49 0 0 1-2.36.64 4.13 4.13 0 0 0 1.81-2.27 8.21 8.21 0 0 1-2.61 1 4.1 4.1 0 0 0-7 3.74 11.64 11.64 0 0 1-8.45-4.29 4.16 4.16 0 0 0-.55 2.07 4.09 4.09 0 0 0 1.82 3.41 4.05 4.05 0 0 1-1.86-.51v.05a4.1 4.1 0 0 0 3.3 4 3.93 3.93 0 0 1-1.85.07 4.1 4.1 0 0 0 3.83 2.84A8.22 8.22 0 0 1 2 17.06a11.57 11.57 0 0 0 6.29 1.85A11.59 11.59 0 0 0 20 7.31c0-.17-.01-.35-.02-.52A8.43 8.43 0 0 0 22 5.8z"/>
+                        </svg>
                       </div>
                       <div>
-                        <div className="font-bold text-gray-800">Mario Rodríguez</div>
-                        <div className="text-sm text-gray-500">@mariotech</div>
+                        <div className="font-bold text-gray-800">Mario Rodríguez <span className="text-gray-500 font-normal">@mariotech</span></div>
                         <div className="mt-2 text-sm">
-                          La automatización de Stripe a Notion me ha ahorrado <span className="font-semibold text-teal-600">más de 10 horas semanales</span>. Ya no pierdo tiempo con seguimientos manuales. ¡Increíble!
+                          La automatización de Stripe a Notion me ha ahorrado <span className="font-semibold text-hero-highlight">más de 10 horas semanales</span>. Ya no pierdo tiempo con seguimientos manuales. ¡Increíble! #AutomatizaSinLimites
                         </div>
-                        <div className="mt-2 flex">
-                          {[1, 2, 3, 4, 5].map((star) => (
-                            <svg key={star} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 24 24">
-                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                          ))}
+                        <div className="mt-2 flex text-[#1DA1F2] text-sm">
+                          <span className="mr-4 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 45</span>
+                          <span className="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92zM18 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM6 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 7.02c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg> 23</span>
                         </div>
                       </div>
                     </div>
                   </div>
                   
-                  {/* Review 2 */}
-                  <div className="p-4 bg-white rounded-lg shadow-sm border border-teal-50 transform -rotate-1 hover:rotate-1 transition-transform">
+                  {/* Social Media Review 2 - Instagram */}
+                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-hero-highlight/10 transform -rotate-1 hover:rotate-1 transition-transform">
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-full bg-cyan-500 flex-shrink-0 flex items-center justify-center text-white font-bold">
-                        LS
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex-shrink-0 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
                       </div>
                       <div>
-                        <div className="font-bold text-gray-800">Laura Sánchez</div>
-                        <div className="text-sm text-gray-500">@lauracreativa</div>
+                        <div className="font-bold text-gray-800">Laura Sánchez <span className="text-gray-500 font-normal">@lauracreativa</span></div>
                         <div className="mt-2 text-sm">
-                          El ROI de la automatización Gmail ➜ WhatsApp ha sido <span className="font-semibold text-teal-600">brutal, +300%</span> en conversión de leads. Ahora respondemos al instante.
+                          El ROI de la automatización Gmail ➜ WhatsApp ha sido <span className="font-semibold text-hero-highlight">brutal, +300%</span> en conversión de leads. Ahora respondemos al instante. 🚀
                         </div>
-                        <div className="mt-2 flex">
-                          {[1, 2, 3, 4, 5].map((star) => (
-                            <svg key={star} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 24 24">
-                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                          ))}
+                        <div className="mt-2 flex text-gray-500 text-sm">
+                          <span className="mr-4 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 128</span>
+                          <span className="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg> 32</span>
                         </div>
                       </div>
                     </div>
                   </div>
                   
-                  {/* Review 3 */}
-                  <div className="p-4 bg-white rounded-lg shadow-sm border border-teal-50 transform rotate-2 hover:-rotate-2 transition-transform">
+                  {/* Social Media Review 3 - LinkedIn */}
+                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-hero-highlight/10 transform rotate-2 hover:-rotate-2 transition-transform">
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-full bg-teal-600 flex-shrink-0 flex items-center justify-center text-white font-bold">
-                        JG
+                      <div className="w-10 h-10 rounded-full bg-[#0077B5] flex-shrink-0 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
                       </div>
                       <div>
-                        <div className="font-bold text-gray-800">Javier García</div>
-                        <div className="text-sm text-gray-500">@javiemprendedor</div>
+                        <div className="font-bold text-gray-800">Javier García <span className="text-gray-500 font-normal">• Director de Marketing</span></div>
                         <div className="mt-2 text-sm">
-                          La automatización con IA para redes sociales nos <span className="font-semibold text-teal-600">multiplicó x7 el engagement</span> con la mitad del esfuerzo. ¡Espectacular!
+                          La automatización con IA para redes sociales nos <span className="font-semibold text-hero-highlight">multiplicó x7 el engagement</span> con la mitad del esfuerzo. Un servicio que recomiendo a cualquier negocio que quiera escalar.
                         </div>
-                        <div className="mt-2 flex">
-                          {[1, 2, 3, 4, 5].map((star) => (
-                            <svg key={star} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 24 24">
-                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                          ))}
+                        <div className="mt-2 flex text-gray-500 text-sm">
+                          <span className="mr-4 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 89</span>
+                          <span className="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92zM18 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM6 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 7.02c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg> 56</span>
                         </div>
                       </div>
                     </div>
@@ -152,15 +147,15 @@ const Hero: React.FC = () => {
                 </div>
                 
                 <div className="mt-4 text-center">
-                  <div className="inline-block px-4 py-2 rounded-full bg-teal-50 text-teal-600 text-sm font-medium">
-                    +150 reviews positivas
+                  <div className="inline-block px-4 py-2 rounded-full bg-hero-highlight/10 text-hero-highlight font-medium text-sm">
+                    +150 reviews positivas en redes sociales
                   </div>
                 </div>
               </div>
               
               {/* Elementos decorativos adicionales */}
-              <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-teal-400 to-teal-500 rounded-full opacity-70 blur-md -z-10"></div>
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-tr from-cyan-400 to-teal-400 rounded-full opacity-50 blur-md -z-10"></div>
+              <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-hero-highlight to-teal-500 rounded-full opacity-70 blur-md -z-10"></div>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-tr from-cyan-400 to-hero-highlight rounded-full opacity-50 blur-md -z-10"></div>
             </div>
           </div>
         </div>

@@ -40,6 +40,12 @@
     /* Teal */
     --teal: 175 76% 35%;
     --teal-foreground: 0 0% 100%;
+
+    /* Hero Colors */
+    --hero-bg: 357 94% 50%;
+    --hero-foreground: 0 0% 100%;
+    --hero-secondary: 174 80% 96%;
+    --hero-highlight: 174 78% 70%;
   }
 
   .dark {
@@ -138,6 +144,17 @@
     hover:bg-teal-50 active:scale-[0.98] hover:-translate-y-0.5;
   }
   
+  /* Hero-specific buttons */
+  .btn-hero {
+    @apply px-6 py-3 bg-hero-highlight text-white rounded-full font-medium transition-all
+    hover:shadow-md hover:shadow-hero-highlight/30 active:scale-[0.98] hover:-translate-y-0.5;
+  }
+  
+  .btn-outline-hero {
+    @apply px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/40 text-white rounded-full font-medium transition-all
+    hover:bg-white/30 active:scale-[0.98] hover:-translate-y-0.5;
+  }
+  
   .card-shine {
     @apply after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-white/20 after:to-transparent after:-translate-x-[100%] after:animate-shimmer;
   }
@@ -169,5 +186,22 @@
   
   .hover-scale {
     @apply transition-all duration-300 ease-in-out hover:scale-105;
+  }
+  
+  /* Hero background */
+  .bg-hero {
+    @apply bg-[#f00d23b];
+  }
+  
+  .text-hero-foreground {
+    @apply text-white;
+  }
+  
+  .text-hero-secondary {
+    @apply text-white/80;
+  }
+  
+  .text-hero-highlight {
+    @apply text-[#81e2db];
   }
 }
