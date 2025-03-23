@@ -50,35 +50,35 @@ const BenefitSection: React.FC = () => {
     },
     { 
       icon: Hammer, 
-      title: "Sistematizar operaciones",
+      title: "Sistematizar operaciones y flujos internos",
       bgColor: "bg-gradient-to-r from-rose-500/10 to-rose-400/20",
       textColor: "text-rose-700",
       borderColor: "border-rose-500"
     },
     { 
       icon: Share2, 
-      title: "Posicionar tu marca",
+      title: "Posicionar tu marca en redes sociales",
       bgColor: "bg-gradient-to-r from-blue-500/10 to-blue-400/20",
       textColor: "text-blue-700",
       borderColor: "border-blue-500"
     },
     { 
       icon: BrainCircuit, 
-      title: "Agentes de IA personalizados",
+      title: "Crear agentes de IA personalizados",
       bgColor: "bg-gradient-to-r from-purple-500/10 to-purple-400/20",
       textColor: "text-purple-700",
       borderColor: "border-purple-500"
     },
     { 
       icon: Users, 
-      title: "Aplicaciones basadas en IA",
+      title: "Crear aplicaciones basadas en inteligencia artificial",
       bgColor: "bg-gradient-to-r from-rose-500/10 to-rose-400/20",
       textColor: "text-rose-700",
       borderColor: "border-rose-500"
     },
     { 
       icon: FileCode, 
-      title: "Automatizar contenido",
+      title: "Automatizar contenido y publicaciones en redes",
       bgColor: "bg-gradient-to-r from-blue-500/10 to-blue-400/20",
       textColor: "text-blue-700",
       borderColor: "border-blue-500"
@@ -101,7 +101,7 @@ const BenefitSection: React.FC = () => {
         <div className="max-w-screen-xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#DE5E64] opacity-0 animate-fadeIn">
-              ¿Qué vas a encontrar aquí?
+              ¿Qué vas a aprender?
             </h2>
           </div>
 
@@ -117,6 +117,10 @@ const BenefitSection: React.FC = () => {
                 borderColor={item.borderColor}
               />
             ))}
+          </div>
+          
+          <div className="text-center mt-10 text-gray-500 opacity-0 animate-fadeIn italic" style={{ animationDelay: '800ms' }}>
+            Y mucho más...
           </div>
         </div>
       </div>
