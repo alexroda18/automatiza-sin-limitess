@@ -76,7 +76,7 @@ const CommunitySection: React.FC = () => {
               
               <div className="opacity-0 animate-fadeIn animate-delay-500">
                 <Button 
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200 font-montserrat uppercase"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200 font-montserrat uppercase text-base"
                 >
                   Únete al grupo
                 </Button>

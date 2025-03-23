@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import { Sparkles } from 'lucide-react';
+import { Button } from './ui/button';
 
 const typewriterPhrases = [
   "generar ingresos",
@@ -67,10 +69,19 @@ const Hero: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
-              <a href="#automatizaciones" className="px-6 py-3.5 bg-gradient-to-r from-blue-500 to-sky-600 text-white rounded-full transition-all hover:shadow-lg hover:shadow-blue-600/30 active:scale-[0.98] hover:-translate-y-0.5 flex items-center justify-center text-center">
-                Ver automatizaciones disponibles
-              </a>
-              <a href="#comunidad" className="px-6 py-3.5 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200 text-center">Únete gratis a la comunidad</a>
+              <Button 
+                className="px-6 py-3.5 bg-gradient-to-r from-blue-500 to-sky-600 text-white rounded-full transition-all hover:shadow-lg hover:shadow-blue-600/30 active:scale-[0.98] hover:-translate-y-0.5"
+                asChild
+              >
+                <a href="#automatizaciones">Ver automatizaciones disponibles</a>
+              </Button>
+              
+              <Button 
+                className="px-6 py-3.5 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200"
+                asChild
+              >
+                <a href="#comunidad">Únete gratis a la comunidad</a>
+              </Button>
             </div>
             
             <div className="pt-8 flex items-center gap-4">
