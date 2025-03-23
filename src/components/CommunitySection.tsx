@@ -76,7 +76,7 @@ const CommunitySection: React.FC = () => {
               
               <div className="opacity-0 animate-fadeIn animate-delay-500">
                 <Button 
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200 font-montserrat uppercase text-base"
+                  className="inline-flex items-center gap-2 px-8 py-5 bg-blue-600 text-white rounded-full transition-all hover:bg-blue-700 active:scale-[0.98] hover:-translate-y-0.5 shadow-lg shadow-blue-500/30 font-montserrat uppercase text-base"
                 >
                   Únete al grupo
                 </Button>
@@ -94,7 +94,7 @@ const CommunitySection: React.FC = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-black p-6 backdrop-blur-sm bg-white/60 rounded-lg border border-white/60 shadow-lg">
                     <h3 className="text-2xl md:text-3xl font-bold mb-2">Automatiza Sin Límites</h3>
-                    <p className="text-gray-700 max-w-xs mx-auto">Únete a +500 profesionales compartiendo conocimiento y oportunidades</p>
+                    <p className="text-gray-700 max-w-xs mx-auto">Únete a +100 profesionales compartiendo conocimiento y oportunidades</p>
                   </div>
                 </div>
               </div>

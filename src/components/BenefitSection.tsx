@@ -119,7 +119,7 @@ const BenefitSection: React.FC = () => {
         <div className="max-w-screen-xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black opacity-0 animate-fadeIn">
-              Con estos cursos, aprenderás a...
+              Con estas automatizaciones podrás...
             </h2>
           </div>
 

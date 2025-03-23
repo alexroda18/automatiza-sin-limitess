@@ -70,21 +70,21 @@ const Hero: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
               <Button 
-                className="px-6 py-3.5 bg-gradient-to-r from-blue-500 to-sky-600 text-white rounded-full transition-all hover:shadow-lg hover:shadow-blue-600/30 active:scale-[0.98] hover:-translate-y-0.5"
+                className="px-6 py-3.5 bg-gradient-to-r from-blue-500 to-sky-600 text-white rounded-full transition-all hover:shadow-lg hover:shadow-blue-600/30 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200 font-montserrat uppercase"
                 asChild
               >
                 <a href="#automatizaciones">Ver automatizaciones disponibles</a>
               </Button>
               
               <Button 
-                className="px-6 py-3.5 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200"
+                className="px-6 py-3.5 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200 font-montserrat uppercase"
                 asChild
               >
                 <a href="#comunidad">Únete gratis a la comunidad</a>
               </Button>
             </div>
             
-            <div className="pt-8 flex items-center gap-4">
+            <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <div className="flex -space-x-2">
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=64&h=64&q=80" className="w-10 h-10 rounded-full border-2 border-white" alt="User" />
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=64&h=64&q=80" className="w-10 h-10 rounded-full border-2 border-white" alt="User" />
