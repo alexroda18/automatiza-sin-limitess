@@ -22,7 +22,7 @@ const Benefit: React.FC<BenefitProps> = ({ icon: Icon, title, delay }) => {
       className={`flex items-center gap-3 opacity-0 animate-fadeIn`}
       style={{ animationDelay: `${delay * 100}ms` }}
     >
-      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#34d4c8]/20 flex items-center justify-center text-[#34d4c8]">
+      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
         <Icon size={16} />
       </div>
       <p className="font-medium text-sm md:text-base text-white">{title}</p>
@@ -41,12 +41,12 @@ const CommunitySection: React.FC = () => {
   ];
 
   return (
-    <section id="comunidad" className="py-24 bg-hero relative overflow-hidden">
+    <section id="comunidad" className="py-24 bg-gradient-to-b from-purple-900 to-purple-800 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-teal-400 to-teal-500 rounded-full opacity-30 blur-3xl"></div>
-        <div className="absolute top-1/3 -left-24 w-80 h-80 bg-gradient-to-tr from-cyan-400 to-teal-400 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-64 h-64 bg-gradient-to-bl from-teal-300 to-cyan-300 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full opacity-30 blur-3xl"></div>
+        <div className="absolute top-1/3 -left-24 w-80 h-80 bg-gradient-to-tr from-violet-400 to-purple-400 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 bg-gradient-to-bl from-purple-300 to-indigo-300 rounded-full opacity-20 blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6">
@@ -54,7 +54,7 @@ const CommunitySection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-5 text-[#DE5E64] opacity-0 animate-fadeIn">
+                <h2 className="text-3xl md:text-4xl font-bold mb-5 text-purple-300 opacity-0 animate-fadeIn">
                   Únete GRATIS a la comunidad y obtén ventajas exclusivas
                 </h2>
                 <p className="text-lg text-white/80 opacity-0 animate-fadeIn animate-delay-100">
@@ -76,7 +76,7 @@ const CommunitySection: React.FC = () => {
               <div className="opacity-0 animate-fadeIn animate-delay-500">
                 <a 
                   href="#" 
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#34d4c8] text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-[#34d4c8]/30 hover:-translate-y-1"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-purple-500/30 hover:-translate-y-1"
                 >
                   Únete al grupo gratuito
                   <ExternalLink size={18} />
@@ -86,7 +86,7 @@ const CommunitySection: React.FC = () => {
             
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-xl opacity-0 animate-scaleIn animate-delay-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-600/90 to-teal-800/90 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/90 to-indigo-800/90 mix-blend-multiply"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
                   alt="Comunidad de WhatsApp" 
@@ -100,8 +100,8 @@ const CommunitySection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#34d4c8]/20 rounded-full opacity-80 -z-10"></div>
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#34d4c8]/20 rounded-full opacity-80 -z-10"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-500/20 rounded-full opacity-80 -z-10"></div>
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-purple-500/20 rounded-full opacity-80 -z-10"></div>
             </div>
           </div>
         </div>

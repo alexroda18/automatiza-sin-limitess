@@ -44,23 +44,23 @@ const BenefitSection: React.FC = () => {
     { 
       icon: Zap, 
       title: "Generar leads automáticamente",
-      bgColor: "bg-gradient-to-r from-teal-500/10 to-teal-400/20",
-      textColor: "text-teal-700",
-      borderColor: "border-teal-500"
+      bgColor: "bg-gradient-to-r from-purple-500/10 to-purple-400/20",
+      textColor: "text-purple-700",
+      borderColor: "border-purple-500"
     },
     { 
       icon: Hammer, 
       title: "Sistematizar operaciones y flujos internos",
-      bgColor: "bg-gradient-to-r from-rose-500/10 to-rose-400/20",
-      textColor: "text-rose-700",
-      borderColor: "border-rose-500"
+      bgColor: "bg-gradient-to-r from-indigo-500/10 to-indigo-400/20",
+      textColor: "text-indigo-700",
+      borderColor: "border-indigo-500"
     },
     { 
       icon: Share2, 
       title: "Posicionar tu marca en redes sociales",
-      bgColor: "bg-gradient-to-r from-blue-500/10 to-blue-400/20",
-      textColor: "text-blue-700",
-      borderColor: "border-blue-500"
+      bgColor: "bg-gradient-to-r from-violet-500/10 to-violet-400/20",
+      textColor: "text-violet-700",
+      borderColor: "border-violet-500"
     },
     { 
       icon: BrainCircuit, 
@@ -72,35 +72,35 @@ const BenefitSection: React.FC = () => {
     { 
       icon: Users, 
       title: "Crear aplicaciones basadas en inteligencia artificial",
-      bgColor: "bg-gradient-to-r from-rose-500/10 to-rose-400/20",
-      textColor: "text-rose-700",
-      borderColor: "border-rose-500"
+      bgColor: "bg-gradient-to-r from-indigo-500/10 to-indigo-400/20",
+      textColor: "text-indigo-700",
+      borderColor: "border-indigo-500"
     },
     { 
       icon: FileCode, 
       title: "Automatizar contenido y publicaciones en redes",
-      bgColor: "bg-gradient-to-r from-blue-500/10 to-blue-400/20",
-      textColor: "text-blue-700",
-      borderColor: "border-blue-500"
+      bgColor: "bg-gradient-to-r from-violet-500/10 to-violet-400/20",
+      textColor: "text-violet-700",
+      borderColor: "border-violet-500"
     }
   ];
 
   return (
-    <section id="beneficios" className="py-16 bg-gradient-to-b from-teal-50/50 to-white relative overflow-hidden">
+    <section id="beneficios" className="py-16 bg-gradient-to-b from-purple-50/50 to-white relative overflow-hidden">
       {/* Elementos decorativos */}
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#34d4c8]/50 to-transparent"></div>
-      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#34d4c8]/30 to-transparent"></div>
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-300/50 to-transparent"></div>
+      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-300/30 to-transparent"></div>
       
       {/* Glassmorphism blobs for background effect */}
-      <div className="absolute -top-[50%] -left-[10%] w-[500px] h-[500px] bg-[#34d4c8]/5 rounded-full blur-3xl opacity-50"></div>
-      <div className="absolute -bottom-[30%] -right-[10%] w-[400px] h-[400px] bg-[#34d4c8]/5 rounded-full blur-3xl opacity-60"></div>
-      <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-purple-500/5 rounded-full blur-3xl opacity-40"></div>
-      <div className="absolute bottom-1/4 right-1/3 w-[250px] h-[250px] bg-blue-500/5 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute -top-[50%] -left-[10%] w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute -bottom-[30%] -right-[10%] w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-3xl opacity-60"></div>
+      <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-indigo-500/5 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute bottom-1/4 right-1/3 w-[250px] h-[250px] bg-violet-500/5 rounded-full blur-3xl opacity-50"></div>
       
       <div className="container mx-auto px-4 sm:px-6 relative">
         <div className="max-w-screen-xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#DE5E64] opacity-0 animate-fadeIn">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-purple-600 opacity-0 animate-fadeIn">
               ¿Qué vas a aprender?
             </h2>
           </div>

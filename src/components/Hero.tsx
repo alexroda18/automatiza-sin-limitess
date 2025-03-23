@@ -42,47 +42,47 @@ const Hero: React.FC = () => {
   }, [currentText, currentPhraseIndex, isDeleting]);
 
   return (
-    <section className="relative overflow-hidden pt-10 md:pt-16 pb-20 bg-hero">
-      {/* Elementos decorativos con efecto teal */}
+    <section className="relative overflow-hidden pt-10 md:pt-16 pb-20 bg-gradient-to-b from-purple-900 to-purple-800">
+      {/* Elementos decorativos con efecto morado */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-teal-400 to-teal-500 rounded-full opacity-30 blur-3xl"></div>
-        <div className="absolute top-1/3 -left-24 w-80 h-80 bg-gradient-to-tr from-cyan-400 to-teal-400 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-64 h-64 bg-gradient-to-bl from-teal-300 to-cyan-300 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full opacity-30 blur-3xl"></div>
+        <div className="absolute top-1/3 -left-24 w-80 h-80 bg-gradient-to-tr from-violet-400 to-purple-400 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 bg-gradient-to-bl from-purple-300 to-indigo-300 rounded-full opacity-20 blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 max-w-screen-xl">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
           {/* Columna de texto */}
           <div className="flex-1 space-y-8 opacity-0 animate-fadeIn">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-balance text-hero-foreground">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-balance text-white">
               Automatizaciones únicas para
               <br />
-              <span className="text-[#34d4c8] inline-block h-[60px] md:h-[72px]">
+              <span className="text-purple-300 inline-block h-[60px] md:h-[72px]">
                 {currentText}
                 <span className="animate-pulse">|</span>
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-hero-secondary max-w-2xl leading-relaxed font-medium italic">
+            <p className="text-lg md:text-xl text-purple-100 max-w-2xl leading-relaxed font-medium italic">
               Si no multiplicas x10 tu inversión, no estamos haciendo bien nuestro trabajo.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
-              <a href="#automatizaciones" className="px-6 py-3.5 bg-gradient-to-r from-[#DE5E64] to-[#ff7b7b] text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-[#DE5E64]/30 active:scale-[0.98] hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
+              <a href="#automatizaciones" className="px-6 py-3.5 bg-gradient-to-r from-purple-500 to-violet-600 text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-purple-600/30 active:scale-[0.98] hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
                 Ver automatizaciones disponibles
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#comunidad" className="px-6 py-3.5 bg-gradient-to-r from-[#5e7df7] to-[#4b6cff] text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-[#5e7df7]/30 active:scale-[0.98] hover:-translate-y-0.5 border border-white/10">Únete gratis a la comunidad</a>
+              <a href="#comunidad" className="px-6 py-3.5 bg-white/10 text-white rounded-full font-medium transition-all hover:bg-white/20 active:scale-[0.98] hover:-translate-y-0.5 border border-white/20">Únete gratis a la comunidad</a>
             </div>
           </div>
 
           {/* Columna de testimonios/reviews */}
           <div className="flex-1 opacity-0 animate-fadeIn animate-delay-200">
             <div className="relative">
-              <div className="p-6 bg-white/30 backdrop-blur-md rounded-2xl shadow-lg border border-[#34d4c8]/20">
+              <div className="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20">
                 <div className="space-y-4">
                   {/* Social Media Review 1 - Twitter */}
-                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-[#34d4c8]/10 transform rotate-1 hover:-rotate-1 transition-transform">
+                  <div className="p-4 bg-white/10 rounded-lg shadow-sm border border-white/10 transform rotate-1 hover:-rotate-1 transition-transform">
                     <div className="flex items-start gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#1DA1F2] flex-shrink-0 flex items-center justify-center text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -90,8 +90,8 @@ const Hero: React.FC = () => {
                         </svg>
                       </div>
                       <div>
-                        <div className="font-bold text-gray-800">Mario Rodríguez</div>
-                        <div className="mt-2 text-sm">
+                        <div className="font-bold text-white">Mario Rodríguez</div>
+                        <div className="mt-2 text-sm text-purple-100">
                           La automatización de Stripe a Notion me ha ahorrado más de 10 horas semanales. Ya no pierdo tiempo con seguimientos manuales. ¡Increíble! #AutomatizaSinLimites
                         </div>
                       </div>
@@ -99,7 +99,7 @@ const Hero: React.FC = () => {
                   </div>
                   
                   {/* Social Media Review 2 - Instagram */}
-                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-[#34d4c8]/10 transform -rotate-1 hover:rotate-1 transition-transform">
+                  <div className="p-4 bg-white/10 rounded-lg shadow-sm border border-white/10 transform -rotate-1 hover:rotate-1 transition-transform">
                     <div className="flex items-start gap-3">
                       <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex-shrink-0 flex items-center justify-center text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -107,8 +107,8 @@ const Hero: React.FC = () => {
                         </svg>
                       </div>
                       <div>
-                        <div className="font-bold text-gray-800">Laura Sánchez</div>
-                        <div className="mt-2 text-sm">
+                        <div className="font-bold text-white">Laura Sánchez</div>
+                        <div className="mt-2 text-sm text-purple-100">
                           El ROI de la automatización Gmail ➜ WhatsApp ha sido brutal, +300% en conversión de leads. Ahora respondemos al instante. 🚀
                         </div>
                       </div>
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
                   </div>
                   
                   {/* Social Media Review 3 - LinkedIn */}
-                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-[#34d4c8]/10 transform rotate-2 hover:-rotate-2 transition-transform">
+                  <div className="p-4 bg-white/10 rounded-lg shadow-sm border border-white/10 transform rotate-2 hover:-rotate-2 transition-transform">
                     <div className="flex items-start gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#0077B5] flex-shrink-0 flex items-center justify-center text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -124,8 +124,8 @@ const Hero: React.FC = () => {
                         </svg>
                       </div>
                       <div>
-                        <div className="font-bold text-gray-800">Javier García • Director de Marketing</div>
-                        <div className="mt-2 text-sm">
+                        <div className="font-bold text-white">Javier García • Director de Marketing</div>
+                        <div className="mt-2 text-sm text-purple-100">
                           La automatización con IA para redes sociales nos multiplicó x7 el engagement con la mitad del esfuerzo. Un servicio que recomiendo a cualquier negocio que quiera escalar.
                         </div>
                       </div>
@@ -134,22 +134,22 @@ const Hero: React.FC = () => {
                 </div>
                 
                 <div className="mt-4 text-center">
-                  <div className="inline-block px-4 py-2 rounded-full bg-[#34d4c8]/10 text-[#34d4c8] font-medium text-sm">
+                  <div className="inline-block px-4 py-2 rounded-full bg-purple-700/30 text-purple-200 font-medium text-sm">
                     +150 reviews positivas en redes sociales
                   </div>
                 </div>
               </div>
               
               {/* Elementos decorativos adicionales */}
-              <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-[#34d4c8] to-teal-500 rounded-full opacity-70 blur-md -z-10"></div>
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-tr from-cyan-400 to-[#34d4c8] rounded-full opacity-50 blur-md -z-10"></div>
+              <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full opacity-70 blur-md -z-10"></div>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-tr from-violet-400 to-purple-500 rounded-full opacity-50 blur-md -z-10"></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Forma decorativa en la parte inferior */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-r from-teal-50 via-cyan-50 to-teal-50 opacity-60 -z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-r from-purple-50 via-indigo-50 to-purple-50 opacity-10 -z-10"></div>
     </section>
   );
 };
