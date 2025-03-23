@@ -87,14 +87,14 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Columna derecha: imagen de un podcast/youtuber */}
+          {/* Columna derecha: Video de YouTube estilado */}
           <div className="flex-1 opacity-0 animate-fadeIn animate-delay-200">
             <div className="relative">
               <div className="p-1 bg-white/60 backdrop-blur-md rounded-2xl shadow-xl border border-white/30 overflow-hidden">
-                <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+                <div className="relative overflow-hidden rounded-xl aspect-video">
                   <img 
                     src="https://images.unsplash.com/photo-1581092921461-39b9d317e9ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
-                    alt="Creador de contenido" 
+                    alt="Podcaster o Youtuber" 
                     className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-500"
                   />
                   

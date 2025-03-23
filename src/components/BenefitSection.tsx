@@ -35,9 +35,9 @@ const LearningCard: React.FC<LearningCardProps> = ({
             className={`flip-card-front h-full w-full cursor-pointer rounded-xl overflow-hidden shadow-lg transition-all duration-300`}
             style={{ backgroundColor: bgColor }}
           >
-            <div className="p-6 h-full flex flex-col">
+            <div className="p-6 h-full flex flex-col items-center justify-center text-center">
               <div className={`mb-4 ${iconColor}`}>
-                <Icon size={28} />
+                <Icon size={32} />
               </div>
               <h3 className="text-white text-xl font-light mb-2">{title}</h3>
             </div>
@@ -47,7 +47,7 @@ const LearningCard: React.FC<LearningCardProps> = ({
           <div className={`flip-card-back h-full w-full rounded-xl overflow-hidden shadow-lg p-6`}
                style={{ backgroundColor: bgColor }}>
             <div className="h-full flex flex-col justify-center">
-              <h3 className="text-white text-xl font-light mb-4">{title}</h3>
+              <h3 className="text-white text-xl font-light mb-4 text-center">{title}</h3>
               <p className="text-white/90 text-sm">{description}</p>
             </div>
           </div>
@@ -104,16 +104,16 @@ const BenefitSection: React.FC = () => {
   ];
 
   return (
-    <section id="beneficios" className="py-16 bg-gradient-to-b from-purple-50/50 to-white relative overflow-hidden">
+    <section id="beneficios" className="py-16 bg-gradient-to-b from-blue-50/50 to-white relative overflow-hidden">
       {/* Elementos decorativos */}
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-300/50 to-transparent"></div>
-      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-300/30 to-transparent"></div>
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-300/50 to-transparent"></div>
+      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-300/30 to-transparent"></div>
       
       {/* Glassmorphism blobs for background effect */}
-      <div className="absolute -top-[50%] -left-[10%] w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-3xl opacity-50"></div>
-      <div className="absolute -bottom-[30%] -right-[10%] w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-3xl opacity-60"></div>
-      <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-indigo-500/5 rounded-full blur-3xl opacity-40"></div>
-      <div className="absolute bottom-1/4 right-1/3 w-[250px] h-[250px] bg-violet-500/5 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute -top-[50%] -left-[10%] w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute -bottom-[30%] -right-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl opacity-60"></div>
+      <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute bottom-1/4 right-1/3 w-[250px] h-[250px] bg-orange-500/5 rounded-full blur-3xl opacity-50"></div>
       
       <div className="container mx-auto px-4 sm:px-6 relative">
         <div className="max-w-screen-xl mx-auto">

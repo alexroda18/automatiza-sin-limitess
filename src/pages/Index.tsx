@@ -5,7 +5,6 @@ import Hero from '../components/Hero';
 import AutomationCard from '../components/AutomationCard';
 import BenefitSection from '../components/BenefitSection';
 import CommunitySection from '../components/CommunitySection';
-import { ArrowRight } from 'lucide-react';
 
 const automationData = [
   {
@@ -73,12 +72,6 @@ const Index: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-light mb-4 text-black opacity-0 animate-fadeIn text-center">
                 Catálogo de automatizaciones
               </h2>
-              
-              <div className="mt-3 opacity-0 animate-fadeIn animate-delay-200">
-                <div className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm">
-                  +15 automatizaciones disponibles
-                </div>
-              </div>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -94,13 +87,6 @@ const Index: React.FC = () => {
                   delay={(index + 1) * 100}
                 />
               ))}
-            </div>
-            
-            <div className="flex justify-center mt-12">
-              <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-[#3366E6] text-white rounded-full transition-all hover:shadow-lg hover:shadow-[#3366E6]/30 hover:-translate-y-1">
-                Ver todas las automatizaciones
-                <ArrowRight size={18} />
-              </a>
             </div>
           </div>
         </div>
