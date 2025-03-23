@@ -53,9 +53,9 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				coral: {
-					DEFAULT: 'hsl(var(--coral))',
-					foreground: 'hsl(var(--coral-foreground))',
+				orange: {
+					DEFAULT: 'hsl(var(--orange))',
+					foreground: 'hsl(var(--orange-foreground))',
 					50: '#fff8f5',
 					100: '#fff0ea',
 					200: '#ffddd0',
@@ -77,17 +77,17 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				purple: {
-					50: '#f5f3ff',
-					100: '#ede9fe',
-					200: '#ddd6fe',
-					300: '#c4b5fd',
-					400: '#a78bfa',
-					500: '#8b5cf6',
-					600: '#7c3aed',
-					700: '#6d28d9',
-					800: '#5b21b6',
-					900: '#4c1d95',
+				blue: {
+					50: '#f0f7ff',
+					100: '#e0eeff',
+					200: '#c0ddff',
+					300: '#85c0ff',
+					400: '#4a97ff',
+					500: '#2979ff',
+					600: '#0e59f2',
+					700: '#0c45dd',
+					800: '#1039b3',
+					900: '#14328c',
 				},
 				orange: {
 					50: '#fff7ed',
@@ -105,7 +105,7 @@ export default {
 					bg: '#F0F3FF',
 					foreground: '#000000',
 					secondary: '#f8fcfc',
-					highlight: '#34d4c8',
+					highlight: '#34b4d4',
 				},
 				// Adding the card colors
 				cardColor: {

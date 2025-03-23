@@ -16,36 +16,36 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 270 60% 50%;
+    --primary: 217 90% 52%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 270 60% 95%;
-    --secondary-foreground: 270 60% 50%;
+    --secondary: 217 90% 95%;
+    --secondary-foreground: 217 90% 52%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 270 60% 96%;
-    --accent-foreground: 270 60% 50%;
+    --accent: 217 90% 96%;
+    --accent-foreground: 217 90% 52%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 270 60% 50%;
+    --ring: 217 90% 52%;
 
     --radius: 0.75rem;
     
-    /* Purple - Loom brand color */
-    --purple: 270 60% 50%;
-    --purple-foreground: 0 0% 100%;
+    /* Blue - Main brand color */
+    --blue: 217 90% 52%;
+    --blue-foreground: 0 0% 100%;
 
     /* Hero Colors */
     --hero-bg: 240 100% 97%; /* #F0F3FF */
     --hero-foreground: 0 0% 100%;
-    --hero-secondary: 270 80% 96%;
-    --hero-highlight: 270 60% 50%;
+    --hero-secondary: 217 80% 96%;
+    --hero-highlight: 217 90% 52%;
   }
 
   .dark {
@@ -58,7 +58,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 270 60% 50%;
+    --primary: 217 90% 52%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -75,7 +75,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 270 60% 50%;
+    --ring: 217 90% 52%;
   }
 }
 
@@ -92,7 +92,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold tracking-tight font-light;
+    @apply font-display tracking-tight;
     font-weight: 200;
   }
 }
@@ -103,11 +103,11 @@
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-purple-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-500;
   }
   
-  .text-gradient-purple {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-400;
+  .text-gradient-blue {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400;
   }
   
   .glassmorphism {
@@ -123,7 +123,7 @@
   }
   
   .highlight::before {
-    @apply content-[''] absolute -bottom-1 left-0 w-full h-[0.2em] bg-purple-200 -z-10 transform origin-bottom scale-x-100;
+    @apply content-[''] absolute -bottom-1 left-0 w-full h-[0.2em] bg-blue-200 -z-10 transform origin-bottom scale-x-100;
   }
   
   /* Flip Card Styles */
@@ -158,20 +158,20 @@
     hover:bg-secondary/70 active:scale-[0.98] hover:-translate-y-0.5;
   }
 
-  .btn-purple {
-    @apply px-6 py-3 bg-purple-600 text-white rounded-full font-medium transition-all
-    hover:shadow-md hover:shadow-purple-600/30 active:scale-[0.98] hover:-translate-y-0.5;
+  .btn-blue {
+    @apply px-6 py-3 bg-blue-600 text-white rounded-full font-medium transition-all
+    hover:shadow-md hover:shadow-blue-600/30 active:scale-[0.98] hover:-translate-y-0.5;
   }
   
-  .btn-outline-purple {
-    @apply px-6 py-3 bg-white border border-purple-600 text-purple-600 rounded-full font-medium transition-all
-    hover:bg-purple-50 active:scale-[0.98] hover:-translate-y-0.5;
+  .btn-outline-blue {
+    @apply px-6 py-3 bg-white border border-blue-600 text-blue-600 rounded-full font-medium transition-all
+    hover:bg-blue-50 active:scale-[0.98] hover:-translate-y-0.5;
   }
   
   /* Hero-specific buttons */
   .btn-hero {
-    @apply px-6 py-3 bg-purple-500 text-white rounded-full font-medium transition-all
-    hover:shadow-md hover:shadow-purple-500/30 active:scale-[0.98] hover:-translate-y-0.5;
+    @apply px-6 py-3 bg-blue-500 text-white rounded-full font-medium transition-all
+    hover:shadow-md hover:shadow-blue-500/30 active:scale-[0.98] hover:-translate-y-0.5;
   }
   
   .btn-outline-hero {
@@ -214,7 +214,7 @@
   
   /* Hero background */
   .bg-hero {
-    @apply bg-gradient-to-b from-purple-900 to-purple-800;
+    @apply bg-gradient-to-b from-blue-900 to-blue-800;
   }
   
   .text-hero-foreground {
@@ -226,11 +226,11 @@
   }
   
   .text-hero-highlight {
-    @apply text-purple-300;
+    @apply text-blue-300;
   }
   
   /* Add this class to fix the hero highlight background */
   .bg-hero-highlight {
-    @apply bg-purple-500;
+    @apply bg-blue-500;
   }
 }

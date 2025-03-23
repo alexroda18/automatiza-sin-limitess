@@ -62,20 +62,20 @@ const Index: React.FC = () => {
       
       <BenefitSection />
       
-      <section id="automatizaciones" className="py-24 bg-gradient-to-b from-white to-teal-50/30 relative">
+      <section id="automatizaciones" className="py-24 bg-gradient-to-b from-white to-sky-50/30 relative">
         {/* Decorative elements */}
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-teal-200 to-transparent"></div>
-        <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-teal-100 to-transparent"></div>
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-sky-200 to-transparent"></div>
+        <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-sky-100 to-transparent"></div>
         
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-screen-xl mx-auto">
             <div className="flex flex-col items-center justify-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black opacity-0 animate-fadeIn text-center">
+              <h2 className="text-3xl md:text-4xl font-light mb-4 text-black opacity-0 animate-fadeIn text-center">
                 Catálogo de automatizaciones
               </h2>
               
               <div className="mt-3 opacity-0 animate-fadeIn animate-delay-200">
-                <div className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium">
+                <div className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm">
                   +15 automatizaciones disponibles
                 </div>
               </div>
@@ -97,7 +97,7 @@ const Index: React.FC = () => {
             </div>
             
             <div className="flex justify-center mt-12">
-              <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-[#6159E6] text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-[#6159E6]/30 hover:-translate-y-1">
+              <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-[#3366E6] text-white rounded-full transition-all hover:shadow-lg hover:shadow-[#3366E6]/30 hover:-translate-y-1">
                 Ver todas las automatizaciones
                 <ArrowRight size={18} />
               </a>

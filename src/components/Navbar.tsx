@@ -21,19 +21,19 @@ const Navbar: React.FC = () => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-xl font-bold text-foreground flex items-center gap-2">
-            <span className="text-purple-600">Automatiza</span> sin límites
+          <a href="/" className="text-xl font-light text-foreground flex items-center gap-2">
+            <span className="text-blue-600">Automatiza</span> sin límites
           </a>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#automatizaciones" className="text-foreground hover:text-purple-600 transition-colors font-medium">
+            <a href="#automatizaciones" className="text-foreground hover:text-blue-600 transition-colors font-light">
               Automatizaciones
             </a>
-            <a href="#comunidad" className="text-foreground hover:text-purple-600 transition-colors font-medium">
+            <a href="#comunidad" className="text-foreground hover:text-blue-600 transition-colors font-light">
               Comunidad
             </a>
-            <a href="#contacto" className="px-4 py-2 bg-purple-100 text-purple-600 rounded-full font-medium transition-all hover:bg-purple-200">
+            <a href="#contacto" className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full font-light transition-all hover:bg-blue-200">
               Contactar
             </a>
           </nav>
@@ -54,21 +54,21 @@ const Navbar: React.FC = () => {
           <nav className="flex flex-col space-y-4">
             <a 
               href="#automatizaciones" 
-              className="text-foreground hover:text-purple-600 transition-colors p-2 font-medium"
+              className="text-foreground hover:text-blue-600 transition-colors p-2 font-light"
               onClick={() => setIsMenuOpen(false)}
             >
               Automatizaciones
             </a>
             <a 
               href="#comunidad" 
-              className="text-foreground hover:text-purple-600 transition-colors p-2 font-medium"
+              className="text-foreground hover:text-blue-600 transition-colors p-2 font-light"
               onClick={() => setIsMenuOpen(false)}
             >
               Comunidad
             </a>
             <a 
               href="#contacto" 
-              className="px-4 py-2 bg-purple-100 text-purple-600 rounded-full font-medium text-center"
+              className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full font-light text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Contactar
