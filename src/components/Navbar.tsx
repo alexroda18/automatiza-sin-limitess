@@ -30,10 +30,10 @@ const Navbar: React.FC = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#automatizaciones" className="text-gray-800 hover:text-blue-600 transition-colors font-light">
+            <a href="#automatizaciones" className="text-gray-800 hover:text-blue-600 transition-colors font-bold">
               Automatizaciones
             </a>
-            <a href="#comunidad" className="text-gray-800 hover:text-blue-600 transition-colors font-light">
+            <a href="#comunidad" className="text-gray-800 hover:text-blue-600 transition-colors font-bold">
               Comunidad
             </a>
           </nav>
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
         <nav className="flex flex-col p-6 space-y-6">
           <a 
             href="#automatizaciones" 
-            className="text-gray-800 hover:text-blue-600 transition-colors p-2 font-light flex items-center"
+            className="text-gray-800 hover:text-blue-600 transition-colors p-2 font-bold flex items-center"
             onClick={() => setIsMenuOpen(false)}
           >
             <span>Automatizaciones</span>
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
           </a>
           <a 
             href="#comunidad" 
-            className="text-gray-800 hover:text-blue-600 transition-colors p-2 font-light flex items-center"
+            className="text-gray-800 hover:text-blue-600 transition-colors p-2 font-bold flex items-center"
             onClick={() => setIsMenuOpen(false)}
           >
             <span>Comunidad</span>

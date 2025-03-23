@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Play, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 const typewriterPhrases = [
   "generar ingresos",
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
   }, [currentText, currentPhraseIndex, isDeleting]);
 
   return (
-    <section className="relative overflow-hidden pt-24 md:pt-32 pb-20 bg-[#F0F3FF]">
+    <section className="relative overflow-hidden pt-16 md:pt-20 pb-20 bg-[#F0F3FF]">
       {/* Elementos decorativos con efecto azul */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full opacity-30 blur-3xl"></div>
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
           {/* Columna de texto */}
           <div className="flex-1 space-y-8 opacity-0 animate-fadeIn">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-balance text-black">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance text-black">
               Automatizaciones únicas para
               <br />
               <span className="text-blue-600 inline-block h-[60px] md:h-[72px]">
@@ -81,38 +81,33 @@ const Hero: React.FC = () => {
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=64&h=64&q=80" className="w-10 h-10 rounded-full border-2 border-white" alt="User" />
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=64&h=64&q=80" className="w-10 h-10 rounded-full border-2 border-white" alt="User" />
               </div>
-              <div className="text-sm text-gray-600 font-light">
+              <div className="text-sm text-gray-600 font-bold">
                 +150 personas ya van un paso por delante de su competencia
               </div>
             </div>
           </div>
 
-          {/* Columna derecha: Video de YouTube estilado */}
+          {/* Columna derecha: Video de YouTube */}
           <div className="flex-1 opacity-0 animate-fadeIn animate-delay-200">
             <div className="relative">
               <div className="p-1 bg-white/60 backdrop-blur-md rounded-2xl shadow-xl border border-white/30 overflow-hidden">
                 <div className="relative overflow-hidden rounded-xl aspect-video">
-                  <img 
-                    src="https://images.unsplash.com/photo-1581092921461-39b9d317e9ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
-                    alt="Podcaster o Youtuber" 
-                    className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-500"
-                  />
-                  
-                  {/* Play button overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-blue-600/90 backdrop-blur-sm flex items-center justify-center shadow-lg hover:bg-blue-700 transition-colors cursor-pointer group">
-                      <Play size={28} fill="white" className="text-white ml-1 group-hover:scale-110 transition-transform" />
-                    </div>
-                  </div>
+                  <iframe 
+                    src="https://www.youtube.com/embed/opi1s_5Dm-c?rel=0" 
+                    title="Tutorial de Automatizaciones"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
                 </div>
                 
                 <div className="p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="text-lg font-normal text-black">Cómo automaticé mi negocio</h3>
-                      <p className="text-gray-600 text-sm font-light">Episodio 42 · 28 min</p>
+                      <h3 className="text-lg font-bold text-black">Cómo automaticé mi negocio</h3>
+                      <p className="text-gray-600 text-sm">Episodio 42 · 28 min</p>
                     </div>
-                    <div className="flex items-center gap-1 bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-light">
+                    <div className="flex items-center gap-1 bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-bold">
                       <Sparkles size={12} />
                       <span>Destacado</span>
                     </div>
