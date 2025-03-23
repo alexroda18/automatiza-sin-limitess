@@ -100,19 +100,6 @@ const Hero: React.FC = () => {
                     className="w-full h-full"
                   ></iframe>
                 </div>
-                
-                <div className="p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="text-lg font-bold text-black">Cómo automaticé mi negocio</h3>
-                      <p className="text-gray-600 text-sm">Episodio 42 · 28 min</p>
-                    </div>
-                    <div className="flex items-center gap-1 bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-bold">
-                      <Sparkles size={12} />
-                      <span>Destacado</span>
-                    </div>
-                  </div>
-                </div>
               </div>
               
               {/* Elementos decorativos adicionales */}
