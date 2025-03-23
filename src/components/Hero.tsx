@@ -63,16 +63,16 @@ const Hero: React.FC = () => {
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-hero-secondary max-w-2xl leading-relaxed font-medium">
-              Si no multiplicamos x10 tu inversión, no estamos haciendo bien nuestro trabajo.
+            <p className="text-lg md:text-xl text-hero-secondary max-w-2xl leading-relaxed font-medium italic">
+              Si no multiplicas x10 tu inversión, no estamos haciendo bien nuestro trabajo.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
-              <a href="#automatizaciones" className="px-6 py-3 bg-[#DE5E64] text-white rounded-full font-medium transition-all hover:shadow-md hover:shadow-[#DE5E64]/30 active:scale-[0.98] hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
+              <a href="#automatizaciones" className="px-6 py-3.5 bg-gradient-to-r from-[#DE5E64] to-[#ff7b7b] text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-[#DE5E64]/30 active:scale-[0.98] hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
                 Ver automatizaciones disponibles
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#comunidad" className="px-6 py-3 bg-[#5e7df7] text-white rounded-full font-medium transition-all hover:shadow-md hover:shadow-[#5e7df7]/30 active:scale-[0.98] hover:-translate-y-0.5">Únete gratis a la comunidad</a>
+              <a href="#comunidad" className="px-6 py-3.5 bg-gradient-to-r from-[#5e7df7] to-[#4b6cff] text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-[#5e7df7]/30 active:scale-[0.98] hover:-translate-y-0.5 border border-white/10">Únete gratis a la comunidad</a>
             </div>
           </div>
 
