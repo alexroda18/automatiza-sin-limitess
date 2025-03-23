@@ -23,9 +23,9 @@ const Navbar: React.FC = () => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-xl font-bold text-foreground flex items-center gap-0.5">
+          <a href="/" className="text-xl font-bold text-foreground flex items-center gap-2">
             <span className="text-blue-600">Automatiza</span>
-            <span className="text-gray-800 opacity-80">Sin Límites</span>
+            <span className="ml-1 text-gray-800 opacity-80">Sin Límites</span>
           </a>
           
           {/* Desktop Navigation */}
