@@ -36,7 +36,7 @@ const AutomationCard: React.FC<AutomationCardProps> = ({
         
         {discount && (
           <div className="absolute top-3 right-3 z-10 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full">
-            {discount}% de descuento
+            {discount}% de descuento para miembros de la comunidad
           </div>
         )}
       </div>
