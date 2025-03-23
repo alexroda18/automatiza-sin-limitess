@@ -1,8 +1,47 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 
+const typewriterPhrases = [
+  "generar ingresos",
+  "reducir costes",
+  "ahorrar tiempo",
+  "reducir recursos",
+  "incrementar la productividad"
+];
+
 const Hero: React.FC = () => {
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      const currentPhrase = typewriterPhrases[currentPhraseIndex];
+      
+      // If deleting
+      if (isDeleting) {
+        setCurrentText(currentPhrase.substring(0, currentText.length - 1));
+      } else {
+        // If typing
+        setCurrentText(currentPhrase.substring(0, currentText.length + 1));
+      }
+      
+      // If finished typing
+      if (!isDeleting && currentText === currentPhrase) {
+        // Wait at full phrase for a moment
+        setTimeout(() => setIsDeleting(true), 1500);
+      } 
+      // If finished deleting
+      else if (isDeleting && currentText === "") {
+        setIsDeleting(false);
+        setCurrentPhraseIndex((currentPhraseIndex + 1) % typewriterPhrases.length);
+      }
+    }, isDeleting ? 50 : 100);
+    
+    return () => clearTimeout(timeout);
+  }, [currentText, currentPhraseIndex, isDeleting]);
+
   return (
     <section className="relative overflow-hidden pt-28 md:pt-36 pb-20">
       {/* Elementos decorativos con efecto teal */}
@@ -17,7 +56,11 @@ const Hero: React.FC = () => {
           {/* Columna de texto */}
           <div className="flex-1 space-y-8 opacity-0 animate-fadeIn">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-balance">
-              Automatizaciones únicas para <span className="text-gradient-teal">generar ingresos</span>, <span className="text-gradient-teal">reducir costes</span> y <span className="text-gradient-teal">ahorrar tiempo</span>
+              Automatizaciones únicas para{" "}
+              <span className="text-gradient-teal min-h-[60px] md:min-h-[72px] inline-flex">
+                {currentText}
+                <span className="animate-pulse">|</span>
+              </span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed font-medium">
@@ -29,7 +72,7 @@ const Hero: React.FC = () => {
                 Ver automatizaciones disponibles
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#comunidad" className="btn-outline-teal">Unirse gratis a la comunidad</a>
+              <a href="#comunidad" className="btn-outline-teal">Únete gratis a la comunidad</a>
             </div>
           </div>
 
