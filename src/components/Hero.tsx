@@ -6,8 +6,7 @@ const typewriterPhrases = [
   "generar ingresos",
   "reducir costes",
   "ahorrar tiempo",
-  "reducir recursos",
-  "incrementar la productividad"
+  "reducir recursos"
 ];
 
 const Hero: React.FC = () => {
@@ -30,20 +29,20 @@ const Hero: React.FC = () => {
       // If finished typing
       if (!isDeleting && currentText === currentPhrase) {
         // Wait at full phrase for a moment
-        setTimeout(() => setIsDeleting(true), 1500);
+        setTimeout(() => setIsDeleting(true), 1000);
       } 
       // If finished deleting
       else if (isDeleting && currentText === "") {
         setIsDeleting(false);
         setCurrentPhraseIndex((currentPhraseIndex + 1) % typewriterPhrases.length);
       }
-    }, isDeleting ? 50 : 100);
+    }, isDeleting ? 30 : 70); // Faster transition speeds
     
     return () => clearTimeout(timeout);
   }, [currentText, currentPhraseIndex, isDeleting]);
 
   return (
-    <section className="relative overflow-hidden pt-16 md:pt-24 pb-20 bg-hero">
+    <section className="relative overflow-hidden pt-10 md:pt-16 pb-20 bg-hero">
       {/* Elementos decorativos con efecto teal */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-teal-400 to-teal-500 rounded-full opacity-30 blur-3xl"></div>
@@ -69,11 +68,11 @@ const Hero: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
-              <a href="#automatizaciones" className="px-6 py-3 bg-[#34d4c8] text-white rounded-full font-medium transition-all hover:shadow-md hover:shadow-[#34d4c8]/30 active:scale-[0.98] hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
+              <a href="#automatizaciones" className="px-6 py-3 bg-[#DE5E64] text-white rounded-full font-medium transition-all hover:shadow-md hover:shadow-[#DE5E64]/30 active:scale-[0.98] hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
                 Ver automatizaciones disponibles
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#comunidad" className="btn-outline-hero">Únete gratis a la comunidad</a>
+              <a href="#comunidad" className="px-6 py-3 bg-[#5e7df7] text-white rounded-full font-medium transition-all hover:shadow-md hover:shadow-[#5e7df7]/30 active:scale-[0.98] hover:-translate-y-0.5">Únete gratis a la comunidad</a>
             </div>
           </div>
 
@@ -91,7 +90,7 @@ const Hero: React.FC = () => {
                         </svg>
                       </div>
                       <div>
-                        <div className="font-bold text-gray-800">Mario Rodríguez <span className="text-gray-500 font-normal">@mariotech</span></div>
+                        <div className="font-bold text-gray-800">Mario Rodríguez</div>
                         <div className="mt-2 text-sm">
                           La automatización de Stripe a Notion me ha ahorrado más de 10 horas semanales. Ya no pierdo tiempo con seguimientos manuales. ¡Increíble! #AutomatizaSinLimites
                         </div>
@@ -108,7 +107,7 @@ const Hero: React.FC = () => {
                         </svg>
                       </div>
                       <div>
-                        <div className="font-bold text-gray-800">Laura Sánchez <span className="text-gray-500 font-normal">@lauracreativa</span></div>
+                        <div className="font-bold text-gray-800">Laura Sánchez</div>
                         <div className="mt-2 text-sm">
                           El ROI de la automatización Gmail ➜ WhatsApp ha sido brutal, +300% en conversión de leads. Ahora respondemos al instante. 🚀
                         </div>
@@ -125,7 +124,7 @@ const Hero: React.FC = () => {
                         </svg>
                       </div>
                       <div>
-                        <div className="font-bold text-gray-800">Javier García <span className="text-gray-500 font-normal">• Director de Marketing</span></div>
+                        <div className="font-bold text-gray-800">Javier García • Director de Marketing</div>
                         <div className="mt-2 text-sm">
                           La automatización con IA para redes sociales nos multiplicó x7 el engagement con la mitad del esfuerzo. Un servicio que recomiendo a cualquier negocio que quiera escalar.
                         </div>

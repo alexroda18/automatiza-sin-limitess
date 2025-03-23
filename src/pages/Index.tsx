@@ -71,7 +71,7 @@ const Index: React.FC = () => {
           <div className="max-w-screen-xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
               <div className="max-w-2xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 opacity-0 animate-fadeIn text-gradient-teal">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 opacity-0 animate-fadeIn bg-clip-text text-transparent bg-gradient-to-r from-[#DE5E64] to-[#5e7df7]">
                   Catálogo de automatizaciones
                 </h2>
               </div>
@@ -99,7 +99,7 @@ const Index: React.FC = () => {
             </div>
             
             <div className="flex justify-center mt-12">
-              <a href="#" className="btn-secondary inline-flex items-center gap-2">
+              <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-[#DE5E64] text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-[#DE5E64]/30 hover:-translate-y-1">
                 Ver todas las automatizaciones
                 <ArrowRight size={18} />
               </a>
