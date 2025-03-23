@@ -98,7 +98,7 @@ const BenefitSection: React.FC = () => {
   ];
 
   return (
-    <section id="beneficios" className="py-20 bg-gradient-to-b from-teal-50/50 to-white relative overflow-hidden">
+    <section id="beneficios" className="py-16 bg-gradient-to-b from-teal-50/50 to-white relative overflow-hidden">
       {/* Elementos decorativos */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#34d4c8]/50 to-transparent"></div>
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#34d4c8]/30 to-transparent"></div>
@@ -107,23 +107,13 @@ const BenefitSection: React.FC = () => {
       
       <div className="container mx-auto px-4 sm:px-6 relative">
         <div className="max-w-screen-xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block px-4 py-1 bg-[#34d4c8]/10 rounded-full text-[#34d4c8] text-sm font-medium mb-4">
-              Plataforma todo-en-uno
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 opacity-0 animate-fadeIn bg-clip-text text-transparent bg-gradient-to-r from-[#DE5E64] to-[#5e7df7]">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#5e7df7] opacity-0 animate-fadeIn">
               ¿Qué vas a encontrar aquí?
             </h2>
             <p className="text-lg text-muted-foreground opacity-0 animate-fadeIn animate-delay-100">
               Automatizaciones únicas en internet diseñadas específicamente para impulsar tu negocio y optimizar tu tiempo.
             </p>
-            
-            {/* Added decorative elements */}
-            <div className="flex justify-center gap-2 mt-6">
-              <span className="inline-block w-3 h-3 rounded-full bg-[#34d4c8] animate-pulse"></span>
-              <span className="inline-block w-3 h-3 rounded-full bg-[#DE5E64] animate-pulse" style={{animationDelay: "300ms"}}></span>
-              <span className="inline-block w-3 h-3 rounded-full bg-[#5e7df7] animate-pulse" style={{animationDelay: "600ms"}}></span>
-            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
