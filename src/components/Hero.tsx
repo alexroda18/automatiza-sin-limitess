@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
   }, [currentText, currentPhraseIndex, isDeleting]);
 
   return (
-    <section className="relative overflow-hidden pt-28 md:pt-36 pb-20 bg-hero">
+    <section className="relative overflow-hidden pt-16 md:pt-24 pb-20 bg-hero">
       {/* Elementos decorativos con efecto teal */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-teal-400 to-teal-500 rounded-full opacity-30 blur-3xl"></div>
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-balance text-hero-foreground">
               Automatizaciones únicas para
               <br />
-              <span className="text-hero-highlight inline-block h-[60px] md:h-[72px]">
+              <span className="text-[#34d4c8] inline-block h-[60px] md:h-[72px]">
                 {currentText}
                 <span className="animate-pulse">|</span>
               </span>
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
-              <a href="#automatizaciones" className="btn-hero flex items-center justify-center gap-2 group">
+              <a href="#automatizaciones" className="px-6 py-3 bg-[#34d4c8] text-white rounded-full font-medium transition-all hover:shadow-md hover:shadow-[#34d4c8]/30 active:scale-[0.98] hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
                 Ver automatizaciones disponibles
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
@@ -80,10 +80,10 @@ const Hero: React.FC = () => {
           {/* Columna de testimonios/reviews */}
           <div className="flex-1 opacity-0 animate-fadeIn animate-delay-200">
             <div className="relative">
-              <div className="p-6 bg-white/30 backdrop-blur-md rounded-2xl shadow-lg border border-hero-highlight/20">
+              <div className="p-6 bg-white/30 backdrop-blur-md rounded-2xl shadow-lg border border-[#34d4c8]/20">
                 <div className="space-y-4">
                   {/* Social Media Review 1 - Twitter */}
-                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-hero-highlight/10 transform rotate-1 hover:-rotate-1 transition-transform">
+                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-[#34d4c8]/10 transform rotate-1 hover:-rotate-1 transition-transform">
                     <div className="flex items-start gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#1DA1F2] flex-shrink-0 flex items-center justify-center text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -93,18 +93,14 @@ const Hero: React.FC = () => {
                       <div>
                         <div className="font-bold text-gray-800">Mario Rodríguez <span className="text-gray-500 font-normal">@mariotech</span></div>
                         <div className="mt-2 text-sm">
-                          La automatización de Stripe a Notion me ha ahorrado <span className="font-semibold text-hero-highlight">más de 10 horas semanales</span>. Ya no pierdo tiempo con seguimientos manuales. ¡Increíble! #AutomatizaSinLimites
-                        </div>
-                        <div className="mt-2 flex text-[#1DA1F2] text-sm">
-                          <span className="mr-4 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 45</span>
-                          <span className="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92zM18 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM6 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 7.02c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg> 23</span>
+                          La automatización de Stripe a Notion me ha ahorrado más de 10 horas semanales. Ya no pierdo tiempo con seguimientos manuales. ¡Increíble! #AutomatizaSinLimites
                         </div>
                       </div>
                     </div>
                   </div>
                   
                   {/* Social Media Review 2 - Instagram */}
-                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-hero-highlight/10 transform -rotate-1 hover:rotate-1 transition-transform">
+                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-[#34d4c8]/10 transform -rotate-1 hover:rotate-1 transition-transform">
                     <div className="flex items-start gap-3">
                       <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex-shrink-0 flex items-center justify-center text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -114,18 +110,14 @@ const Hero: React.FC = () => {
                       <div>
                         <div className="font-bold text-gray-800">Laura Sánchez <span className="text-gray-500 font-normal">@lauracreativa</span></div>
                         <div className="mt-2 text-sm">
-                          El ROI de la automatización Gmail ➜ WhatsApp ha sido <span className="font-semibold text-hero-highlight">brutal, +300%</span> en conversión de leads. Ahora respondemos al instante. 🚀
-                        </div>
-                        <div className="mt-2 flex text-gray-500 text-sm">
-                          <span className="mr-4 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 128</span>
-                          <span className="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg> 32</span>
+                          El ROI de la automatización Gmail ➜ WhatsApp ha sido brutal, +300% en conversión de leads. Ahora respondemos al instante. 🚀
                         </div>
                       </div>
                     </div>
                   </div>
                   
                   {/* Social Media Review 3 - LinkedIn */}
-                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-hero-highlight/10 transform rotate-2 hover:-rotate-2 transition-transform">
+                  <div className="p-4 bg-white/80 rounded-lg shadow-sm border border-[#34d4c8]/10 transform rotate-2 hover:-rotate-2 transition-transform">
                     <div className="flex items-start gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#0077B5] flex-shrink-0 flex items-center justify-center text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -135,11 +127,7 @@ const Hero: React.FC = () => {
                       <div>
                         <div className="font-bold text-gray-800">Javier García <span className="text-gray-500 font-normal">• Director de Marketing</span></div>
                         <div className="mt-2 text-sm">
-                          La automatización con IA para redes sociales nos <span className="font-semibold text-hero-highlight">multiplicó x7 el engagement</span> con la mitad del esfuerzo. Un servicio que recomiendo a cualquier negocio que quiera escalar.
-                        </div>
-                        <div className="mt-2 flex text-gray-500 text-sm">
-                          <span className="mr-4 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 89</span>
-                          <span className="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92zM18 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM6 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 7.02c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg> 56</span>
+                          La automatización con IA para redes sociales nos multiplicó x7 el engagement con la mitad del esfuerzo. Un servicio que recomiendo a cualquier negocio que quiera escalar.
                         </div>
                       </div>
                     </div>
@@ -147,15 +135,15 @@ const Hero: React.FC = () => {
                 </div>
                 
                 <div className="mt-4 text-center">
-                  <div className="inline-block px-4 py-2 rounded-full bg-hero-highlight/10 text-hero-highlight font-medium text-sm">
+                  <div className="inline-block px-4 py-2 rounded-full bg-[#34d4c8]/10 text-[#34d4c8] font-medium text-sm">
                     +150 reviews positivas en redes sociales
                   </div>
                 </div>
               </div>
               
               {/* Elementos decorativos adicionales */}
-              <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-hero-highlight to-teal-500 rounded-full opacity-70 blur-md -z-10"></div>
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-tr from-cyan-400 to-hero-highlight rounded-full opacity-50 blur-md -z-10"></div>
+              <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-[#34d4c8] to-teal-500 rounded-full opacity-70 blur-md -z-10"></div>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-tr from-cyan-400 to-[#34d4c8] rounded-full opacity-50 blur-md -z-10"></div>
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
           <a href="/" className="text-xl font-bold text-foreground flex items-center gap-2">
-            <span className="text-teal-500">Tech</span>Flow
+            <span className="text-teal-500">Automatiza</span> sin límites
           </a>
           
           {/* Desktop Navigation */}
