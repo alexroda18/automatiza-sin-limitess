@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 const typewriterPhrases = [
   "generar ingresos",
@@ -42,7 +41,7 @@ const Hero: React.FC = () => {
   }, [currentText, currentPhraseIndex, isDeleting]);
 
   return (
-    <section className="relative overflow-hidden pt-16 md:pt-20 pb-20 bg-[#F0F3FF]">
+    <section className="relative overflow-hidden pt-12 md:pt-16 pb-20 bg-[#F0F3FF]">
       {/* Elementos decorativos con efecto azul */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full opacity-30 blur-3xl"></div>
@@ -68,11 +67,10 @@ const Hero: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
-              <a href="#automatizaciones" className="px-6 py-3.5 bg-gradient-to-r from-blue-500 to-sky-600 text-white rounded-full transition-all hover:shadow-lg hover:shadow-blue-600/30 active:scale-[0.98] hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
+              <a href="#automatizaciones" className="px-6 py-3.5 bg-gradient-to-r from-blue-500 to-sky-600 text-white rounded-full transition-all hover:shadow-lg hover:shadow-blue-600/30 active:scale-[0.98] hover:-translate-y-0.5 flex items-center justify-center text-center">
                 Ver automatizaciones disponibles
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#comunidad" className="px-6 py-3.5 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200">Únete gratis a la comunidad</a>
+              <a href="#comunidad" className="px-6 py-3.5 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200 text-center">Únete gratis a la comunidad</a>
             </div>
             
             <div className="pt-8 flex items-center gap-4">

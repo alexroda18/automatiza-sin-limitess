@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Linkedin, 
@@ -22,7 +21,7 @@ const Footer: React.FC = () => {
                   A
                 </div>
                 <span className="text-blue-600 font-normal text-lg">Automatiza</span>
-                <span className="ml-1.5 text-gray-800 opacity-80 text-lg font-light">sin límites</span>
+                <span className="ml-1.5 text-gray-800 opacity-80 text-lg font-light">Sin Límites</span>
               </div>
               
               <p className="text-gray-600 font-light">
@@ -98,7 +97,7 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="border-t border-gray-100 mt-12 pt-8 text-center text-gray-500 text-sm font-light">
-            <p>© {currentYear} Automatiza Fácilmente. Todos los derechos reservados.</p>
+            <p>© {currentYear} Automatiza Sin Límites. Todos los derechos reservados.</p>
           </div>
         </div>
       </div>

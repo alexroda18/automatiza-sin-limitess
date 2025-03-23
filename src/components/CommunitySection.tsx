@@ -54,10 +54,10 @@ const CommunitySection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-5 text-black opacity-0 animate-fadeIn">
+                <h2 className="text-3xl md:text-4xl font-bold mb-5 text-white opacity-0 animate-fadeIn">
                   Únete GRATIS a la comunidad y obtén ventajas exclusivas
                 </h2>
-                <p className="text-lg text-gray-700 opacity-0 animate-fadeIn animate-delay-100">
+                <p className="text-lg text-white opacity-0 animate-fadeIn animate-delay-100">
                   Conecta con emprendedores, creadores y profesionales que están transformando sus negocios con automatizaciones inteligentes.
                 </p>
               </div>
@@ -76,7 +76,7 @@ const CommunitySection: React.FC = () => {
               <div className="opacity-0 animate-fadeIn animate-delay-500">
                 <a 
                   href="#" 
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200 font-medium"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200 font-medium text-center"
                 >
                   Únete al grupo gratuito
                   <ExternalLink size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -94,7 +94,7 @@ const CommunitySection: React.FC = () => {
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-black p-6 backdrop-blur-sm bg-white/60 rounded-lg border border-white/60 shadow-lg">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2">Automatiza sin límites</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2">Automatiza Sin Límites</h3>
                     <p className="text-gray-700 max-w-xs mx-auto">Únete a +500 profesionales compartiendo conocimiento y oportunidades</p>
                   </div>
                 </div>
