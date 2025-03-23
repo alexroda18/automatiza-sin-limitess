@@ -13,16 +13,16 @@ const Footer: React.FC = () => {
   
   return (
     <footer className="bg-white border-t border-gray-100">
-      <div className="container mx-auto px-4 sm:px-6 py-8">
+      <div className="container mx-auto px-4 sm:px-6 py-6">
         <div className="max-w-screen-xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <div className="md:col-span-5 space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+            <div className="md:col-span-5 space-y-3">
               <div className="flex items-center">
                 <div className="w-6 h-6 rounded-md bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white mr-2">
                   A
                 </div>
                 <span className="text-blue-600 font-normal text-base">Automatiza</span>
-                <span className="ml-1.5 text-gray-800 opacity-80 text-base font-light">Sin Límites</span>
+                <span className="text-gray-800 opacity-80 text-base font-light">Sin Límites</span>
               </div>
               
               <p className="text-gray-600 font-light text-sm">
@@ -42,9 +42,9 @@ const Footer: React.FC = () => {
               </div>
             </div>
             
-            <div className="md:col-span-3">
-              <h3 className="text-base font-light mb-3 text-black">Enlaces rápidos</h3>
-              <ul className="space-y-1.5">
+            <div className="md:col-span-3 mt-4 md:mt-0">
+              <h3 className="text-base font-light mb-2 text-black">Enlaces rápidos</h3>
+              <ul className="space-y-1">
                 <li>
                   <a href="#automatizaciones" className="text-gray-600 hover:text-blue-600 transition-colors font-light text-sm flex items-center group">
                     <span>Automatizaciones</span>
@@ -66,8 +66,8 @@ const Footer: React.FC = () => {
               </ul>
             </div>
             
-            <div className="md:col-span-4">
-              <h3 className="text-base font-light mb-3 text-black">Contacto</h3>
+            <div className="md:col-span-4 mt-4 md:mt-0">
+              <h3 className="text-base font-light mb-2 text-black">Contacto</h3>
               <ul className="space-y-2">
                 <li>
                   <a href="mailto:info@automatizafacilmente.com" className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors font-light text-sm group">
@@ -85,11 +85,11 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
               
-              <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-100">
+              <div className="mt-3 p-3 bg-blue-50 rounded-lg border border-blue-100">
                 <p className="text-xs text-blue-800 font-light">
                   ¿Necesitas una automatización personalizada? Podemos desarrollarla específicamente para tu negocio.
                 </p>
-                <a href="#contacto" className="inline-flex items-center gap-1 mt-1.5 text-xs text-blue-600 font-normal hover:underline">
+                <a href="#contacto" className="inline-flex items-center gap-1 mt-1 text-xs text-blue-600 font-normal hover:underline">
                   Contacta con nosotros
                   <ArrowUpRight size={12} />
                 </a>
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
           
-          <div className="border-t border-gray-100 mt-6 pt-4 text-center text-gray-500 text-xs font-light">
+          <div className="border-t border-gray-100 mt-4 pt-3 text-center text-gray-500 text-xs font-light">
             <p>© {currentYear} Automatiza Sin Límites. Todos los derechos reservados.</p>
           </div>
         </div>

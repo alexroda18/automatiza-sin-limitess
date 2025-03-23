@@ -1,144 +1,83 @@
 
 import React from 'react';
 import { 
-  Zap,
-  BrainCircuit,
-  Share2,
-  Hammer,
-  Users,
-  FileCode,
+  BarChart, 
+  Zap, 
+  Clock, 
+  Shield, 
+  Sparkles,
+  Check
 } from 'lucide-react';
 
-interface LearningCardProps {
-  icon: React.ElementType;
+interface BenefitCardProps {
+  icon: React.ReactNode;
   title: string;
   description: string;
-  bgColor: string;
-  iconColor: string;
   delay: number;
 }
 
-const LearningCard: React.FC<LearningCardProps> = ({ 
-  icon: Icon, 
-  title, 
-  description,
-  bgColor,
-  iconColor,
-  delay
-}) => {
+const BenefitCard: React.FC<BenefitCardProps> = ({ icon, title, description, delay }) => {
   return (
-    <div className="opacity-0 animate-fadeIn h-[250px]" style={{ animationDelay: `${delay * 100}ms` }}>
-      <div className="flip-card h-full w-full">
-        <div className="flip-card-inner h-full w-full">
-          {/* Front side */}
-          <div 
-            className={`flip-card-front h-full w-full cursor-pointer rounded-xl overflow-hidden shadow-lg transition-all duration-300`}
-            style={{ backgroundColor: bgColor }}
-          >
-            <div className="p-6 h-full flex flex-col items-center justify-center text-center">
-              <div className={`mb-4 ${iconColor}`}>
-                <Icon size={32} />
-              </div>
-              <h3 className="text-white text-xl font-bold mb-2">{title}</h3>
-            </div>
-          </div>
-          
-          {/* Back side */}
-          <div className={`flip-card-back h-full w-full rounded-xl overflow-hidden shadow-lg p-6`}
-               style={{ backgroundColor: bgColor }}>
-            <div className="h-full flex flex-col justify-center">
-              <h3 className="text-white text-xl font-bold mb-4 text-center">{title}</h3>
-              <p className="text-white/90 text-sm">{description}</p>
-            </div>
-          </div>
-        </div>
+    <div 
+      className="p-6 bg-white rounded-xl shadow-md border border-gray-100 group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+      style={{ animationDelay: `${delay * 100}ms` }}
+    >
+      <div className="mb-4 text-blue-600 group-hover:scale-110 transition-transform duration-300">
+        {icon}
       </div>
+      <h3 className="text-lg font-bold mb-2 text-gray-900">{title}</h3>
+      <p className="text-gray-600 text-sm">{description}</p>
     </div>
   );
 };
 
 const BenefitSection: React.FC = () => {
-  const learningCards = [
-    { 
-      icon: Zap, 
-      title: "Generar leads automáticamente",
-      description: "Atrae y convierte más prospectos con automatizaciones inteligentes para hacer crecer tu negocio.",
-      bgColor: "#879AFF",
-      iconColor: "text-white"
+  const benefits = [
+    {
+      icon: <Zap size={24} className="text-blue-600" />,
+      title: "Ahorra tiempo",
+      description: "Con estas automatizaciones podrás reducir tareas manuales y enfocarte en lo que realmente importa.",
     },
-    { 
-      icon: Hammer, 
-      title: "Sistematizar operaciones y flujos internos",
-      description: "Optimiza y automatiza procesos para mayor eficiencia, reduciendo tareas repetitivas en tu empresa.",
-      bgColor: "#6161FF",
-      iconColor: "text-white"
+    {
+      icon: <Clock size={24} className="text-blue-600" />,
+      title: "Sistema 24/7",
+      description: "Con estas automatizaciones podrás tener un sistema que trabaja constantemente, incluso mientras duermes.",
     },
-    { 
-      icon: Share2, 
-      title: "Posicionar tu marca en redes sociales",
-      description: "Destaca entre la competencia con contenido viral y estrategias optimizadas por IA.",
-      bgColor: "#24C4E6",
-      iconColor: "text-white"
+    {
+      icon: <Shield size={24} className="text-blue-600" />,
+      title: "Reduce errores",
+      description: "Con estas automatizaciones podrás eliminar errores humanos en procesos críticos y mejorar la precisión.",
     },
-    { 
-      icon: BrainCircuit, 
-      title: "Crear agentes de IA personalizados",
-      description: "Desarrolla asistentes virtuales inteligentes que trabajen 24/7 para tu negocio.",
-      bgColor: "#673971",
-      iconColor: "text-white"
-    },
-    { 
-      icon: Users, 
-      title: "Crear aplicaciones basadas en inteligencia artificial",
-      description: "Transforma tu negocio con soluciones tecnológicas avanzadas sin necesidad de programar.",
-      bgColor: "#FF596D",
-      iconColor: "text-white"
-    },
-    { 
-      icon: FileCode, 
-      title: "Automatizar contenido y publicaciones en redes",
-      description: "Genera contenido de alta calidad automáticamente para todas tus plataformas sociales.",
-      bgColor: "#1F0F83",
-      iconColor: "text-white"
+    {
+      icon: <Sparkles size={24} className="text-blue-600" />,
+      title: "Mejora la experiencia",
+      description: "Con estas automatizaciones podrás brindar respuestas inmediatas a tus clientes y mejorar su satisfacción.",
     }
   ];
 
   return (
-    <section id="beneficios" className="py-16 bg-gradient-to-b from-blue-50/50 to-white relative overflow-hidden">
-      {/* Elementos decorativos */}
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-300/50 to-transparent"></div>
-      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-300/30 to-transparent"></div>
-      
-      {/* Glassmorphism blobs for background effect */}
-      <div className="absolute -top-[50%] -left-[10%] w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-3xl opacity-50"></div>
-      <div className="absolute -bottom-[30%] -right-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl opacity-60"></div>
-      <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-3xl opacity-40"></div>
-      <div className="absolute bottom-1/4 right-1/3 w-[250px] h-[250px] bg-orange-500/5 rounded-full blur-3xl opacity-50"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 relative">
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-screen-xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black opacity-0 animate-fadeIn">
-              Con estos cursos, aprenderás a...
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+              Beneficios de automatizar
             </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {learningCards.map((card, index) => (
-              <LearningCard 
-                key={index} 
-                icon={card.icon} 
-                title={card.title}
-                description={card.description}
-                bgColor={card.bgColor}
-                iconColor={card.iconColor}
-                delay={index + 2}
-              />
-            ))}
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Implementa sistemas que trabajen por ti y recupera el control de tu tiempo
+            </p>
           </div>
           
-          <div className="text-center mt-10 text-gray-500 opacity-0 animate-fadeIn italic" style={{ animationDelay: '800ms' }}>
-            Y mucho más...
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <BenefitCard 
+                key={index}
+                icon={benefit.icon}
+                title={benefit.title}
+                description={benefit.description}
+                delay={index + 1}
+              />
+            ))}
           </div>
         </div>
       </div>
