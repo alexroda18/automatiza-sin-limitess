@@ -22,10 +22,10 @@ const Benefit: React.FC<BenefitProps> = ({ icon: Icon, title, delay }) => {
       className={`flex items-center gap-3 opacity-0 animate-fadeIn`}
       style={{ animationDelay: `${delay * 100}ms` }}
     >
-      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center text-teal-600">
+      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#34d4c8]/20 flex items-center justify-center text-[#34d4c8]">
         <Icon size={16} />
       </div>
-      <p className="font-medium text-sm md:text-base">{title}</p>
+      <p className="font-medium text-sm md:text-base text-white">{title}</p>
     </div>
   );
 };
@@ -41,11 +41,12 @@ const CommunitySection: React.FC = () => {
   ];
 
   return (
-    <section id="comunidad" className="py-24 relative overflow-hidden">
+    <section id="comunidad" className="py-24 bg-hero relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 -right-32 w-64 h-64 bg-teal-100 rounded-full opacity-60 blur-3xl"></div>
-        <div className="absolute bottom-0 -left-32 w-64 h-64 bg-cyan-50 rounded-full opacity-60 blur-3xl"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-teal-400 to-teal-500 rounded-full opacity-30 blur-3xl"></div>
+        <div className="absolute top-1/3 -left-24 w-80 h-80 bg-gradient-to-tr from-cyan-400 to-teal-400 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 bg-gradient-to-bl from-teal-300 to-cyan-300 rounded-full opacity-20 blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6">
@@ -53,10 +54,10 @@ const CommunitySection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-5 opacity-0 animate-fadeIn">
+                <h2 className="text-3xl md:text-4xl font-bold mb-5 text-[#DE5E64] opacity-0 animate-fadeIn">
                   Únete GRATIS a la comunidad y obtén ventajas exclusivas
                 </h2>
-                <p className="text-lg text-muted-foreground opacity-0 animate-fadeIn animate-delay-100">
+                <p className="text-lg text-white/80 opacity-0 animate-fadeIn animate-delay-100">
                   Conecta con emprendedores, creadores y profesionales que están transformando sus negocios con automatizaciones inteligentes.
                 </p>
               </div>
@@ -75,7 +76,7 @@ const CommunitySection: React.FC = () => {
               <div className="opacity-0 animate-fadeIn animate-delay-500">
                 <a 
                   href="#" 
-                  className="inline-flex items-center gap-2 btn-primary"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#34d4c8] text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-[#34d4c8]/30 hover:-translate-y-1"
                 >
                   Únete al grupo gratuito
                   <ExternalLink size={18} />
@@ -99,8 +100,8 @@ const CommunitySection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-full opacity-80 -z-10"></div>
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-teal-100 rounded-full opacity-80 -z-10"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#34d4c8]/20 rounded-full opacity-80 -z-10"></div>
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#34d4c8]/20 rounded-full opacity-80 -z-10"></div>
             </div>
           </div>
         </div>

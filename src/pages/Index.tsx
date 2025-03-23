@@ -69,14 +69,12 @@ const Index: React.FC = () => {
         
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-screen-xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-              <div className="max-w-2xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#DE5E64] opacity-0 animate-fadeIn">
-                  Catálogo de automatizaciones
-                </h2>
-              </div>
+            <div className="flex flex-col items-center justify-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#DE5E64] opacity-0 animate-fadeIn text-center">
+                Catálogo de automatizaciones
+              </h2>
               
-              <div className="mt-6 md:mt-0 opacity-0 animate-fadeIn animate-delay-200">
+              <div className="mt-3 opacity-0 animate-fadeIn animate-delay-200">
                 <div className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium">
                   +15 automatizaciones disponibles
                 </div>
