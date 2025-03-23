@@ -53,6 +53,20 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				coral: {
+					DEFAULT: 'hsl(var(--coral))',
+					foreground: 'hsl(var(--coral-foreground))',
+					50: '#fff8f5',
+					100: '#fff0ea',
+					200: '#ffddd0',
+					300: '#ffc2aa',
+					400: '#fe9a75',
+					500: '#fd7342',
+					600: '#ed5a2c',
+					700: '#c63d1e',
+					800: '#9d321e',
+					900: '#7f2c1c',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -74,6 +88,18 @@ export default {
 					700: '#6d28d9',
 					800: '#5b21b6',
 					900: '#4c1d95',
+				},
+				orange: {
+					50: '#fff7ed',
+					100: '#ffedd5',
+					200: '#fed7aa',
+					300: '#fdba74',
+					400: '#fb923c',
+					500: '#f97316',
+					600: '#ea580c',
+					700: '#c2410c',
+					800: '#9a3412',
+					900: '#7c2d12',
 				},
 			},
 			borderRadius: {
@@ -104,6 +130,10 @@ export default {
 				float: {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
+				},
+				pulse: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
 				}
 			},
 			animation: {
@@ -112,7 +142,8 @@ export default {
 				fadeIn: 'fadeIn 0.6s ease-out forwards',
 				shimmer: 'shimmer 2s infinite',
 				scaleIn: 'scaleIn 0.3s ease-out forwards',
-				float: 'float 6s ease-in-out infinite'
+				float: 'float 6s ease-in-out infinite',
+				pulse: 'pulse 3s ease-in-out infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
