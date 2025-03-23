@@ -9,6 +9,7 @@ import {
   Sparkles,
   ExternalLink
 } from 'lucide-react';
+import { Button } from './ui/button';
 
 interface BenefitProps {
   icon: React.ElementType;
@@ -25,7 +26,7 @@ const Benefit: React.FC<BenefitProps> = ({ icon: Icon, title, delay }) => {
       <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
         <Icon size={16} />
       </div>
-      <p className="font-bold text-sm md:text-base text-black">{title}</p>
+      <p className="text-sm md:text-base text-black font-normal">{title}</p>
     </div>
   );
 };
@@ -54,10 +55,10 @@ const CommunitySection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-5 text-white opacity-0 animate-fadeIn">
+                <h2 className="text-3xl md:text-4xl font-bold mb-5 text-black opacity-0 animate-fadeIn">
                   Únete GRATIS a la comunidad y obtén ventajas exclusivas
                 </h2>
-                <p className="text-lg text-white opacity-0 animate-fadeIn animate-delay-100">
+                <p className="text-lg text-black font-normal opacity-0 animate-fadeIn animate-delay-100">
                   Conecta con emprendedores, creadores y profesionales que están transformando sus negocios con automatizaciones inteligentes.
                 </p>
               </div>
@@ -74,13 +75,11 @@ const CommunitySection: React.FC = () => {
               </div>
               
               <div className="opacity-0 animate-fadeIn animate-delay-500">
-                <a 
-                  href="#" 
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200 font-medium text-center"
+                <Button 
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-blue-100 text-blue-700 rounded-full transition-all hover:bg-blue-200 active:scale-[0.98] hover:-translate-y-0.5 border border-blue-200 font-montserrat uppercase"
                 >
-                  Únete al grupo gratuito
-                  <ExternalLink size={18} className="group-hover:translate-x-1 transition-transform" />
-                </a>
+                  Únete al grupo
+                </Button>
               </div>
             </div>
             
