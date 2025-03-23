@@ -39,7 +39,7 @@ const LearningCard: React.FC<LearningCardProps> = ({
               <div className={`mb-4 ${iconColor}`}>
                 <Icon size={32} />
               </div>
-              <h3 className="text-white text-xl font-light mb-2">{title}</h3>
+              <h3 className="text-white text-xl font-bold mb-2">{title}</h3>
             </div>
           </div>
           
@@ -47,7 +47,7 @@ const LearningCard: React.FC<LearningCardProps> = ({
           <div className={`flip-card-back h-full w-full rounded-xl overflow-hidden shadow-lg p-6`}
                style={{ backgroundColor: bgColor }}>
             <div className="h-full flex flex-col justify-center">
-              <h3 className="text-white text-xl font-light mb-4 text-center">{title}</h3>
+              <h3 className="text-white text-xl font-bold mb-4 text-center">{title}</h3>
               <p className="text-white/90 text-sm">{description}</p>
             </div>
           </div>
@@ -118,8 +118,8 @@ const BenefitSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 relative">
         <div className="max-w-screen-xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-light mb-6 text-black opacity-0 animate-fadeIn">
-              ¿Qué vas a aprender?
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black opacity-0 animate-fadeIn">
+              Que podrás aplicar
             </h2>
           </div>
 

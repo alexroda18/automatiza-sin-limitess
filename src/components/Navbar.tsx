@@ -23,9 +23,9 @@ const Navbar: React.FC = () => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-xl font-light text-foreground flex items-center gap-2">
-            <span className="text-blue-600 font-normal">Automatiza</span>
-            <span className="ml-1 text-gray-800 opacity-80 font-light">sin límites</span>
+          <a href="/" className="text-xl font-bold text-foreground flex items-center gap-2">
+            <span className="text-blue-600">Automatiza</span>
+            <span className="ml-1 text-gray-800 opacity-80">sin límites</span>
           </a>
           
           {/* Desktop Navigation */}
@@ -35,10 +35,6 @@ const Navbar: React.FC = () => {
             </a>
             <a href="#comunidad" className="text-gray-800 hover:text-blue-600 transition-colors font-light">
               Comunidad
-            </a>
-            <a href="#contacto" className="px-5 py-2 bg-blue-600 text-white rounded-full font-light transition-all hover:bg-blue-700 hover:shadow-md hover:shadow-blue-500/20 flex items-center gap-1 group">
-              Contactar
-              <ChevronRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
           </nav>
           
@@ -84,16 +80,6 @@ const Navbar: React.FC = () => {
             <span>Comunidad</span>
             <ChevronRight size={16} className="ml-auto" />
           </a>
-          <div className="pt-4">
-            <a 
-              href="#contacto" 
-              className="w-full px-4 py-3 bg-blue-600 text-white rounded-full font-light text-center inline-flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contactar
-              <ChevronRight size={16} />
-            </a>
-          </div>
         </nav>
       </div>
       

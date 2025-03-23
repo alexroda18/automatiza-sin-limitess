@@ -54,7 +54,7 @@ const CommunitySection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl md:text-4xl font-light mb-5 text-blue-300 opacity-0 animate-fadeIn">
+                <h2 className="text-3xl md:text-4xl font-bold mb-5 text-blue-300 opacity-0 animate-fadeIn">
                   Únete GRATIS a la comunidad y obtén ventajas exclusivas
                 </h2>
                 <p className="text-lg text-white/80 opacity-0 animate-fadeIn animate-delay-100">
@@ -93,8 +93,8 @@ const CommunitySection: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white p-6">
-                    <h3 className="text-2xl md:text-3xl font-light mb-2">Comunidad TechFlow</h3>
+                  <div className="text-center text-white p-6 backdrop-blur-sm bg-blue-900/40 rounded-lg border border-blue-500/20 shadow-lg">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2">Automatiza sin límites</h3>
                     <p className="text-white/80 max-w-xs mx-auto">Únete a +500 profesionales compartiendo conocimiento y oportunidades</p>
                   </div>
                 </div>
