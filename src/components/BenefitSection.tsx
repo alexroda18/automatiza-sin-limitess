@@ -36,11 +36,16 @@ const BenefitSection: React.FC = () => {
   ];
 
   return (
-    <section id="beneficios" className="py-20 bg-slate-50/70">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="beneficios" className="py-20 bg-gradient-to-b from-teal-50/50 to-white relative overflow-hidden">
+      {/* Elementos decorativos */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-teal-200 to-transparent"></div>
+      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-teal-100 to-transparent"></div>
+      <div className="absolute -top-[50%] -left-[10%] w-[500px] h-[500px] bg-teal-50/50 rounded-full blur-3xl opacity-50"></div>
+      
+      <div className="container mx-auto px-4 sm:px-6 relative">
         <div className="max-w-screen-xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 opacity-0 animate-fadeIn">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 opacity-0 animate-fadeIn text-gradient">
               ¿Qué vas a encontrar aquí?
             </h2>
             <p className="text-lg text-muted-foreground opacity-0 animate-fadeIn animate-delay-100">

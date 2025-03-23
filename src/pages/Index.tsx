@@ -62,12 +62,16 @@ const Index: React.FC = () => {
       
       <BenefitSection />
       
-      <section id="automatizaciones" className="py-24">
+      <section id="automatizaciones" className="py-24 bg-gradient-to-b from-white to-teal-50/30 relative">
+        {/* Decorative elements */}
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-teal-200 to-transparent"></div>
+        <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-teal-100 to-transparent"></div>
+        
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-screen-xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
               <div className="max-w-2xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 opacity-0 animate-fadeIn">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 opacity-0 animate-fadeIn text-gradient-teal">
                   Catálogo de automatizaciones
                 </h2>
               </div>
