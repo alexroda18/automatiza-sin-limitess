@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -101,6 +100,13 @@ export default {
 					800: '#9a3412',
 					900: '#7c2d12',
 				},
+				// Add hero colors directly in the Tailwind config
+				hero: {
+					bg: '#f00d23b',
+					foreground: '#ffffff',
+					secondary: '#f8fcfc',
+					highlight: '#81e2db',
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
