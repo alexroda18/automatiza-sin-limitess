@@ -22,21 +22,18 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
           <a href="/" className="text-xl font-bold text-foreground flex items-center gap-2">
-            <span className="text-orange-500">Auto</span>Mate
+            <span className="text-teal-500">Tech</span>Flow
           </a>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#automatizaciones" className="text-foreground hover:text-orange-500 transition-colors font-medium">
+            <a href="#automatizaciones" className="text-foreground hover:text-teal-500 transition-colors font-medium">
               Automatizaciones
             </a>
-            <a href="#beneficios" className="text-foreground hover:text-orange-500 transition-colors font-medium">
-              Beneficios
-            </a>
-            <a href="#comunidad" className="text-foreground hover:text-orange-500 transition-colors font-medium">
+            <a href="#comunidad" className="text-foreground hover:text-teal-500 transition-colors font-medium">
               Comunidad
             </a>
-            <a href="#contacto" className="px-4 py-2 bg-orange-100 text-orange-600 rounded-full font-medium transition-all hover:bg-orange-200">
+            <a href="#contacto" className="px-4 py-2 bg-teal-100 text-teal-600 rounded-full font-medium transition-all hover:bg-teal-200">
               Contactar
             </a>
           </nav>
@@ -57,28 +54,21 @@ const Navbar: React.FC = () => {
           <nav className="flex flex-col space-y-4">
             <a 
               href="#automatizaciones" 
-              className="text-foreground hover:text-orange-500 transition-colors p-2 font-medium"
+              className="text-foreground hover:text-teal-500 transition-colors p-2 font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Automatizaciones
             </a>
             <a 
-              href="#beneficios" 
-              className="text-foreground hover:text-orange-500 transition-colors p-2 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Beneficios
-            </a>
-            <a 
               href="#comunidad" 
-              className="text-foreground hover:text-orange-500 transition-colors p-2 font-medium"
+              className="text-foreground hover:text-teal-500 transition-colors p-2 font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Comunidad
             </a>
             <a 
               href="#contacto" 
-              className="px-4 py-2 bg-orange-100 text-orange-600 rounded-full font-medium text-center"
+              className="px-4 py-2 bg-teal-100 text-teal-600 rounded-full font-medium text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Contactar

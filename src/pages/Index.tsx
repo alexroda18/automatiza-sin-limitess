@@ -60,6 +60,8 @@ const Index: React.FC = () => {
     <Layout>
       <Hero />
       
+      <BenefitSection />
+      
       <section id="automatizaciones" className="py-24">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-screen-xl mx-auto">
@@ -68,9 +70,6 @@ const Index: React.FC = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 opacity-0 animate-fadeIn">
                   Catálogo de automatizaciones
                 </h2>
-                <p className="text-lg text-muted-foreground opacity-0 animate-fadeIn animate-delay-100">
-                  Soluciones prácticas diseñadas para resolver problemas reales y optimizar tu flujo de trabajo.
-                </p>
               </div>
               
               <div className="mt-6 md:mt-0 opacity-0 animate-fadeIn animate-delay-200">
@@ -105,7 +104,6 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      <BenefitSection />
       <CommunitySection />
     </Layout>
   );
