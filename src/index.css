@@ -42,7 +42,7 @@
     --purple-foreground: 0 0% 100%;
 
     /* Hero Colors */
-    --hero-bg: 270 60% 15%;
+    --hero-bg: 240 100% 97%; /* #F0F3FF */
     --hero-foreground: 0 0% 100%;
     --hero-secondary: 270 80% 96%;
     --hero-highlight: 270 60% 50%;
@@ -122,6 +122,28 @@
   
   .highlight::before {
     @apply content-[''] absolute -bottom-1 left-0 w-full h-[0.2em] bg-purple-200 -z-10 transform origin-bottom scale-x-100;
+  }
+  
+  /* Flip Card Styles */
+  .flip-card {
+    @apply perspective-1000;
+  }
+  
+  .flip-card-inner {
+    @apply relative transition-transform duration-700 transform-style-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    @apply rotate-y-180;
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    @apply absolute w-full h-full backface-hidden;
+  }
+  
+  .flip-card-back {
+    @apply rotate-y-180;
   }
   
   .btn-primary {

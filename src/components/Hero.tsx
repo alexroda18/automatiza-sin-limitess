@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
   }, [currentText, currentPhraseIndex, isDeleting]);
 
   return (
-    <section className="relative overflow-hidden pt-10 md:pt-16 pb-20 bg-gradient-to-b from-purple-900 to-purple-800">
+    <section className="relative overflow-hidden pt-10 md:pt-16 pb-20 bg-[#F0F3FF]">
       {/* Elementos decorativos con efecto morado */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full opacity-30 blur-3xl"></div>
@@ -54,16 +54,16 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
           {/* Columna de texto */}
           <div className="flex-1 space-y-8 opacity-0 animate-fadeIn">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-balance text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-balance text-black">
               Automatizaciones únicas para
               <br />
-              <span className="text-purple-300 inline-block h-[60px] md:h-[72px]">
+              <span className="text-purple-600 inline-block h-[60px] md:h-[72px]">
                 {currentText}
                 <span className="animate-pulse">|</span>
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-purple-100 max-w-2xl leading-relaxed font-medium italic">
+            <p className="text-lg md:text-xl text-gray-700 max-w-2xl leading-relaxed font-medium italic">
               Si no multiplicas x10 tu inversión, no estamos haciendo bien nuestro trabajo.
             </p>
             
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
                 Ver automatizaciones disponibles
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#comunidad" className="px-6 py-3.5 bg-white/10 text-white rounded-full font-medium transition-all hover:bg-white/20 active:scale-[0.98] hover:-translate-y-0.5 border border-white/20">Únete gratis a la comunidad</a>
+              <a href="#comunidad" className="px-6 py-3.5 bg-purple-100 text-purple-700 rounded-full font-medium transition-all hover:bg-purple-200 active:scale-[0.98] hover:-translate-y-0.5 border border-purple-200">Únete gratis a la comunidad</a>
             </div>
           </div>
 
@@ -149,7 +149,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Forma decorativa en la parte inferior */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-r from-purple-50 via-indigo-50 to-purple-50 opacity-10 -z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-r from-purple-50 via-indigo-50 to-purple-50 opacity-50 -z-10"></div>
     </section>
   );
 };

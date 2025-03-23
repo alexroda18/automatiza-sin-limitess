@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -101,10 +100,9 @@ export default {
 					800: '#9a3412',
 					900: '#7c2d12',
 				},
-				// Add hero colors directly in the Tailwind config
 				hero: {
-					bg: '#002d38',
-					foreground: '#ffffff',
+					bg: '#F0F3FF',
+					foreground: '#000000',
 					secondary: '#f8fcfc',
 					highlight: '#34d4c8',
 				}
@@ -113,6 +111,20 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			transformStyle: {
+				'3d': 'preserve-3d',
+			},
+			backfaceVisibility: {
+				'hidden': 'hidden',
+				'visible': 'visible',
+			},
+			perspective: {
+				'none': 'none',
+				'1000': '1000px',
+			},
+			rotate: {
+				'y-180': 'rotateY(180deg)',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -158,5 +170,24 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		function({ addUtilities }) {
+			const newUtilities = {
+				'.perspective-1000': {
+					'perspective': '1000px',
+				},
+				'.transform-style-3d': {
+					'transform-style': 'preserve-3d',
+				},
+				'.backface-hidden': {
+					'backface-visibility': 'hidden',
+				},
+				'.rotate-y-180': {
+					'transform': 'rotateY(180deg)',
+				},
+			};
+			addUtilities(newUtilities);
+		},
+	],
 } satisfies Config;

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
@@ -69,7 +70,7 @@ const Index: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-screen-xl mx-auto">
             <div className="flex flex-col items-center justify-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#DE5E64] opacity-0 animate-fadeIn text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black opacity-0 animate-fadeIn text-center">
                 Catálogo de automatizaciones
               </h2>
               
@@ -96,7 +97,7 @@ const Index: React.FC = () => {
             </div>
             
             <div className="flex justify-center mt-12">
-              <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-[#DE5E64] text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-[#DE5E64]/30 hover:-translate-y-1">
+              <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-[#6159E6] text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-[#6159E6]/30 hover:-translate-y-1">
                 Ver todas las automatizaciones
                 <ArrowRight size={18} />
               </a>
