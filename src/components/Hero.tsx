@@ -54,10 +54,6 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
           {/* Columna de texto */}
           <div className="flex-1 space-y-8 opacity-0 animate-fadeIn">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-600 text-sm font-light mb-2">
-              Automatizaciones que multiplican tu productividad x10
-            </div>
-            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-balance text-black">
               Automatizaciones únicas para
               <br />
@@ -86,7 +82,7 @@ const Hero: React.FC = () => {
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=64&h=64&q=80" className="w-10 h-10 rounded-full border-2 border-white" alt="User" />
               </div>
               <div className="text-sm text-gray-600 font-light">
-                +150 personas ya han mejorado su productividad
+                +150 personas ya van un paso por delante de su competencia
               </div>
             </div>
           </div>
