@@ -102,7 +102,7 @@ export default {
 				},
 				// Add hero colors directly in the Tailwind config
 				hero: {
-					bg: '#f00d23b',
+					bg: '#002d38',
 					foreground: '#ffffff',
 					secondary: '#f8fcfc',
 					highlight: '#81e2db',

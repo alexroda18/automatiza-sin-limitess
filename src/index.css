@@ -41,7 +41,7 @@
     --teal-foreground: 0 0% 100%;
 
     /* Hero Colors */
-    --hero-bg: 357 94% 50%;
+    --hero-bg: 196 100% 11%;
     --hero-foreground: 0 0% 100%;
     --hero-secondary: 174 80% 96%;
     --hero-highlight: 174 78% 70%;
@@ -189,7 +189,7 @@
   
   /* Hero background */
   .bg-hero {
-    @apply bg-[#f00d23b];
+    @apply bg-[#002d38];
   }
   
   .text-hero-foreground {
