@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Zap,
@@ -7,6 +6,7 @@ import {
   Hammer,
   Users,
   FileCode,
+  ArrowRight,
 } from 'lucide-react';
 
 interface BenefitItemProps {
