@@ -1,9 +1,7 @@
-
 import React from 'react';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import AutomationCard from '../components/AutomationCard';
-import BenefitSection from '../components/BenefitSection';
 import CommunitySection from '../components/CommunitySection';
 
 const automationData = [
@@ -59,17 +57,15 @@ const Index: React.FC = () => {
     <Layout>
       <Hero />
       
-      <BenefitSection />
-      
-      <section id="automatizaciones" className="py-24 bg-gradient-to-b from-white to-sky-50/30 relative">
+      <section id="automatizaciones" className="py-24 bg-gradient-to-b from-black to-[#12123A] relative">
         {/* Decorative elements */}
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-sky-200 to-transparent"></div>
-        <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-sky-100 to-transparent"></div>
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#4F7FFF]/20 to-transparent"></div>
+        <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#4F7FFF]/10 to-transparent"></div>
         
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-screen-xl mx-auto">
             <div className="flex flex-col items-center justify-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black opacity-0 animate-fadeIn text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white opacity-0 animate-fadeIn text-center">
                 Catálogo de automatizaciones
               </h2>
             </div>

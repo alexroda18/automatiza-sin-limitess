@@ -1,10 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronRight } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,80 +13,31 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-      isScrolled 
-        ? 'py-3 bg-white/80 backdrop-blur-md shadow-sm' 
-        : 'py-5 bg-[#F0F3FF]'
-    }`}>
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between">
-          <a href="/" className="text-xl font-bold text-foreground flex items-center">
-            <span className="text-blue-600">Automatiza</span>
-            <span className="ml-2 text-gray-800 opacity-80">Sin Límites</span>
-          </a>
-          
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#automatizaciones" className="text-gray-800 hover:text-blue-600 transition-colors font-bold">
-              Automatizaciones
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#1E1E4A]/20">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex-1">
+            <a href="/" className="text-2xl font-bold text-white block text-center">
+              automatiza{' '}
+              <span className="bg-gradient-to-r from-[#4F7FFF] to-[#9747FF] bg-clip-text text-transparent">sin límites</span>
             </a>
-            <a href="#comunidad" className="text-gray-800 hover:text-blue-600 transition-colors font-bold">
-              Comunidad
-            </a>
-          </nav>
+          </div>
           
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-foreground flex items-center justify-center w-10 h-10 rounded-full bg-white/80 shadow-sm"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-center space-x-4">
+              <a href="#automatizaciones" className="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Automatizaciones
+              </a>
+              <a href="#comunidad" className="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Comunidad
+              </a>
+              <a href="mailto:alex@cosstudio.co" className="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Contacto
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      
-      {/* Mobile Menu - Sliding from the right */}
-      <div className={`fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${
-        isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}>
-        <div className="flex justify-end p-4">
-          <button 
-            onClick={() => setIsMenuOpen(false)}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700"
-            aria-label="Close menu"
-          >
-            <X size={20} />
-          </button>
-        </div>
-        
-        <nav className="flex flex-col p-6 space-y-6">
-          <a 
-            href="#automatizaciones" 
-            className="text-gray-800 hover:text-blue-600 transition-colors p-2 font-bold flex items-center"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <span>Automatizaciones</span>
-            <ChevronRight size={16} className="ml-auto" />
-          </a>
-          <a 
-            href="#comunidad" 
-            className="text-gray-800 hover:text-blue-600 transition-colors p-2 font-bold flex items-center"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <span>Comunidad</span>
-            <ChevronRight size={16} className="ml-auto" />
-          </a>
-        </nav>
-      </div>
-      
-      {/* Overlay for mobile menu */}
-      {isMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
-          onClick={() => setIsMenuOpen(false)}
-        ></div>
-      )}
+      </nav>
     </header>
   );
 };
