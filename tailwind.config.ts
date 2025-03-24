@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -102,15 +101,15 @@ export default {
 					900: '#7c2d12',
 				},
 				hero: {
-					bg: '#121826', // Dark hero background
-					foreground: '#ffffff',
-					secondary: '#1e293b',
-					highlight: '#3b82f6',
+					bg: '#F0F3FF',
+					foreground: '#000000',
+					secondary: '#f8fcfc',
+					highlight: '#34b4d4',
 				},
-				// Adding the card colors with updated dark tones
+				// Adding the card colors
 				cardColor: {
-					blue1: '#5b6af9',
-					blue2: '#4f43ff',
+					blue1: '#879AFF',
+					blue2: '#6161FF',
 					teal: '#24C4E6',
 					purple: '#673971',
 					pink: '#FF596D',
