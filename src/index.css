@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -6,32 +7,32 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
 
     --primary: 217 90% 52%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 217 90% 95%;
-    --secondary-foreground: 217 90% 52%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217 90% 96%;
-    --accent-foreground: 217 90% 52%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
     --ring: 217 90% 52%;
 
     --radius: 0.75rem;
@@ -41,9 +42,9 @@
     --blue-foreground: 0 0% 100%;
 
     /* Hero Colors */
-    --hero-bg: 240 100% 97%; /* #F0F3FF */
-    --hero-foreground: 0 0% 100%;
-    --hero-secondary: 217 80% 96%;
+    --hero-bg: 222 47% 11%; 
+    --hero-foreground: 210 40% 98%;
+    --hero-secondary: 217 33% 17%;
     --hero-highlight: 217 90% 52%;
   }
 
@@ -235,5 +236,14 @@
   /* Add this class to fix the hero highlight background */
   .bg-hero-highlight {
     @apply bg-blue-500;
+  }
+  
+  /* Dark theme specific classes */
+  .dark-card {
+    @apply bg-secondary/50 backdrop-blur-sm border border-white/5 shadow-lg;
+  }
+  
+  .dark-glassmorphism {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-lg;
   }
 }
