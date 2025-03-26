@@ -80,7 +80,7 @@ const CommunitySection: React.FC = () => {
               asChild
             >
               <a href="https://chat.whatsapp.com/JTLA1aII7hsJtYyzxomv6q" target="_blank" rel="noopener noreferrer">
-                <span className="relative z-10">Únete gratis a la comunidad</span>
+                <span className="relative z-10">Quiero unirme!</span>
                 <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#9747FF] via-white/10 to-[#4F7FFF] blur-sm"></div>
                 <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#9747FF] via-white/20 to-[#4F7FFF] translate-x-[-100%] animate-shine"></div>
               </a>

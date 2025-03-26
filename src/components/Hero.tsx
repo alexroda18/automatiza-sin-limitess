@@ -65,9 +65,9 @@ const Hero: React.FC = () => {
               Automatizaciones únicas para{' '}
               <div className="h-[72px] mt-2">
                 <span className="bg-gradient-to-r from-[#4F7FFF] via-[#9747FF] to-[#4F7FFF] bg-clip-text text-transparent whitespace-nowrap">
-                  {currentText}
+                {currentText}
                   <span className="animate-pulse text-white">|</span>
-                </span>
+              </span>
               </div>
             </h1>
             
@@ -140,7 +140,7 @@ const Hero: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-screen-xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Con estas automatizaciones podrás...
+              Con estas automatizaciones aprenderás a...
             </h2>
           </div>
 

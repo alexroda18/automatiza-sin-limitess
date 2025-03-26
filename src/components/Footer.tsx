@@ -77,18 +77,6 @@ const Footer: React.FC = () => {
                     <ArrowUpRight size={12} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </li>
-                <li>
-                  <a href="/terminos" className="text-gray-400 hover:text-white transition-colors font-light text-sm flex items-center group">
-                    <span>Términos y condiciones</span>
-                    <ArrowUpRight size={12} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                </li>
-                <li>
-                  <a href="/privacidad" className="text-gray-400 hover:text-white transition-colors font-light text-sm flex items-center group">
-                    <span>Política de privacidad</span>
-                    <ArrowUpRight size={12} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                </li>
               </ul>
             </div>
             
