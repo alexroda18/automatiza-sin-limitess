@@ -71,18 +71,44 @@ const Index: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {automationData.map((automation, index) => (
-                <AutomationCard
-                  key={index}
-                  title={automation.title}
-                  description={automation.description}
-                  image={automation.image}
-                  price={automation.price}
-                  discount={automation.discount}
-                  link={automation.link}
-                  delay={(index + 1) * 100}
-                />
-              ))}
+              <AutomationCard
+                title="Convierte un video en contenido para tus redes"
+                description="Transforma automáticamente tus videos largos en piezas de contenido optimizadas para cada red social."
+                price="0€"
+                originalPrice="45€"
+                isFree={true}
+                image="/images/automation-5.jpg"
+              />
+              <AutomationCard
+                title="Automatización de Redes Sociales"
+                description="Programa y gestiona tus publicaciones en múltiples redes sociales desde una única plataforma."
+                price="239€"
+                originalPrice="299€"
+                discount={true}
+                image="/images/automation-1.jpg"
+              />
+              <AutomationCard
+                title="Automatización de Procesos de RRHH"
+                description="Automatiza procesos de selección, onboarding y gestión de empleados."
+                price="319€"
+                originalPrice="399€"
+                discount={true}
+                image="/images/automation-3.jpg"
+              />
+              <AutomationCard
+                title="Automatización de Email Marketing"
+                description="Crea y automatiza campañas de email marketing personalizadas para tu audiencia."
+                price="199€"
+                comingSoon={true}
+                image="/images/automation-2.jpg"
+              />
+              <AutomationCard
+                title="Automatización de Ventas"
+                description="Automatiza el proceso de ventas, desde la captación de leads hasta el cierre."
+                price="249€"
+                comingSoon={true}
+                image="/images/automation-4.jpg"
+              />
             </div>
           </div>
         </div>

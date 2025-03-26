@@ -14,7 +14,6 @@ const typewriterPhrases = [
   "generar ingresos",
   "reducir costes",
   "ahorrar tiempo",
-  "reducir recursos"
 ];
 
 const Hero: React.FC = () => {
@@ -99,7 +98,7 @@ const Hero: React.FC = () => {
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=64&h=64&q=80" className="w-10 h-10 rounded-full border-2 border-[#1E1E4A]" alt="User" />
               </div>
               <div className="text-sm text-gray-400 font-medium text-center md:text-left">
-                Más de 20 empresas y 150 personas ya confían en nosotros.
+                Más de 20 empresas<br className="hidden sm:block md:hidden" /> y 150 personas<br className="hidden sm:block md:hidden" /> ya confían en nosotros.
               </div>
             </div>
           </div>
@@ -208,7 +207,7 @@ const Hero: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 text-center">Automatizar contenido</h3>
               <p className="text-gray-400 leading-relaxed text-center">
-              Aprende a generar y distribuir contenido automáticamente, ahorrando tiempo y maximizando el impacto de tus publicaciones en múltiples plataformas.
+              Aprende a extraer, generar y distribuir contenido automáticamente, ahorrando tiempo y maximizando el impacto de tus publicaciones en múltiples plataformas.
               </p>
             </div>
           </div>

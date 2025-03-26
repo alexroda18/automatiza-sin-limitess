@@ -5,7 +5,8 @@ import {
   MessageSquare,
   ArrowUpRight,
   Instagram,
-  Youtube
+  Youtube,
+  Facebook
 } from 'lucide-react';
 import { FaTiktok } from 'react-icons/fa';
 
@@ -35,7 +36,7 @@ const Footer: React.FC = () => {
                 <a href="http://linkedin.com/in/alexmroda" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
                   <Linkedin size={14} />
                 </a>
-                <a href="mailto:alex@cosstudio.co" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
+                <a href="mailto:soporte@automatizasinlimites.com" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
                   <Mail size={14} />
                 </a>
                 <a href="https://chat.whatsapp.com/JTLA1aII7hsJtYyzxomv6q" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
@@ -50,6 +51,14 @@ const Footer: React.FC = () => {
                 <a href="https://www.youtube.com/@automatizasinlimites" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
                   <Youtube size={14} />
                 </a>
+                <a
+                  href="https://www.facebook.com/automatizasinlimites"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors"
+                >
+                  <Facebook className="w-5 h-5" />
+                </a>
               </div>
             </div>
             
@@ -63,8 +72,8 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#comunidad" className="text-gray-400 hover:text-white transition-colors font-light text-sm flex items-center group">
-                    <span>Comunidad WhatsApp</span>
+                  <a href="https://chat.whatsapp.com/JTLA1aII7hsJtYyzxomv6q" className="text-gray-400 hover:text-white transition-colors font-light text-sm flex items-center group">
+                    <span>Únete a la comunidad</span>
                     <ArrowUpRight size={12} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </li>
@@ -80,12 +89,6 @@ const Footer: React.FC = () => {
                     <ArrowUpRight size={12} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </li>
-                <li>
-                  <a href="/cookies" className="text-gray-400 hover:text-white transition-colors font-light text-sm flex items-center group">
-                    <span>Cookies</span>
-                    <ArrowUpRight size={12} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                </li>
               </ul>
             </div>
             
@@ -94,7 +97,7 @@ const Footer: React.FC = () => {
                 <p className="text-sm text-gray-300 font-light">
                   ¿Necesitas una automatización personalizada? Podemos desarrollarla específicamente para tu negocio.
                 </p>
-                <a href="mailto:alex@cosstudio.co" className="inline-flex items-center gap-1 mt-2 text-sm text-[#4F7FFF] hover:text-[#9747FF] transition-colors">
+                <a href="mailto:soporte@automatizasinlimites.com" className="inline-flex items-center gap-1 mt-2 text-sm text-[#4F7FFF] hover:text-[#9747FF] transition-colors">
                   Contacta con nosotros
                   <ArrowUpRight size={14} />
                 </a>

@@ -32,9 +32,9 @@ const Benefit: React.FC<BenefitProps> = ({ icon: Icon, title, delay }) => {
 
 const CommunitySection: React.FC = () => {
   const benefits = [
-    { icon: Tag, title: "Descuentos exclusivos en automatizaciones" },
-    { icon: BookOpen, title: "Acceso a masterclasses" },
-    { icon: Users, title: "Sesiones en vivo con expertos" },
+    { icon: Tag, title: "Descuentos exclusivos en nuevos lanzamientos" },
+    { icon: BookOpen, title: "Acceso gratuito a automatizaciones" },
+    { icon: Users, title: "Acceso a masterclasses" },
     { icon: Headphones, title: "Soporte técnico disponible" },
     { icon: Clock, title: "Contenido nuevo semanal" },
     { icon: Sparkles, title: "Networking con otros miembros" }
@@ -56,14 +56,11 @@ const CommunitySection: React.FC = () => {
             <span className="bg-gradient-to-r from-[#4F7FFF] to-[#9747FF] bg-clip-text text-transparent">
               gratis
             </span>
-            {' '}a la comunidad y{' '}<br />
+            {' '}a la comunidad y accede a {' '}<br />
             <span className="bg-gradient-to-r from-[#4F7FFF] to-[#9747FF] bg-clip-text text-transparent">
-              accede a ventajas exclusivas
+              ventajas exclusivas
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Forma parte de una comunidad de emprendedores y profesionales que están transformando sus negocios con automatizaciones.
-          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="space-y-12 flex flex-col items-center md:items-start">
@@ -83,7 +80,7 @@ const CommunitySection: React.FC = () => {
               asChild
             >
               <a href="https://chat.whatsapp.com/JTLA1aII7hsJtYyzxomv6q" target="_blank" rel="noopener noreferrer">
-                <span className="relative z-10">Únete al grupo</span>
+                <span className="relative z-10">Únete gratis a la comunidad</span>
                 <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#9747FF] via-white/10 to-[#4F7FFF] blur-sm"></div>
                 <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#9747FF] via-white/20 to-[#4F7FFF] translate-x-[-100%] animate-shine"></div>
               </a>
