@@ -8,8 +8,12 @@ interface AutomationCardProps {
   originalPrice?: string;
   discount?: boolean;
   comingSoon?: boolean;
+  comingSoonDate?: string;
   isFree?: boolean;
+  freeForMembers?: boolean;
   image: string;
+  link?: string;
+  customButtonText?: string;
 }
 
 const AutomationCard: React.FC<AutomationCardProps> = ({
@@ -19,8 +23,12 @@ const AutomationCard: React.FC<AutomationCardProps> = ({
   originalPrice,
   discount,
   comingSoon,
+  comingSoonDate,
   isFree,
-  image
+  freeForMembers,
+  image,
+  link,
+  customButtonText
 }) => {
   return (
     <div className="relative bg-[#0A0A1B] border border-[#1E1E4A] rounded-2xl overflow-hidden group flex flex-col">
@@ -29,7 +37,12 @@ const AutomationCard: React.FC<AutomationCardProps> = ({
           20% descuento para miembros
         </div>
       )}
-      {comingSoon && (
+      {comingSoonDate && (
+        <div className="absolute top-3 right-3 z-10 bg-gradient-to-r from-[#FF6B6B] to-[#FF8E8E] text-white text-xs font-medium px-3 py-1.5 rounded-full">
+          Disponible el {comingSoonDate}
+        </div>
+      )}
+      {comingSoon && !comingSoonDate && (
         <div className="absolute top-3 right-3 z-10 bg-gradient-to-r from-[#FF6B6B] to-[#FF8E8E] text-white text-xs font-medium px-3 py-1.5 rounded-full">
           Próximamente
         </div>
@@ -37,6 +50,11 @@ const AutomationCard: React.FC<AutomationCardProps> = ({
       {isFree && (
         <div className="absolute top-3 right-3 z-10 bg-gradient-to-r from-[#22c55e] to-[#15803d] text-white text-xs font-medium px-3 py-1.5 rounded-full">
           GRATIS
+        </div>
+      )}
+      {freeForMembers && (
+        <div className="absolute top-3 right-3 z-10 bg-gradient-to-r from-[#22c55e] to-[#15803d] text-white text-xs font-medium px-3 py-1.5 rounded-full">
+          Gratis para miembros
         </div>
       )}
       <div className="relative h-48 overflow-hidden">
@@ -47,7 +65,8 @@ const AutomationCard: React.FC<AutomationCardProps> = ({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       </div>
-      <div className="p-6 flex flex-col flex-grow">
+      
+      <div className="p-6">
         <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
         <p className="text-gray-400 text-sm mb-4 flex-grow">{description}</p>
         <div className="flex items-center justify-between mt-auto">
@@ -58,10 +77,12 @@ const AutomationCard: React.FC<AutomationCardProps> = ({
             <span className="text-white font-semibold">{price}</span>
           </div>
           <a
-            href={comingSoon ? "mailto:soporte@automatizasinlimites.com" : "#"}
+            href={link || (comingSoon ? "mailto:soporte@automatizasinlimites.com" : "#")}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center text-[#4F7FFF] hover:text-[#9747FF] transition-colors"
           >
-            {comingSoon ? "Dame acceso anticipado" : "Ver detalles"}
+            {customButtonText || (comingSoon ? "Dame acceso anticipado" : "Ver detalles")}
             <ArrowUpRight className="w-4 h-4 ml-1" />
           </a>
         </div>

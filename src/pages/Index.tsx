@@ -74,40 +74,29 @@ const Index: React.FC = () => {
               <AutomationCard
                 title="Convierte un video en contenido para tus redes"
                 description="Transforma automáticamente tus videos largos en piezas de contenido optimizadas para cada red social."
-                price="0€"
-                originalPrice="45€"
-                isFree={true}
-                image="/images/automation-5.jpg"
+                price="49€"
+                isFree={false}
+                image="/images/video-to-social.jpg.png"
+                link="https://cosstudio.thrivecart.com/video-a-redes-sociales/"
+                freeForMembers={true}
               />
               <AutomationCard
-                title="Automatización de Redes Sociales"
-                description="Programa y gestiona tus publicaciones en múltiples redes sociales desde una única plataforma."
-                price="239€"
-                originalPrice="299€"
-                discount={true}
-                image="/images/automation-1.jpg"
+                title="Aumenta tu reputación de empresa o marca personal"
+                description="Esta automatización evalúa y convierte diariamente noticias de sectores específicos y las transforma en contenido para tus redes sociales."
+                price="69€"
+                image="/images/de-noticias-a-redes-sociales.png"
+                link="https://subscribepage.io/automatizasinlimites"
+                comingSoonDate="04/04"
+                customButtonText="Unirme a la lista de espera"
               />
               <AutomationCard
-                title="Automatización de Procesos de RRHH"
-                description="Automatiza procesos de selección, onboarding y gestión de empleados."
-                price="319€"
-                originalPrice="399€"
-                discount={true}
-                image="/images/automation-3.jpg"
-              />
-              <AutomationCard
-                title="Automatización de Email Marketing"
-                description="Crea y automatiza campañas de email marketing personalizadas para tu audiencia."
-                price="199€"
-                comingSoon={true}
-                image="/images/automation-2.jpg"
-              />
-              <AutomationCard
-                title="Automatización de Ventas"
-                description="Automatiza el proceso de ventas, desde la captación de leads hasta el cierre."
-                price="249€"
-                comingSoon={true}
-                image="/images/automation-4.jpg"
+                title="De una reunión, genera una oferta para el cliente y notas de coaching"
+                description="Genera una oferta para un cliente basada en el análisis de tu reunión + acciones para mejorar tus skills en ventas + notificacion en Slack y ClickUp."
+                price="69€"
+                image="/images/de-reunion-a-propuesta-y-coachin-notes.png"
+                link="https://subscribepage.io/automatizasinlimites"
+                comingSoonDate="07/04"
+                customButtonText="Unirme a la lista de espera"
               />
             </div>
           </div>
