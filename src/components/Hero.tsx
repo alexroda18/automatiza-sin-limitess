@@ -87,7 +87,13 @@ const Hero: React.FC = () => {
                 className="px-8 py-4 bg-[#12123A] text-white transition-all hover:bg-[#1E1E4A] active:scale-[0.98] hover:-translate-y-0.5 border border-[#4F7FFF]/30 font-medium uppercase"
                 asChild
               >
-                <a href="#comunidad">Únete a la comunidad</a>
+                <a 
+                  href="https://subscribepage.io/automatizasinlimites"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Únete a la comunidad
+                </a>
               </Button>
             </div>
             

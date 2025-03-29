@@ -76,13 +76,15 @@ const CommunitySection: React.FC = () => {
             </div>
 
             <Button 
-              className="group relative inline-flex items-center gap-2 px-12 py-6 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white rounded-lg transition-all hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase overflow-hidden text-lg"
+              className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
               asChild
             >
-              <a href="https://chat.whatsapp.com/JTLA1aII7hsJtYyzxomv6q" target="_blank" rel="noopener noreferrer">
-                <span className="relative z-10">Quiero unirme!</span>
-                <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#9747FF] via-white/10 to-[#4F7FFF] blur-sm"></div>
-                <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#9747FF] via-white/20 to-[#4F7FFF] translate-x-[-100%] animate-shine"></div>
+              <a 
+                href="https://subscribepage.io/automatizasinlimites"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Quiero unirme
               </a>
             </Button>
           </div>
@@ -105,20 +107,6 @@ const CommunitySection: React.FC = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes shine {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-        .animate-shine {
-          animation: shine 3s infinite linear;
-        }
-      `}</style>
     </section>
   );
 };

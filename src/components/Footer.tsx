@@ -36,10 +36,15 @@ const Footer: React.FC = () => {
                 <a href="http://linkedin.com/in/alexmroda" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
                   <Linkedin size={14} />
                 </a>
-                <a href="mailto:soporte@automatizasinlimites.com" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
+                <a href="mailto:alex@cosstudio.co" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
                   <Mail size={14} />
                 </a>
-                <a href="https://chat.whatsapp.com/JTLA1aII7hsJtYyzxomv6q" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
+                <a 
+                  href="https://subscribepage.io/automatizasinlimites" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors"
+                >
                   <MessageSquare size={14} />
                 </a>
                 <a href="http://www.instagram.com/automatizasinlimites" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
