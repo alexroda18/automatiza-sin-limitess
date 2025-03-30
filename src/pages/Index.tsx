@@ -83,7 +83,7 @@ const Index: React.FC = () => {
               <AutomationCard
                 title="Aumenta tu reputación de empresa o marca personal"
                 description="Esta automatización evalúa y convierte diariamente noticias de sectores específicos y las transforma en contenido para tus redes sociales."
-                price="69€"
+                price="49€"
                 image="/images/de-noticias-a-redes-sociales.png"
                 link="https://subscribepage.io/automatizasinlimites"
                 comingSoonDate="04/04"
@@ -91,11 +91,38 @@ const Index: React.FC = () => {
               />
               <AutomationCard
                 title="De una reunión, genera una oferta para el cliente y notas de coaching"
-                description="Genera una oferta para un cliente basada en el análisis de tu reunión + acciones para mejorar tus skills en ventas + notificacion en Slack y ClickUp."
-                price="69€"
+                description="Esta automatización generará una oferta para un cliente potencial basada en el análisis de tu reunión, junto con acciones para mejorar tus habilidades en ventas, notificaciones en Slack y una tarea en ClickUp."
+                price="49€"
                 image="/images/de-reunion-a-propuesta-y-coachin-notes.png"
                 link="https://subscribepage.io/automatizasinlimites"
                 comingSoonDate="07/04"
+                customButtonText="Unirme a la lista de espera"
+              />
+              <AutomationCard
+                title="Encuentra leads cercanos, analiza su web y envíales un correo personalizado"
+                description="Esta automatización genera un listado de clientes potenciales cercanos, analiza sus páginas web y crea un correo personalizado para ofrecerles tus servicios de forma estratégica y sin esfuerzo."
+                price="49€"
+                image="/images/encuentra-leads.png"
+                link="https://subscribepage.io/automatizasinlimites"
+                comingSoonDate="11/04"
+                customButtonText="Unirme a la lista de espera"
+              />
+              <AutomationCard
+                title="Obtén y filtra contenido viral de redes sociales como TikTok"
+                description="Con esta automatización recibirás periódicamente un listado de contenido en tendencia de redes como TikTok, listo para inspirarte, replicar ideas y aumentar el engagement de tu marca."
+                price="49€"
+                image="/images/factura-automatica.png"
+                link="https://subscribepage.io/automatizasinlimites"
+                comingSoonDate="14/04"
+                customButtonText="Unirme a la lista de espera"
+              />
+              <AutomationCard
+                title="Genera facturas automáticamente y envíalas al cliente"
+                description="Esta automatización procesa la información que le proporciones, genera una factura en segundos y la envía automáticamente al correo del cliente. Ahorra tiempo y olvídate del papeleo."
+                price="49€"
+                image="/images/tiktok-scraper.png"
+                link="https://subscribepage.io/automatizasinlimites"
+                comingSoonDate="18/04"
                 customButtonText="Unirme a la lista de espera"
               />
             </div>
