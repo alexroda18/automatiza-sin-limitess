@@ -64,9 +64,9 @@ const Index: React.FC = () => {
         
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-screen-xl mx-auto">
-            <div className="flex flex-col items-center justify-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white opacity-0 animate-fadeIn text-center">
-                Catálogo de automatizaciones
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Cursos de Automatización
               </h2>
             </div>
             
