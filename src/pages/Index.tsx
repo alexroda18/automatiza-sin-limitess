@@ -90,8 +90,8 @@ const Index: React.FC = () => {
                 customButtonText="Unirme a la lista de espera"
               />
               <AutomationCard
-                title="De una reunión, genera una oferta para el cliente y notas de coaching"
-                description="Esta automatización generará una oferta para un cliente potencial basada en el análisis de tu reunión, junto con acciones para mejorar tus habilidades en ventas, notificaciones en Slack y una tarea en ClickUp."
+                title="De una reunión, genera una oferta estructurada para el cliente y cierra la venta"
+                description="Esta automatización generará una oferta para un cliente potencial basada en el análisis de tu reunión y sus necesidades. También te enviará una notificación en Slack y creará una tarea en ClickUp para revisar la oferta."
                 price="49€"
                 image="/images/de-reunion-a-propuesta-y-coachin-notes.png"
                 link="https://subscribepage.io/automatizasinlimites"
