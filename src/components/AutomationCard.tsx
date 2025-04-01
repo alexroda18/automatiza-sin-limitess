@@ -38,8 +38,8 @@ const AutomationCard: React.FC<AutomationCardProps> = ({
         </div>
       )}
       {comingSoonDate && (
-        <div className="absolute top-3 right-3 z-10 bg-gradient-to-r from-[#FF6B6B] to-[#FF8E8E] text-white text-xs font-medium px-3 py-1.5 rounded-full">
-          Próximamente
+        <div className="absolute top-3 right-3 z-10 bg-gradient-to-r from-[#22c55e] to-[#15803d] text-white text-xs font-medium px-3 py-1.5 rounded-full">
+          25% descuento para miembros
         </div>
       )}
       {comingSoon && !comingSoonDate && (
