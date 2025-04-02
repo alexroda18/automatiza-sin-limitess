@@ -81,13 +81,13 @@ const Index: React.FC = () => {
                 freeForMembers={true}
               />
               <AutomationCard
-                title="Aumenta tu reputación de empresa o marca personal"
+                title="Convierte noticias relevantes en contenido diario para tus redes sociales"
                 description="Esta automatización evalúa y convierte diariamente noticias de sectores específicos y las transforma en contenido para tus redes sociales."
                 price="49€"
-                image="/images/de-noticias-a-redes-sociales.png"
-                link="https://subscribepage.io/automatizasinlimites"
+                image="/images/2_automatizacion.png"
+                link="https://cosstudio.thrivecart.com/convierte-noticias-en-contenido/"
+                customButtonText="Comprar ahora"
                 comingSoonDate="04/04"
-                customButtonText="Unirme a la lista de espera"
               />
               <AutomationCard
                 title="De una reunión, genera una oferta estructurada para el cliente y cierra la venta"

@@ -39,7 +39,7 @@ const AutomationCard: React.FC<AutomationCardProps> = ({
       )}
       {comingSoonDate && (
         <div className="absolute top-3 right-3 z-10 bg-gradient-to-r from-[#22c55e] to-[#15803d] text-white text-xs font-medium px-3 py-1.5 rounded-full">
-          25% descuento para miembros
+          50% descuento para miembros
         </div>
       )}
       {comingSoon && !comingSoonDate && (
@@ -63,7 +63,7 @@ const AutomationCard: React.FC<AutomationCardProps> = ({
           alt={title}
           className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
         />
-        {comingSoonDate && (
+        {comingSoonDate && !link.includes('thrivecart.com') && (
           <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
             <div className="text-center">
               <p className="text-white text-lg font-medium mb-2">Disponible el {comingSoonDate}</p>
