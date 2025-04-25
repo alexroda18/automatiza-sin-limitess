@@ -66,7 +66,7 @@ const Index: React.FC = () => {
           <div className="max-w-screen-xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Cursos de Automatización
+                Cursos disponibles
               </h2>
             </div>
             

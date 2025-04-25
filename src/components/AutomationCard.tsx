@@ -66,7 +66,7 @@ const AutomationCard: React.FC<AutomationCardProps> = ({
         {comingSoonDate && !link.includes('thrivecart.com') && (
           <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
             <div className="text-center">
-              <p className="text-white text-lg font-medium mb-2">Disponible el {comingSoonDate}</p>
+              <p className="text-white text-lg font-medium mb-2">Próximamente</p>
               <p className="text-[#c3c5ca] text-sm">
                 Descuento de lanzamiento<br />disponible para miembros
               </p>
