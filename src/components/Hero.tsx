@@ -349,14 +349,14 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Sección de Servicios */}
-      <section className="relative bg-[#0A0A14] py-28 mt-20">
+      <section className="relative bg-[#0A0A14] py-16 mt-12">
         <div className="absolute inset-0 -z-10">
           <div className="absolute -top-20 left-10 w-72 h-72 bg-gradient-to-br from-[#4F7FFF] to-[#9747FF] opacity-10 blur-[160px]" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tr from-[#9747FF] to-[#4F7FFF] opacity-10 blur-[180px]" />
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 max-w-screen-xl">
-          <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               Qué hacemos y para quién
             </h2>
@@ -429,14 +429,14 @@ const Hero: React.FC = () => {
       </section>
 
       {/* Sección de Servicios Detallados */}
-      <section id="nuestros-servicios" className="relative bg-[#0A0A14] py-28">
+      <section id="nuestros-servicios" className="relative bg-[#0A0A14] py-16">
         <div className="absolute inset-0 -z-10">
           <div className="absolute -top-20 left-10 w-72 h-72 bg-gradient-to-br from-[#4F7FFF] to-[#9747FF] opacity-10 blur-[160px]" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tr from-[#9747FF] to-[#4F7FFF] opacity-10 blur-[180px]" />
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 max-w-screen-xl">
-          <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               Nuestros servicios
             </h2>
@@ -461,9 +461,23 @@ const Hero: React.FC = () => {
                     Analizamos tu negocio, detectamos cuellos de botella y diseñamos un plan claro de automatizaciones y agentes de IA para implementar por fases.
                   </p>
                 </div>
-                <div className="mt-auto pt-4">
+                <div className="mt-auto pt-4 space-y-4">
                   <div className="rounded-2xl border border-white/5 bg-[#0D0D27]/70 px-3 py-3 text-sm leading-relaxed text-white">
                     <span className="text-white font-medium">Para quién:</span> negocios que quieren saber qué automatizar primero y cómo obtener el mejor ROI.
+                  </div>
+                  <div className="flex justify-center">
+                    <Button 
+                      className="w-auto px-6 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] border-none font-medium"
+                      asChild
+                    >
+                      <a 
+                        href="https://subscribepage.io/automatizasinlimites"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Agendar una llamada
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -484,9 +498,23 @@ const Hero: React.FC = () => {
                     Creamos automatizaciones hechas a medida para tu negocio que ahorran tiempo, reducen tareas manuales y mejoran la eficiencia.
                   </p>
                 </div>
-                <div className="mt-auto pt-4">
+                <div className="mt-auto pt-4 space-y-4">
                   <div className="rounded-2xl border border-white/5 bg-[#0D0D27]/70 px-3 py-3 text-sm leading-relaxed text-white">
                     <span className="text-white font-medium">Para quién:</span> equipos que quieren automatizar procesos clave y mejorar la eficiencia.
+                  </div>
+                  <div className="flex justify-center">
+                    <Button 
+                      className="w-auto px-6 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] border-none font-medium"
+                      asChild
+                    >
+                      <a 
+                        href="https://subscribepage.io/automatizasinlimites"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Agendar una llamada
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -507,9 +535,23 @@ const Hero: React.FC = () => {
                     Creamos agentes de IA que responden a clientes, procesan información, clasifican datos, gestionan tareas y trabajan 24/7 sin supervisión.
                   </p>
                 </div>
-                <div className="mt-auto pt-4">
+                <div className="mt-auto pt-4 space-y-4">
                   <div className="rounded-2xl border border-white/5 bg-[#0D0D27]/70 px-3 py-3 text-sm leading-relaxed text-white">
                     <span className="text-white font-medium">Para quién:</span> negocios que quieren dar un salto en eficiencia y reducir la carga de trabajo de su equipo.
+                  </div>
+                  <div className="flex justify-center">
+                    <Button 
+                      className="w-auto px-6 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] border-none font-medium"
+                      asChild
+                    >
+                      <a 
+                        href="https://subscribepage.io/automatizasinlimites"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Agendar una llamada
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -530,39 +572,37 @@ const Hero: React.FC = () => {
                     Nos encargamos del monitoreo, resolución de incidencias y mejoras mensuales para que tus automatizaciones y agentes de IA sigan funcionando sin problemas.
                   </p>
                 </div>
-                <div className="mt-auto pt-4">
+                <div className="mt-auto pt-4 space-y-4">
                   <div className="rounded-2xl border border-white/5 bg-[#0D0D27]/70 px-3 py-3 text-sm leading-relaxed text-white">
                     <span className="text-white font-medium">Para quién:</span> negocios que quieren estabilidad, soporte técnico y evolución continua de sus automatizaciones y agentes de IA.
+                  </div>
+                  <div className="flex justify-center">
+                    <Button 
+                      className="w-auto px-6 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] border-none font-medium"
+                      asChild
+                    >
+                      <a 
+                        href="https://subscribepage.io/automatizasinlimites"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Agendar una llamada
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* CTA Button */}
-          <div className="mt-16 text-center">
-            <Button 
-              className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase text-lg"
-              asChild
-            >
-              <a 
-                href="https://subscribepage.io/automatizasinlimites"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Agendar una llamada de 20 minutos gratuita
-              </a>
-            </Button>
-          </div>
         </div>
       </section>
 
       {/* Casos de uso reales */}
-      <section id="casos-de-uso" className="py-24 bg-[#0A0A14] relative">
+      <section id="casos-de-uso" className="py-14 bg-[#0A0A14] relative">
 
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-screen-xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Casos de uso reales
               </h2>
@@ -712,14 +752,14 @@ const Hero: React.FC = () => {
       </section>
 
       {/* Sección Cómo trabajamos */}
-      <section id="como-trabajamos" className="relative bg-[#0A0A14] py-28">
+      <section id="como-trabajamos" className="relative bg-[#0A0A14] py-16">
         <div className="absolute inset-0 -z-10">
           <div className="absolute -top-20 left-10 w-72 h-72 bg-gradient-to-br from-[#4F7FFF] to-[#9747FF] opacity-10 blur-[160px]" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tr from-[#9747FF] to-[#4F7FFF] opacity-10 blur-[180px]" />
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 max-w-screen-xl">
-          <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               Cómo trabajamos
             </h2>
@@ -797,7 +837,7 @@ const Hero: React.FC = () => {
       </section>
 
       {/* Sección de Testimonios */}
-      <section id="nuestros-clientes" className="relative bg-[#0A0A14] py-20">
+      <section id="nuestros-clientes" className="relative bg-[#0A0A14] py-12">
         <div className="absolute inset-0 overflow-hidden -z-10">
           <div className="absolute -top-24 right-0 w-96 h-96 bg-gradient-to-br from-[#9747FF] to-[#4F7FFF] rounded-full opacity-10 blur-3xl"></div>
           <div className="absolute top-1/3 left-0 w-80 h-80 bg-gradient-to-tr from-[#9747FF] to-[#4F7FFF] rounded-full opacity-5 blur-3xl"></div>
@@ -896,14 +936,14 @@ const Hero: React.FC = () => {
       
 
       {/* Sección Por qué confiar en nosotros */}
-      <section className="relative bg-[#0A0A14] py-28">
+      <section className="relative bg-[#0A0A14] py-16">
         <div className="absolute inset-0 -z-10">
           <div className="absolute -top-20 left-10 w-72 h-72 bg-gradient-to-br from-[#4F7FFF] to-[#9747FF] opacity-10 blur-[160px]" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tr from-[#9747FF] to-[#4F7FFF] opacity-10 blur-[180px]" />
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 max-w-screen-xl">
-          <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               ¿Por qué confiar en nosotros?
             </h2>
@@ -1034,7 +1074,7 @@ const Hero: React.FC = () => {
       </section>
 
       {/* Sección de Preguntas Frecuentes */}
-      <section className="relative bg-[#0A0A14] py-20">
+      <section className="relative bg-[#0A0A14] py-12">
         <div className="absolute inset-0 overflow-hidden -z-10">
           <div className="absolute -top-24 right-0 w-96 h-96 bg-gradient-to-br from-[#9747FF] to-[#4F7FFF] rounded-full opacity-10 blur-3xl"></div>
           <div className="absolute top-1/3 left-0 w-80 h-80 bg-gradient-to-tr from-[#9747FF] to-[#4F7FFF] rounded-full opacity-5 blur-3xl"></div>
@@ -1259,7 +1299,7 @@ const Hero: React.FC = () => {
       </section>
 
       {/* Sección CTA Final */}
-      <section className="relative bg-[#0A0A14] py-32">
+      <section className="relative bg-[#0A0A14] py-16">
         <div className="absolute inset-0 -z-10">
           <div className="absolute -top-20 left-10 w-72 h-72 bg-gradient-to-br from-[#4F7FFF] to-[#9747FF] opacity-10 blur-[160px]" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tr from-[#9747FF] to-[#4F7FFF] opacity-10 blur-[180px]" />
