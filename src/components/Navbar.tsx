@@ -25,14 +25,20 @@ const Navbar: React.FC = () => {
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
-              <a href="#automatizaciones" className="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Automatizaciones
+              <a href="#nuestros-servicios" className="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Nuestros servicios
               </a>
-              <a href="#comunidad" className="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Comunidad
+              <a href="#casos-de-uso" className="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Casos de uso reales
               </a>
-              <a href="mailto:soporte@automatizasinlimites.com" className="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Contacto
+              <a href="#como-trabajamos" className="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Cómo trabajamos
+              </a>
+              <a href="#nuestros-clientes" className="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Nuestros clientes
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Agendar una cita
               </a>
             </div>
           </div>

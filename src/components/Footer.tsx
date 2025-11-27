@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                 <a href="http://linkedin.com/in/alexmroda" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
                   <Linkedin size={14} />
                 </a>
-                <a href="mailto:alex@cosstudio.co" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
+                <a href="mailto:soporte@automatizasinlimites.com" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
                   <Mail size={14} />
                 </a>
                 <a 
@@ -47,17 +47,17 @@ const Footer: React.FC = () => {
                 >
                   <MessageSquare size={14} />
                 </a>
-                <a href="http://www.instagram.com/automatizasinlimites" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
+                <a href="http://www.instagram.com/alexmroda" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
                   <Instagram size={14} />
                 </a>
-                <a href="http://www.tiktok.com/@automatizasinlimites" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
+                <a href="http://www.tiktok.com/@alexmroda" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
                   <FaTiktok size={14} />
                 </a>
-                <a href="https://www.youtube.com/@automatizasinlimites" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
+                <a href="https://www.youtube.com/@alexmroda" className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors">
                   <Youtube size={14} />
                 </a>
                 <a
-                  href="https://www.facebook.com/automatizasinlimites"
+                  href="https://www.facebook.com/alexmroda"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors"
@@ -67,31 +67,13 @@ const Footer: React.FC = () => {
               </div>
             </div>
             
-            <div className="md:col-span-3">
-              <h3 className="text-base font-medium mb-4 text-white">Enlaces rápidos</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#automatizaciones" className="text-gray-400 hover:text-white transition-colors font-light text-sm flex items-center group">
-                    <span>Automatizaciones</span>
-                    <ArrowUpRight size={12} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://chat.whatsapp.com/JTLA1aII7hsJtYyzxomv6q" className="text-gray-400 hover:text-white transition-colors font-light text-sm flex items-center group">
-                    <span>Únete a la comunidad</span>
-                    <ArrowUpRight size={12} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="md:col-span-4">
-              <div className="mt-6 p-4 bg-[#0A0A1B] rounded-lg border border-[#1E1E4A] hover:border-[#4F7FFF]/50 transition-colors">
+            <div className="md:col-span-7">
+              <div className="mt-0 p-2 bg-[#0A0A1B] rounded-lg border border-[#1E1E4A] hover:border-[#4F7FFF]/50 transition-colors">
                 <p className="text-sm text-gray-300 font-light">
-                  ¿Necesitas una automatización personalizada? Podemos desarrollarla específicamente para tu negocio.
+                ¿Todavía no formas parte de nuestra newsletter gratuita semanal? Únete y recibirás un resumen con lo mejor de la IA y las herramientas digitales explicado de forma simple, tips prácticos y material exclusivo que no comparto en redes.
                 </p>
-                <a href="mailto:soporte@automatizasinlimites.com" className="inline-flex items-center gap-1 mt-2 text-sm text-[#4F7FFF] hover:text-[#9747FF] transition-colors">
-                  Contacta con nosotros
+                <a href="https://subscribepage.io/automatizasinlimites" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-2 text-sm text-[#4F7FFF] hover:text-[#9747FF] transition-colors">
+                  Únete aquí
                   <ArrowUpRight size={14} />
                 </a>
               </div>
