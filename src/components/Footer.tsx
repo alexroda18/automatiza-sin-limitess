@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                 <p className="text-sm text-gray-300 font-light">
                 ¿Todavía no formas parte de nuestra newsletter gratuita semanal? Únete y recibirás un resumen con lo mejor de la IA y las herramientas digitales explicado de forma simple, tips prácticos y material exclusivo que no comparto en redes.
                 </p>
-                <a href="https://subscribepage.io/automatizasinlimites" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-2 text-sm text-[#4F7FFF] hover:text-[#9747FF] transition-colors">
+                <a href="https://subscribepage.io/alexmroda" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-2 text-sm text-[#4F7FFF] hover:text-[#9747FF] transition-colors">
                   Únete aquí
                   <ArrowUpRight size={14} />
                 </a>

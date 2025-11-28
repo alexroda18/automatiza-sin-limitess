@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
               <a href="#nuestros-clientes" className="text-gray-400 hover:text-white px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium transition-colors">
                 Clientes
               </a>
-              <a href="https://calendly.com/automatizasinlimites/30min" className="text-gray-400 hover:text-white px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium transition-colors">
+              <a href="https://calendly.com/automatizasinlimites/30min" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium transition-colors">
                 Agendar una llamada
               </a>
             </div>

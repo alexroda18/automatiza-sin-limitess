@@ -239,6 +239,7 @@ const Hero: React.FC = () => {
   const [isServicesVisible, setIsServicesVisible] = useState(false);
   const servicesSectionRef = React.useRef<HTMLElement | null>(null);
   const [activeServiceTab, setActiveServiceTab] = useState("automation");
+  const flipCardRefs = React.useRef<(HTMLDivElement | null)[]>([]);
   
   useEffect(() => {
     // Calcular la altura máxima de todos los casos de uso después de que se rendericen
@@ -274,6 +275,52 @@ const Hero: React.FC = () => {
     }
 
     return () => observer.disconnect();
+  }, []);
+
+  // Intersection Observer para voltear las cajas automáticamente en móvil al hacer scroll
+  useEffect(() => {
+    // Solo en móvil (ancho menor a 768px)
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) return;
+
+    const observers: IntersectionObserver[] = [];
+
+    flipCardRefs.current.forEach((ref, index) => {
+      if (!ref) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Cuando la caja entra en el viewport, volterla
+              setIsFlipped((prev) => {
+                const newState = [...prev];
+                newState[index] = true;
+                return newState;
+              });
+            } else {
+              // Cuando la caja sale del viewport, volverla a la posición inicial
+              setIsFlipped((prev) => {
+                const newState = [...prev];
+                newState[index] = false;
+                return newState;
+              });
+            }
+          });
+        },
+        {
+          threshold: 0.5, // Se activa cuando el 50% de la caja es visible
+          rootMargin: '-50px 0px', // Margen para activar antes de que esté completamente visible
+        }
+      );
+
+      observer.observe(ref);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
   }, []);
   
   useEffect(() => {
@@ -404,17 +451,28 @@ const Hero: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {/* Servicio 1 */}
             <div 
+              ref={(el) => { flipCardRefs.current[0] = el; }}
               className="group perspective-1000 h-auto min-h-[240px] sm:min-h-[280px] md:h-80"
-              onMouseEnter={() => setIsFlipped(prev => {
-                const newState = [...prev];
-                newState[0] = true;
-                return newState;
-              })}
-              onMouseLeave={() => setIsFlipped(prev => {
-                const newState = [...prev];
-                newState[0] = false;
-                return newState;
-              })}
+              onMouseEnter={() => {
+                // Solo en desktop
+                if (window.innerWidth >= 768) {
+                  setIsFlipped(prev => {
+                    const newState = [...prev];
+                    newState[0] = true;
+                    return newState;
+                  });
+                }
+              }}
+              onMouseLeave={() => {
+                // Solo en desktop
+                if (window.innerWidth >= 768) {
+                  setIsFlipped(prev => {
+                    const newState = [...prev];
+                    newState[0] = false;
+                    return newState;
+                  });
+                }
+              }}
               style={{ animationDelay: '0s' }}
             >
               <div
@@ -444,17 +502,28 @@ const Hero: React.FC = () => {
 
             {/* Servicio 2 */}
             <div 
+              ref={(el) => { flipCardRefs.current[1] = el; }}
               className="group perspective-1000 h-auto min-h-[240px] sm:min-h-[280px] md:h-80"
-              onMouseEnter={() => setIsFlipped(prev => {
-                const newState = [...prev];
-                newState[1] = true;
-                return newState;
-              })}
-              onMouseLeave={() => setIsFlipped(prev => {
-                const newState = [...prev];
-                newState[1] = false;
-                return newState;
-              })}
+              onMouseEnter={() => {
+                // Solo en desktop
+                if (window.innerWidth >= 768) {
+                  setIsFlipped(prev => {
+                    const newState = [...prev];
+                    newState[1] = true;
+                    return newState;
+                  });
+                }
+              }}
+              onMouseLeave={() => {
+                // Solo en desktop
+                if (window.innerWidth >= 768) {
+                  setIsFlipped(prev => {
+                    const newState = [...prev];
+                    newState[1] = false;
+                    return newState;
+                  });
+                }
+              }}
               style={{ animationDelay: '0.1s' }}
             >
               <div
@@ -484,17 +553,28 @@ const Hero: React.FC = () => {
 
             {/* Servicio 3 */}
             <div 
+              ref={(el) => { flipCardRefs.current[2] = el; }}
               className="group perspective-1000 h-auto min-h-[240px] sm:min-h-[280px] md:h-80"
-              onMouseEnter={() => setIsFlipped(prev => {
-                const newState = [...prev];
-                newState[2] = true;
-                return newState;
-              })}
-              onMouseLeave={() => setIsFlipped(prev => {
-                const newState = [...prev];
-                newState[2] = false;
-                return newState;
-              })}
+              onMouseEnter={() => {
+                // Solo en desktop
+                if (window.innerWidth >= 768) {
+                  setIsFlipped(prev => {
+                    const newState = [...prev];
+                    newState[2] = true;
+                    return newState;
+                  });
+                }
+              }}
+              onMouseLeave={() => {
+                // Solo en desktop
+                if (window.innerWidth >= 768) {
+                  setIsFlipped(prev => {
+                    const newState = [...prev];
+                    newState[2] = false;
+                    return newState;
+                  });
+                }
+              }}
               style={{ animationDelay: '0.2s' }}
             >
               <div
