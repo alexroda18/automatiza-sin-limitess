@@ -41,7 +41,7 @@ const CommunitySection: React.FC = () => {
   ];
 
   return (
-    <section id="comunidad" className="relative overflow-x-hidden bg-gradient-to-br from-black to-[#12123A] py-32">
+    <section id="comunidad" className="relative overflow-x-hidden bg-gradient-to-br from-black to-[#12123A] py-16 sm:py-24 md:py-32">
       {/* Elementos decorativos con efecto morado */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute -top-24 right-0 w-96 h-96 bg-gradient-to-br from-[#9747FF] to-[#4F7FFF] rounded-full opacity-10 blur-3xl"></div>
@@ -50,19 +50,19 @@ const CommunitySection: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 max-w-screen-xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 px-4 sm:px-0">
             Únete{' '}
             <span className="bg-gradient-to-r from-[#4F7FFF] to-[#9747FF] bg-clip-text text-transparent">
               gratis
             </span>
-            {' '}a la comunidad y accede a {' '}<br />
+            {' '}a la comunidad y accede a {' '}<br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-[#4F7FFF] to-[#9747FF] bg-clip-text text-transparent">
               ventajas exclusivas
             </span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-20 items-center">
           <div className="space-y-12 flex flex-col items-center md:items-start">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
