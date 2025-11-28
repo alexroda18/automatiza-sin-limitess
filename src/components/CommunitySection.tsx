@@ -76,7 +76,7 @@ const CommunitySection: React.FC = () => {
             </div>
 
             <Button 
-              className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
+              className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
               asChild
             >
               <a 
@@ -98,7 +98,7 @@ const CommunitySection: React.FC = () => {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-6 backdrop-blur-md bg-[#0A0A1B]/80 rounded-lg border border-[#1E1E4A] shadow-lg">
+                <div className="text-center p-6 bg-[#0A0A1B]/90 rounded-lg border border-[#1E1E4A] shadow-lg">
                   <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">No te quedes atrás</h3>
                   <p className="text-gray-400 max-w-xs mx-auto">Más de +150 profesionales van un paso por delante de su competencia</p>
                 </div>

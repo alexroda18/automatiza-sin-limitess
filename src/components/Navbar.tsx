@@ -6,11 +6,19 @@ const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -23,7 +31,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#1E1E4A]/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 border-b border-[#1E1E4A]/20" style={{ willChange: 'background-color' }}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-1 flex md:justify-start justify-center md:justify-start">
@@ -72,7 +80,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-[#1E1E4A]/20 bg-black/95 backdrop-blur-md">
+          <div className="md:hidden border-t border-[#1E1E4A]/20 bg-black/95">
             <div className="px-4 pt-2 pb-4 space-y-1">
               <a
                 href="#nuestros-servicios"

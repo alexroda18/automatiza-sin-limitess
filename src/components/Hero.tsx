@@ -378,14 +378,14 @@ const Hero: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 pt-5 sm:pt-4 md:pt-4 justify-center md:justify-start">
               <Button 
-                className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase text-sm sm:text-base"
+                className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase text-sm sm:text-base"
                 asChild
               >
                 <a href="https://calendly.com/automatizasinlimites/30min" target="_blank" rel="noopener noreferrer">Agendar llamada gratuita</a>
               </Button>
               
               <Button 
-                className="px-6 py-3 sm:px-8 sm:py-4 bg-[#12123A] text-white transition-all hover:bg-[#1E1E4A] active:scale-[0.98] hover:-translate-y-0.5 border border-[#4F7FFF]/30 font-medium uppercase text-sm sm:text-base"
+                className="px-6 py-3 sm:px-8 sm:py-4 bg-[#12123A] text-white transition-colors transition-transform duration-200 hover:bg-[#1E1E4A] active:scale-[0.98] hover:-translate-y-0.5 border border-[#4F7FFF]/30 font-medium uppercase text-sm sm:text-base"
                 asChild
               >
                 <a 
@@ -401,7 +401,7 @@ const Hero: React.FC = () => {
           {/* Columna derecha: Video de YouTube */}
           <div className="w-full md:w-[600px] opacity-0 animate-fadeIn animate-delay-200 mt-0 sm:mt-0">
             <div className="relative">
-              <div className="p-1 bg-[#12123A]/60 backdrop-blur-md rounded-2xl shadow-xl border border-[#1E1E4A] overflow-hidden">
+              <div className="p-1 bg-[#12123A]/80 rounded-2xl shadow-xl border border-[#1E1E4A] overflow-hidden">
                 <div className="relative overflow-hidden rounded-xl aspect-video">
                   <iframe 
                     src="https://www.youtube.com/embed/IyC3pfyOZDk?rel=0" 
@@ -433,11 +433,12 @@ const Hero: React.FC = () => {
 
         <div className="container mx-auto px-4 sm:px-6 max-w-screen-xl">
           <div 
-            className={`text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16 transition-all duration-1000 ${
+            className={`text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16 transition-opacity transition-transform duration-1000 ${
               isServicesVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
             }`}
+            style={{ willChange: 'opacity, transform' }}
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
               Qué hacemos
@@ -452,7 +453,7 @@ const Hero: React.FC = () => {
             {/* Servicio 1 */}
             <div 
               ref={(el) => { flipCardRefs.current[0] = el; }}
-              className="group perspective-1000 h-auto min-h-[240px] sm:min-h-[280px] md:h-80"
+              className="group perspective-1000 h-auto min-h-[240px] sm:min-h-[280px] md:h-80 overflow-hidden"
               onMouseEnter={() => {
                 // Solo en desktop
                 if (window.innerWidth >= 768) {
@@ -479,9 +480,19 @@ const Hero: React.FC = () => {
                 className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${
                   isFlipped[0] ? 'rotate-y-180' : ''
                 }`}
+                style={{ willChange: 'transform', transformStyle: 'preserve-3d' }}
               >
                 {/* Front */}
-                <div className="absolute inset-0 backface-hidden rounded-2xl sm:rounded-3xl border border-white/5 bg-white/5 backdrop-blur-2xl p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center cursor-pointer hover-glow">
+                <div 
+                  className="absolute inset-0 backface-hidden rounded-2xl sm:rounded-3xl border border-white/5 bg-white/10 p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center cursor-pointer hover-glow" 
+                  style={{ 
+                    willChange: 'transform', 
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
+                    transform: 'rotateY(0deg)',
+                    zIndex: isFlipped[0] ? 1 : 2
+                  }}
+                >
                   <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] rounded-full flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <Users className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
                   </div>
@@ -489,7 +500,16 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Back */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl sm:rounded-3xl border border-white/5 bg-gradient-to-br from-[#9747FF]/10 to-[#4F7FFF]/10 backdrop-blur-2xl p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                <div 
+                  className="absolute inset-0 backface-hidden rounded-2xl sm:rounded-3xl border border-white/5 bg-gradient-to-br from-[#9747FF]/15 to-[#4F7FFF]/15 p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center" 
+                  style={{ 
+                    willChange: 'transform', 
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
+                    transform: 'rotateY(180deg)',
+                    zIndex: isFlipped[0] ? 2 : 1
+                  }}
+                >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] rounded-full flex items-center justify-center mb-3 sm:mb-4 md:mb-6 shadow-lg">
                     <Users className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                   </div>
@@ -503,7 +523,7 @@ const Hero: React.FC = () => {
             {/* Servicio 2 */}
             <div 
               ref={(el) => { flipCardRefs.current[1] = el; }}
-              className="group perspective-1000 h-auto min-h-[240px] sm:min-h-[280px] md:h-80"
+              className="group perspective-1000 h-auto min-h-[240px] sm:min-h-[280px] md:h-80 overflow-hidden"
               onMouseEnter={() => {
                 // Solo en desktop
                 if (window.innerWidth >= 768) {
@@ -530,9 +550,19 @@ const Hero: React.FC = () => {
                 className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${
                   isFlipped[1] ? 'rotate-y-180' : ''
                 }`}
+                style={{ willChange: 'transform', transformStyle: 'preserve-3d' }}
               >
                 {/* Front */}
-                <div className="absolute inset-0 backface-hidden rounded-2xl sm:rounded-3xl border border-white/5 bg-white/5 backdrop-blur-2xl p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center cursor-pointer hover-glow">
+                <div 
+                  className="absolute inset-0 backface-hidden rounded-2xl sm:rounded-3xl border border-white/5 bg-white/10 p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center cursor-pointer hover-glow" 
+                  style={{ 
+                    willChange: 'transform', 
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
+                    transform: 'rotateY(0deg)',
+                    zIndex: isFlipped[1] ? 1 : 2
+                  }}
+                >
                   <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#4F7FFF] to-[#9747FF] rounded-full flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <Workflow className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
                   </div>
@@ -540,7 +570,16 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Back */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl sm:rounded-3xl border border-white/5 bg-gradient-to-br from-[#4F7FFF]/10 to-[#9747FF]/10 backdrop-blur-2xl p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                <div 
+                  className="absolute inset-0 backface-hidden rounded-2xl sm:rounded-3xl border border-white/5 bg-gradient-to-br from-[#4F7FFF]/15 to-[#9747FF]/15 p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center" 
+                  style={{ 
+                    willChange: 'transform', 
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
+                    transform: 'rotateY(180deg)',
+                    zIndex: isFlipped[1] ? 2 : 1
+                  }}
+                >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#4F7FFF] to-[#9747FF] rounded-full flex items-center justify-center mb-3 sm:mb-4 md:mb-6 shadow-lg">
                     <Workflow className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                   </div>
@@ -554,7 +593,7 @@ const Hero: React.FC = () => {
             {/* Servicio 3 */}
             <div 
               ref={(el) => { flipCardRefs.current[2] = el; }}
-              className="group perspective-1000 h-auto min-h-[240px] sm:min-h-[280px] md:h-80"
+              className="group perspective-1000 h-auto min-h-[240px] sm:min-h-[280px] md:h-80 overflow-hidden"
               onMouseEnter={() => {
                 // Solo en desktop
                 if (window.innerWidth >= 768) {
@@ -581,9 +620,19 @@ const Hero: React.FC = () => {
                 className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${
                   isFlipped[2] ? 'rotate-y-180' : ''
                 }`}
+                style={{ willChange: 'transform', transformStyle: 'preserve-3d' }}
               >
                 {/* Front */}
-                <div className="absolute inset-0 backface-hidden rounded-2xl sm:rounded-3xl border border-white/5 bg-white/5 backdrop-blur-2xl p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center cursor-pointer hover-glow">
+                <div 
+                  className="absolute inset-0 backface-hidden rounded-2xl sm:rounded-3xl border border-white/5 bg-white/10 p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center cursor-pointer hover-glow" 
+                  style={{ 
+                    willChange: 'transform', 
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
+                    transform: 'rotateY(0deg)',
+                    zIndex: isFlipped[2] ? 1 : 2
+                  }}
+                >
                   <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#9747FF] via-[#4F7FFF] to-[#9747FF] rounded-full flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
                   </div>
@@ -591,7 +640,16 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Back */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl sm:rounded-3xl border border-white/5 bg-gradient-to-br from-[#9747FF]/10 via-[#4F7FFF]/10 to-[#9747FF]/10 backdrop-blur-2xl p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                <div 
+                  className="absolute inset-0 backface-hidden rounded-2xl sm:rounded-3xl border border-white/5 bg-gradient-to-br from-[#9747FF]/15 via-[#4F7FFF]/15 to-[#9747FF]/15 p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center" 
+                  style={{ 
+                    willChange: 'transform', 
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
+                    transform: 'rotateY(180deg)',
+                    zIndex: isFlipped[2] ? 2 : 1
+                  }}
+                >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#9747FF] via-[#4F7FFF] to-[#9747FF] rounded-full flex items-center justify-center mb-3 sm:mb-4 md:mb-6 shadow-lg">
                     <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                   </div>
@@ -673,7 +731,7 @@ const Hero: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
               <button
                 onClick={() => setActiveServiceTab("automation")}
-                className={`p-4 sm:p-6 rounded-xl border transition-all duration-300 text-center flex flex-col items-center justify-center ${
+                className={`p-4 sm:p-6 rounded-xl border transition-colors transition-transform duration-300 text-center flex flex-col items-center justify-center ${
                   activeServiceTab === "automation"
                     ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20 scale-105"
                     : "border-white/5 bg-white/5 hover:border-[#4F7FFF]/50"
@@ -685,7 +743,7 @@ const Hero: React.FC = () => {
 
               <button
                 onClick={() => setActiveServiceTab("chatbots")}
-                className={`p-4 sm:p-6 rounded-xl border transition-all duration-300 text-center flex flex-col items-center justify-center ${
+                className={`p-4 sm:p-6 rounded-xl border transition-colors transition-transform duration-300 text-center flex flex-col items-center justify-center ${
                   activeServiceTab === "chatbots"
                     ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20 scale-105"
                     : "border-white/5 bg-white/5 hover:border-[#4F7FFF]/50"
@@ -697,7 +755,7 @@ const Hero: React.FC = () => {
 
               <button
                 onClick={() => setActiveServiceTab("voice")}
-                className={`p-4 sm:p-6 rounded-xl border transition-all duration-300 text-center flex flex-col items-center justify-center ${
+                className={`p-4 sm:p-6 rounded-xl border transition-colors transition-transform duration-300 text-center flex flex-col items-center justify-center ${
                   activeServiceTab === "voice"
                     ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20 scale-105"
                     : "border-white/5 bg-white/5 hover:border-[#4F7FFF]/50"
@@ -709,7 +767,7 @@ const Hero: React.FC = () => {
 
               <button
                 onClick={() => setActiveServiceTab("support")}
-                className={`p-4 sm:p-6 rounded-xl border transition-all duration-300 text-center flex flex-col items-center justify-center ${
+                className={`p-4 sm:p-6 rounded-xl border transition-colors transition-transform duration-300 text-center flex flex-col items-center justify-center ${
                   activeServiceTab === "support"
                     ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20 scale-105"
                     : "border-white/5 bg-white/5 hover:border-[#4F7FFF]/50"
@@ -723,7 +781,7 @@ const Hero: React.FC = () => {
             {/* Content */}
             <div
               key={activeServiceTab}
-              className="rounded-2xl border border-[#4F7FFF]/20 bg-white/5 backdrop-blur-sm p-6 sm:p-8 md:p-12 animate-fadeIn"
+              className="rounded-2xl border border-[#4F7FFF]/20 bg-white/5  p-6 sm:p-8 md:p-12 animate-fadeIn"
             >
               {activeServiceTab === "automation" && (
                 <div className="mb-6">
@@ -762,7 +820,7 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <Button 
-                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
+                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
                       asChild
                     >
                       <a 
@@ -814,7 +872,7 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <Button 
-                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
+                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
                       asChild
                     >
                       <a 
@@ -866,7 +924,7 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <Button 
-                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
+                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
                       asChild
                     >
                       <a 
@@ -918,7 +976,7 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <Button 
-                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
+                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
                       asChild
                     >
                       <a 
@@ -955,13 +1013,13 @@ const Hero: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
               {/* Tabs en grid para móvil, columna para desktop */}
               <div className="lg:col-span-1">
-                <div className="bg-[#0A0A1B]/60 backdrop-blur-md rounded-2xl border border-[#1E1E4A] p-3 sm:p-4">
+                <div className="bg-[#0A0A1B]/60  rounded-2xl border border-[#1E1E4A] p-3 sm:p-4">
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-2 lg:gap-2">
                     {useCases.map((useCase, index) => (
                       <button
                         key={useCase.id}
                         onClick={() => setActiveUseCase(index)}
-                        className={`px-3 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-medium transition-all duration-300 rounded-lg text-center lg:text-left ${
+                        className={`px-3 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-medium transition-colors transition-transform duration-300 rounded-lg text-center lg:text-left ${
                           activeUseCase === index
                             ? 'bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white shadow-lg'
                             : 'text-gray-400 hover:text-white hover:bg-white/5'
@@ -977,7 +1035,7 @@ const Hero: React.FC = () => {
               {/* Contenido a la derecha */}
               <div className="lg:col-span-3">
                 <div 
-                  className="bg-[#0A0A1B]/60 backdrop-blur-md rounded-2xl border border-[#1E1E4A] overflow-hidden transition-all duration-300"
+                  className="bg-[#0A0A1B]/60  rounded-2xl border border-[#1E1E4A] overflow-hidden transition-opacity duration-300"
                   style={{ minHeight: maxContentHeight > 0 ? `${maxContentHeight}px` : 'auto' }}
                 >
                   {/* Renderizar todos los casos ocultos para medir sus alturas */}
@@ -1073,7 +1131,7 @@ const Hero: React.FC = () => {
                           </Button>
                           <Button
                             variant="outline"
-                            className="flex-1 px-6 py-3 sm:px-8 sm:py-4 border border-white/20 bg-transparent text-white hover:bg-white/10 transition-all active:scale-[0.98] hover:-translate-y-0.5 font-medium uppercase text-sm sm:text-base"
+                            className="flex-1 px-6 py-3 sm:px-8 sm:py-4 border border-white/20 bg-transparent text-white hover:bg-white/10 transition-colors transition-transform duration-200 active:scale-[0.98] hover:-translate-y-0.5 font-medium uppercase text-sm sm:text-base"
                             asChild
                           >
                             <a href={useCases[activeUseCase].calendarLink} target="_blank" rel="noopener noreferrer">
@@ -1293,7 +1351,7 @@ const Hero: React.FC = () => {
           {/* Carrusel de Testimonios */}
           <div className="relative max-w-4xl mx-auto">
             {/* Testimonio Principal */}
-            <div className="bg-[#0A0A1B]/60 backdrop-blur-md p-6 sm:p-8 md:p-12 rounded-2xl border border-[#1E1E4A] text-center">
+            <div className="bg-[#0A0A1B]/60  p-6 sm:p-8 md:p-12 rounded-2xl border border-[#1E1E4A] text-center">
               {/* Estrellas */}
               <div className="flex justify-center mb-4 sm:mb-6 gap-1 relative">
                 <svg className="absolute w-0 h-0">
@@ -1330,7 +1388,7 @@ const Hero: React.FC = () => {
             <div className="flex justify-center items-center gap-4 mt-8">
               <button
                 onClick={() => setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
-                className="w-12 h-12 bg-[#0A0A1B] border border-[#1E1E4A] rounded-full flex items-center justify-center text-white hover:border-[#4F7FFF]/50 transition-all duration-300"
+                className="w-12 h-12 bg-[#0A0A1B] border border-[#1E1E4A] rounded-full flex items-center justify-center text-white hover:border-[#4F7FFF]/50 transition-colors duration-300"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -1341,7 +1399,7 @@ const Hero: React.FC = () => {
                   <button
                     key={i}
                     onClick={() => setCurrentTestimonial(i)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
                       currentTestimonial === i 
                         ? 'bg-[#4F7FFF] scale-125' 
                         : 'bg-[#1E1E4A] hover:bg-[#4F7FFF]/50'
@@ -1352,7 +1410,7 @@ const Hero: React.FC = () => {
               
               <button
                 onClick={() => setCurrentTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
-                className="w-12 h-12 bg-[#0A0A1B] border border-[#1E1E4A] rounded-full flex items-center justify-center text-white hover:border-[#4F7FFF]/50 transition-all duration-300"
+                className="w-12 h-12 bg-[#0A0A1B] border border-[#1E1E4A] rounded-full flex items-center justify-center text-white hover:border-[#4F7FFF]/50 transition-colors duration-300"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -1404,7 +1462,7 @@ const Hero: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               {/* Razón 1 */}
               <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-all duration-500 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20 hover:border-[#4F7FFF]/50 hover:shadow-xl hover:-translate-y-1">                  
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20 hover:border-[#4F7FFF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>                  
                   <div className="relative z-10">
                     <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#4F7FFF]/20 to-[#4F7FFF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#4F7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1416,13 +1474,13 @@ const Hero: React.FC = () => {
                   </div>
                   
                   {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-all duration-500 bg-gradient-to-r from-[#4F7FFF] to-transparent" />
+                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#4F7FFF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
 
               {/* Razón 2 */}
               <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-all duration-500 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20 hover:border-[#9747FF]/50 hover:shadow-xl hover:-translate-y-1">                  
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20 hover:border-[#9747FF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>                  
                   <div className="relative z-10">
                     <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#9747FF]/20 to-[#9747FF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#9747FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1434,13 +1492,13 @@ const Hero: React.FC = () => {
                   </div>
                   
                   {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-all duration-500 bg-gradient-to-r from-[#9747FF] to-transparent" />
+                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#9747FF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
 
               {/* Razón 3 */}
               <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-all duration-500 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20 hover:border-[#4F7FFF]/50 hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20 hover:border-[#4F7FFF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>
                   <div className="relative z-10">
                     <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#4F7FFF]/20 to-[#4F7FFF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#4F7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1452,13 +1510,13 @@ const Hero: React.FC = () => {
                   </div>
                   
                   {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-all duration-500 bg-gradient-to-r from-[#4F7FFF] to-transparent" />
+                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#4F7FFF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
 
               {/* Razón 4 */}
               <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-all duration-500 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20 hover:border-[#9747FF]/50 hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20 hover:border-[#9747FF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>
                   <div className="relative z-10">
                     <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#9747FF]/20 to-[#9747FF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#9747FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1470,13 +1528,13 @@ const Hero: React.FC = () => {
                   </div>
                   
                   {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-all duration-500 bg-gradient-to-r from-[#9747FF] to-transparent" />
+                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#9747FF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
 
               {/* Razón 5 */}
               <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-all duration-500 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20 hover:border-[#4F7FFF]/50 hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20 hover:border-[#4F7FFF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>
                   <div className="relative z-10">
                     <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#4F7FFF]/20 to-[#4F7FFF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#4F7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1488,13 +1546,13 @@ const Hero: React.FC = () => {
                   </div>
                   
                   {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-all duration-500 bg-gradient-to-r from-[#4F7FFF] to-transparent" />
+                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#4F7FFF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
 
               {/* Razón 6 */}
               <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-all duration-500 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20 hover:border-[#9747FF]/50 hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20 hover:border-[#9747FF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>
                   <div className="relative z-10">
                     <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#9747FF]/20 to-[#9747FF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#9747FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1507,7 +1565,7 @@ const Hero: React.FC = () => {
                   </div>
                   
                   {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-all duration-500 bg-gradient-to-r from-[#9747FF] to-transparent" />
+                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#9747FF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
             </div>
@@ -1556,7 +1614,7 @@ const Hero: React.FC = () => {
           {/* FAQs */}
           <div className="max-w-4xl mx-auto space-y-4">
             {/* FAQ 1 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 1 ? null : 1)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
@@ -1578,7 +1636,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* FAQ 2 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 2 ? null : 2)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
@@ -1600,7 +1658,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* FAQ 3 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 3 ? null : 3)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
@@ -1622,7 +1680,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* FAQ 4 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 4 ? null : 4)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
@@ -1644,7 +1702,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* FAQ 5 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 5 ? null : 5)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
@@ -1687,7 +1745,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* FAQ 6 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 6 ? null : 6)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
@@ -1709,7 +1767,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* FAQ 7 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 7 ? null : 7)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
@@ -1731,7 +1789,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* FAQ 8 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 8 ? null : 8)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
@@ -1753,7 +1811,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* FAQ 9 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 9 ? null : 9)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
@@ -1775,7 +1833,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* FAQ 10 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 10 ? null : 10)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
@@ -1797,7 +1855,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* FAQ 11 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 11 ? null : 11)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
@@ -1848,7 +1906,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* FAQ 12 */}
-            <div className="bg-[#0A0A1B]/80 backdrop-blur-md rounded-xl border border-[#1E1E4A] overflow-hidden">
+            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === 12 ? null : 12)}
                 className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
