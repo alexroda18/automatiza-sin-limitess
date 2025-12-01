@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                   <Mail size={14} />
                 </a>
                 <a 
-                  href="https://subscribepage.io/automatizasinlimites" 
+                  href="https://subscribepage.io/alexmroda" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors"
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                   <Youtube size={14} />
                 </a>
                 <a
-                  href="https://www.facebook.com/alexmroda"
+                  href="https://www.facebook.com/alexmrodaa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-lg bg-[#0A0A1B] border border-[#1E1E4A] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#4F7FFF] transition-colors"

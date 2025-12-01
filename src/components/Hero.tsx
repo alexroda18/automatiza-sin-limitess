@@ -60,18 +60,18 @@ const useCases = [
     title: "\"Tu recepcionista virtual que nunca duerme\"",
     subtitle: "Tu recepcionista virtual que nunca duerme",
     problem:
-      "Tu equipo pierde 10-20 horas semanales respondiendo las mismas preguntas: horarios, precios, disponibilidad. Las llamadas interrumpen el trabajo importante y fuera de horario pierdes oportunidades.",
+      "Tu equipo invierte 10-20 horas semanales respondiendo las mismas preguntas: horarios, precios, disponibilidad. Las llamadas interrumpen el trabajo importante y fuera de horario pierdes oportunidades.",
     solutionLabel: "La solución:",
     solution: [
       "Agente conversacional disponible 24/7 con voz natural en español",
-      "Responde preguntas frecuentes y agenda citas en Google/Outlook",
+      "Responde preguntas frecuentes y agenda citas",
       "Detecta llamadas urgentes y las transfiere a la persona adecuada",
-      "Envía resumen por email o WhatsApp después de cada llamada",
+      "Envía resumen por email o otros canales después de cada llamada",
       "Registra automáticamente contactos en tu CRM"
     ],
     resultLabel: "Resultado:",
     result: [
-      "Ahorro de 12-18 horas/semana del equipo administrativo",
+      "Ahorro de +20 horas/semana por persona del equipo administrativo",
       "Reducción del 70% en llamadas que requieren a un humano",
       "Disponibilidad 24/7, fines de semana incluidos",
       "Incremento del 35-50% en citas agendadas"
@@ -87,12 +87,12 @@ const useCases = [
     title: "\"Tu bandeja de entrada que se gestiona sola\"",
     subtitle: "Tu bandeja de entrada que se gestiona sola",
     problem:
-      "Tu equipo se ahoga entre correos: consultas repetidas, spam, mensajes urgentes perdidos. Cada persona dedica 2-3 horas diarias a clasificar y responder lo básico.",
+      "Tu equipo invierte 2-3 horas diarias en clasificar y responder correos: consultas repetidas, spam, mensajes urgentes perdidos.",
     solutionLabel: "La solución:",
     solution: [
       "IA que lee y clasifica emails (urgente/consulta/venta/spam)",
-      "Responde automáticamente a las 20 preguntas más frecuentes",
-      "Extrae información clave y la registra en CRM o Google Sheets",
+      "Responde automáticamente a las preguntas más frecuentes del cliente",
+      "Extrae información clave y la registra en CRM o otras herramientas",
       "Enruta mensajes al departamento correcto",
       "Solo notifica al equipo lo que requiere intervención humana",
       "Seguimiento automático si no hay respuesta en X días"
@@ -111,31 +111,33 @@ const useCases = [
   },
   {
     id: "case-3",
-    category: "CASO 3: Calificación automática de leads",
-    title: "\"Tus vendedores solo hablan con clientes listos para comprar\"",
-    subtitle: "Tus vendedores solo hablan con clientes listos para comprar",
-    problem:
-      "Tus vendedores pierden 60% de su tiempo persiguiendo leads que nunca comprarán. Los leads buenos se enfrían esperando respuesta.",
-    solutionLabel: "La solución:",
-    solution: [
-      "Puntuación automática de leads (presupuesto, urgencia, encaje)",
-      "Leads calientes directos a WhatsApp/Slack del vendedor",
-      "Leads tibios entran a secuencias de nurturing automatizadas",
-      "Leads fríos se nutren con contenido educativo",
-      "Enriquecimiento automático con datos de LinkedIn y web",
-      "Dashboard en tiempo real con pipeline y calidad"
-    ],
-    resultLabel: "Resultado:",
-    result: [
-      "Ahorro de 15-20 horas/semana por vendedor",
-      "Reducción del 50% en tiempo hasta la primera llamada cualificada",
-      "Mejora del 35-60% en tasa de conversión",
-      "2-3x más leads procesados con el mismo equipo"
-    ],
-    image: "/images/de-reunion-a-propuesta-y-coachin-notes.png",
-    imageLink: "https://subscribepage.io/automatizasinlimites",
-    demoLink: "https://subscribepage.io/automatizasinlimites",
-    calendarLink: "https://calendly.com/automatizasinlimites/30min"
+  category: "CASO 3: Automatización de prospección 24/7",
+  title: "\"Tu máquina de ventas trabajando mientras duermes\"",
+  subtitle: "Prospección automática que encuentra leads, los analiza y les escribe por ti",
+  problem:
+    "Tu equipo pierde horas buscando leads, revisando webs, redactando correos personalizados y haciendo seguimiento. La prospección es lenta, inconsistente y depende demasiado de tiempo humano.",
+  solutionLabel: "La solución:",
+  solution: [
+    "Scraping automático de leads desde Google, Apollo, directorios, redes o bases públicas",
+    "Enriquecimiento con información de su web, redes y datos relevantes",
+    "IA analiza el negocio del lead y redacta correos personalizados",
+    "Envío automático de emails con variaciones para evitar spam",
+    "Secuencias de seguimiento si no responden",
+    "Registro automático en tu CRM o base de datos",
+    "Funciona 24/7 sin intervención humana"
+  ],
+  resultLabel: "Resultado:",
+  result: [
+    "+20 nuevos leads cualificados al día sin esfuerzo",
+    "Prospección 10 veces más rápida que un humano",
+    "Mensajes hiperpersonalizados que multiplican la tasa de respuesta",
+    "Ahorro de +20 horas/semana en tareas comerciales",
+    "Tu pipeline siempre lleno sin tocar un botón"
+  ],
+  image: "/images/lead-scraper.png",
+  imageLink: "https://subscribepage.io/alexmroda",
+  demoLink: "https://subscribepage.io/alexmroda",
+  calendarLink: "https://calendly.com/automatizasinlimites/30min"
   },
   {
     id: "case-4",
@@ -162,8 +164,8 @@ const useCases = [
       "+25% en retención gracias a activación inmediata"
     ],
     image: "/images/encuentra-leads.png",
-    imageLink: "https://subscribepage.io/automatizasinlimites",
-    demoLink: "https://subscribepage.io/automatizasinlimites",
+    imageLink: "https://subscribepage.io/alexmroda",
+    demoLink: "https://subscribepage.io/alexmroda",
     calendarLink: "https://calendly.com/automatizasinlimites/30min"
   },
   {
@@ -191,35 +193,146 @@ const useCases = [
       "€600-1.200/mes ahorrados en costes administrativos"
     ],
     image: "/images/factura-automatica.png",
-    imageLink: "https://subscribepage.io/automatizasinlimites",
-    demoLink: "https://subscribepage.io/automatizasinlimites",
+    imageLink: "https://subscribepage.io/alexmroda",
+    demoLink: "https://subscribepage.io/alexmroda",
     calendarLink: "https://calendly.com/automatizasinlimites/30min"
   },
   {
     id: "case-6",
-    category: "CASO 6: Generación automática de propuestas y presupuestos",
-    title: "\"De consulta a propuesta profesional en 3 minutos\"",
-    subtitle: "De consulta a propuesta profesional en 3 minutos",
+  category: "CASO 6: Entrenador de ventas impulsado por IA",
+  title: "\"Convierte cada llamada en una oportunidad de mejora\"",
+  subtitle: "Análisis automático de llamadas para mejorar cierres y rendimiento",
+  problem:
+    "Los equipos de ventas repiten errores, no siguen guiones, no detectan objeciones y no saben por qué pierden oportunidades. Los managers no pueden revisar todas las llamadas manualmente.",
+  solutionLabel: "La solución:",
+  solution: [
+    "Transcripción automática de llamadas con precisión avanzada",
+    "IA analiza tono, claridad, objeciones y argumentos utilizados",
+    "Identificación de oportunidades perdidas durante la conversación",
+    "Informe detallado: puntos fuertes, puntos débiles, frases a evitar",
+    "Recomendaciones accionables para mejorar cierres",
+    "Ranking del rendimiento por vendedor y por llamada",
+    "Dashboard con tendencias y evolución del equipo"
+  ],
+  resultLabel: "Resultado:",
+  result: [
+    "Mejora del 20–45% en ratios de cierre en 2–6 semanas",
+    "Entrenamiento continuo sin necesidad de supervisión humana",
+    "Equipos más seguros, preparados y alineados",
+    "Detección instantánea de errores repetidos",
+    "Reducción del tiempo de onboarding de nuevos vendedores"
+  ],
+    image: "/images/call-ai-coach.png",
+    imageLink: "https://subscribepage.io/alexmroda",
+    demoLink: "https://subscribepage.io/alexmroda",
+    calendarLink: "https://calendly.com/automatizasinlimites/30min"
+  },
+  {
+    id: "case-7",
+    category: "CASO 7: Generador de contenido automático",
+    title: "\"Tu generador de contenido automático que nunca descansa\"",
+    subtitle: "Automatización de generación de contenido con IA",
     problem:
-      "Cada propuesta te toma 45-90 minutos (copiar plantilla, personalizar, pricing, PDF, enviar). Pierdes oportunidades por tardar días en responder.",
+      "Crear contenido para redes, newsletters o blogs consume horas. Las ideas se agotan y el equipo no tiene tiempo para producir a diario.",
     solutionLabel: "La solución:",
     solution: [
-      "Formulario simple recoge necesidades del cliente",
-      "PDF profesional instantáneo con tu branding",
-      "Incluye alcance, pricing y T&C personalizadas",
-      "Envío automático por email y tracking de aperturas",
-      "Recordatorios si no responden en X días"
+      "IA genera temas, titulares y guiones según tu nicho",
+      "Reescritura automática en distintos tonos (educativo, técnico, venta suave)",
+      "Resumen de artículos externos en formato \"post listo para publicar\"",
+      "Publicación automatizada en redes o envío a aprobación",
+      "Calendario editorial generado solo"
     ],
     resultLabel: "Resultado:",
     result: [
-      "Ahorro de 6-10 horas/semana en propuestas",
-      "Respuesta 90% más rápida (de días a minutos)",
-      "Mejora del 40-60% en tasa de conversión",
-      "3-5x más propuestas enviadas con el mismo equipo"
+      "20–40 horas/mes ahorradas",
+      "Consistencia diaria sin esfuerzo",
+      "+3x más contenido publicado",
+      "Mayor alcance orgánico sin equipo extra"
     ],
-    image: "/images/tiktok-scraper.png",
-    imageLink: "https://subscribepage.io/automatizasinlimites",
-    demoLink: "https://subscribepage.io/automatizasinlimites",
+    image: "/images/content-generator.png",
+    imageLink: "https://subscribepage.io/alexmroda",
+    demoLink: "https://subscribepage.io/alexmroda",
+    calendarLink: "https://calendly.com/automatizasinlimites/30min"
+  },
+  {
+    id: "case-8",
+    category: "CASO 8: Selección de candidatos automatizada",
+    title: "\"Tu departamento de recursos humanos automatizado\"",
+    subtitle: "Selección de candidatos y análisis de CVs con IA",
+    problem:
+      "El equipo de RRHH revisa CVs y perfiles a mano, pierde tiempo y puede tomar decisiones sesgadas.",
+    solutionLabel: "La solución:",
+    solution: [
+      "Extracción automática de datos de CVs (skills, experiencia, rol)",
+      "IA analiza compatibilidad con la vacante",
+      "Ranking de candidatos según criterios",
+      "Emails automáticos con pruebas o entrevistas",
+      "Reporte para el hiring manager"
+    ],
+    resultLabel: "Resultado:",
+    result: [
+      "70–90% menos tiempo filtrando candidatos",
+      "Decisiones más objetivas",
+      "Proceso más rápido y profesional"
+    ],
+    image: "/images/hr-automation.png",
+    imageLink: "https://subscribepage.io/alexmroda",
+    demoLink: "https://subscribepage.io/alexmroda",
+    calendarLink: "https://calendly.com/automatizasinlimites/30min"
+  },
+  {
+    id: "case-9",
+    category: "CASO 9: Analista de competencia 24/7",
+    title: "\"Tu analista de competencia 24/7\"",
+    subtitle: "Monitorización automática de competencia + informes con IA",
+    problem:
+      "Analizar la competencia requiere horas: revisar webs, precios, contenidos, lanzamientos y movimientos importantes.",
+    solutionLabel: "La solución:",
+    solution: [
+      "Scraper automático que monitoriza tus competidores",
+      "IA resume cambios en precios, productos o contenido",
+      "Detección de tendencias relevantes en su marketing",
+      "Dashboard actualizado semanalmente",
+      "Informe ejecutivo enviado por email cada lunes"
+    ],
+    resultLabel: "Resultado:",
+    result: [
+      "Visión constante del mercado sin esfuerzo",
+      "Decisiones más estratégicas con datos actualizados",
+      "Detección rápida de oportunidades o amenazas",
+      "Ahorro de 10–20 horas al mes en análisis manual"
+    ],
+    image: "/images/competitor-analysis.png",
+    imageLink: "https://subscribepage.io/alexmroda",
+    demoLink: "https://subscribepage.io/alexmroda",
+    calendarLink: "https://calendly.com/automatizasinlimites/30min"
+  },
+  {
+    id: "case-10",
+    category: "CASO 10: Gestor automático de RRHH",
+    title: "\"Tu gestor automático de RRHH\"",
+    subtitle: "Automatización completa de procesos internos de Recursos Humanos",
+    problem:
+      "RRHH pierde horas en onboarding, recopilación de documentos, contratos, renovaciones y comunicación interna.",
+    solutionLabel: "La solución:",
+    solution: [
+      "Recopilación automática de documentos del empleado",
+      "Firma digital + archivado automático",
+      "Recordatorios de renovaciones y fechas críticas",
+      "Generación de contratos personalizados con IA",
+      "Creación automática de accesos y cuentas",
+      "Notificaciones a dirección en tiempo real"
+    ],
+    resultLabel: "Resultado:",
+    result: [
+      "Reducción del 60% de tareas administrativas",
+      "Menos errores y olvidos",
+      "Onboarding más rápido y profesional",
+      "Mejor experiencia para nuevos empleados"
+    ],
+    image: "/images/hr-manager.png",
+    imageLink: "https://subscribepage.io/alexmroda",
+    demoLink: "https://subscribepage.io/alexmroda",
     calendarLink: "https://calendly.com/automatizasinlimites/30min"
   }
 ];
@@ -233,31 +346,11 @@ const Hero: React.FC = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [activeUseCase, setActiveUseCase] = useState(0);
-  const [maxContentHeight, setMaxContentHeight] = useState(0);
-  const contentRefs = React.useRef<(HTMLDivElement | null)[]>([]);
   const [isFlipped, setIsFlipped] = useState<boolean[]>([false, false, false]);
   const [isServicesVisible, setIsServicesVisible] = useState(false);
   const servicesSectionRef = React.useRef<HTMLElement | null>(null);
   const [activeServiceTab, setActiveServiceTab] = useState("automation");
   const flipCardRefs = React.useRef<(HTMLDivElement | null)[]>([]);
-  
-  useEffect(() => {
-    // Calcular la altura máxima de todos los casos de uso después de que se rendericen
-    const timer = setTimeout(() => {
-      const heights = contentRefs.current.map(ref => {
-        if (ref) {
-          return ref.scrollHeight;
-        }
-        return 0;
-      });
-      const maxHeight = Math.max(...heights, 800); // Mínimo 800px
-      if (maxHeight > 0) {
-        setMaxContentHeight(maxHeight);
-      }
-    }, 100);
-    
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     // Intersection Observer para detectar cuando la sección de servicios entra en vista
@@ -1036,54 +1129,7 @@ const Hero: React.FC = () => {
               <div className="lg:col-span-3">
                 <div 
                   className="bg-[#0A0A1B]/60  rounded-2xl border border-[#1E1E4A] overflow-hidden transition-opacity duration-300"
-                  style={{ minHeight: maxContentHeight > 0 ? `${maxContentHeight}px` : 'auto' }}
                 >
-                  {/* Renderizar todos los casos ocultos para medir sus alturas */}
-                  <div className="absolute opacity-0 pointer-events-none -z-10">
-                    {useCases.map((useCase, index) => (
-                      <div
-                        key={`hidden-${useCase.id}`}
-                        ref={(el) => {
-                          if (el) contentRefs.current[index] = el;
-                        }}
-                        className="p-6 sm:p-8 md:p-12"
-                      >
-                        <p className="text-xs font-semibold tracking-[0.4em] text-[#A5B4FC] mb-3">
-                          {useCase.category}
-                        </p>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-6">
-                          {useCase.subtitle}
-                        </h3>
-                        <div className="space-y-6 text-sm md:text-base text-gray-300">
-                          <div>
-                            <p className="font-semibold text-white mb-2">El problema:</p>
-                            <p className="leading-relaxed">{useCase.problem}</p>
-                          </div>
-                          <div>
-                            <p className="font-semibold text-white mb-2">{useCase.solutionLabel}</p>
-                            <ul className="mt-2 list-disc pl-5 space-y-2">
-                              {useCase.solution.map((item) => (
-                                <li key={item} className="leading-relaxed">{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div>
-                            <p className="font-semibold text-white mb-2">{useCase.resultLabel}</p>
-                            <ul className="mt-2 list-disc pl-5 space-y-2">
-                              {useCase.result.map((item) => (
-                                <li key={item} className="leading-relaxed">{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                        <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                          <div className="flex-1 h-10"></div>
-                          <div className="flex-1 h-10"></div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  
                   {useCases[activeUseCase] && (
                     <div className="flex flex-col animate-fadeIn">
                       {/* Contenido */}
@@ -1120,22 +1166,13 @@ const Hero: React.FC = () => {
                           </div>
                         </div>
 
-                        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3">
+                        <div className="mt-6 sm:mt-8 flex justify-center">
                           <Button
-                            className="flex-1 px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-all hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase text-sm sm:text-base"
-                            asChild
-                          >
-                            <a href={useCases[activeUseCase].demoLink} target="_blank" rel="noopener noreferrer">
-                              Ver demo
-                            </a>
-                          </Button>
-                          <Button
-                            variant="outline"
-                            className="flex-1 px-6 py-3 sm:px-8 sm:py-4 border border-white/20 bg-transparent text-white hover:bg-white/10 transition-colors transition-transform duration-200 active:scale-[0.98] hover:-translate-y-0.5 font-medium uppercase text-sm sm:text-base"
+                            className="px-8 py-3 sm:px-10 sm:py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase text-sm sm:text-base"
                             asChild
                           >
                             <a href={useCases[activeUseCase].calendarLink} target="_blank" rel="noopener noreferrer">
-                              Quiero esto para mi negocio
+                              Lo quiero para negocio
                             </a>
                           </Button>
                         </div>
@@ -1717,7 +1754,7 @@ const Hero: React.FC = () => {
               {openFAQ === 5 && (
                 <div className="px-4 sm:px-6 pb-4 sm:pb-6">
                   <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-3">
-                    Depende del alcance.
+                    Depende del alcance, pero de media estos serian los tiempos aproximados:
                   </p>
                   <ul className="space-y-2 text-sm sm:text-base text-gray-300">
                     <li className="flex items-start">
@@ -1854,56 +1891,7 @@ const Hero: React.FC = () => {
               )}
             </div>
 
-            {/* FAQ 11 */}
-            <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
-              <button
-                onClick={() => setOpenFAQ(openFAQ === 11 ? null : 11)}
-                className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-[#1E1E4A]/30 transition-all duration-300"
-              >
-                <h3 className="text-base sm:text-lg font-semibold text-white pr-4">
-                  ¿Qué tipo de resultados puedo esperar?
-                </h3>
-                <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 ${
-                  openFAQ === 11 ? 'rotate-180' : ''
-                }`} />
-              </button>
-              {openFAQ === 11 && (
-                <div className="px-4 sm:px-6 pb-4 sm:pb-6">
-                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-3">
-                    Depende del proyecto, pero lo habitual es:
-                  </p>
-                  <ul className="space-y-2 text-sm sm:text-base text-gray-300">
-                    <li className="flex items-start">
-                      <span className="text-[#4F7FFF] mr-2">•</span>
-                      <span>Reducción de tareas manuales</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#4F7FFF] mr-2">•</span>
-                      <span>Menos errores operativos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#4F7FFF] mr-2">•</span>
-                      <span>Atención más rápida</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#4F7FFF] mr-2">•</span>
-                      <span>Leads mejor cualificados</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#4F7FFF] mr-2">•</span>
-                      <span>Procesos más fluidos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#4F7FFF] mr-2">•</span>
-                      <span>Equipo con más tiempo para lo importante</span>
-                    </li>
-                  </ul>
-                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed mt-3">
-                    Muchos clientes recuperan horas de trabajo desde el primer mes.
-                  </p>
-                </div>
-              )}
-            </div>
+
 
             {/* FAQ 12 */}
             <div className="bg-[#0A0A1B]/80  rounded-xl border border-[#1E1E4A] overflow-hidden">
@@ -1951,7 +1939,7 @@ const Hero: React.FC = () => {
             </h2>
             
             <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto mb-4 sm:mb-6">
-              Cada semana que pasa, tu equipo pierde <span className="text-white font-semibold">20+ horas</span> en tareas que una IA podría hacer mejor, más rápido y sin errores. Mientras tanto, tus competidores están reinvirtiendo ese tiempo en crecer, vender más, y escalar.
+              Cada semana que pasa, tu equipo invierte <span className="text-white font-semibold">20+ horas</span> en tareas que una IA podría hacer mejor, más rápido y sin errores. Mientras tanto, tus competidores están reinvirtiendo ese tiempo en crecer, vender más, y escalar.
             </p>
             
             <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
@@ -1972,7 +1960,7 @@ const Hero: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Quiero automatizar mi negocio ya
+                Lo quiero para mi negocio
               </a>
             </Button>
           </div>
