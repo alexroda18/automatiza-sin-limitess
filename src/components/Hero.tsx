@@ -1498,10 +1498,10 @@ const Hero: React.FC = () => {
           <div className="max-w-5xl mx-auto mb-8 sm:mb-12">
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               {/* Razón 1 */}
-              <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20 hover:border-[#4F7FFF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>                  
+              <div>
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20">                  
                   <div className="relative z-10">
-                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#4F7FFF]/20 to-[#4F7FFF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
+                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#4F7FFF]/20 to-[#4F7FFF]/10 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#4F7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                       </svg>
@@ -1509,17 +1509,14 @@ const Hero: React.FC = () => {
                     <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white text-center md:text-left">Explicamos las cosas sin tecnicismos</h3>
                     <p className="text-sm sm:text-base text-gray-300 leading-relaxed text-center md:text-left">Hablamos en tu idioma. Sin jerga técnica innecesaria, te explicamos qué hacemos, cómo funciona y por qué es importante para tu negocio.</p>
                   </div>
-                  
-                  {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#4F7FFF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
 
               {/* Razón 2 */}
-              <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20 hover:border-[#9747FF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>                  
+              <div>
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20">                  
                   <div className="relative z-10">
-                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#9747FF]/20 to-[#9747FF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
+                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#9747FF]/20 to-[#9747FF]/10 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#9747FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                       </svg>
@@ -1527,17 +1524,14 @@ const Hero: React.FC = () => {
                     <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white text-center md:text-left">Diseñamos soluciones a medida</h3>
                     <p className="text-sm sm:text-base text-gray-300 leading-relaxed text-center md:text-left">Cada negocio es único. Creamos automatizaciones específicas para tus procesos, no soluciones genéricas que no encajan.</p>
                   </div>
-                  
-                  {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#9747FF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
 
               {/* Razón 3 */}
-              <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20 hover:border-[#4F7FFF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>
+              <div>
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20">
                   <div className="relative z-10">
-                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#4F7FFF]/20 to-[#4F7FFF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
+                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#4F7FFF]/20 to-[#4F7FFF]/10 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#4F7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                       </svg>
@@ -1545,17 +1539,14 @@ const Hero: React.FC = () => {
                     <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white text-center md:text-left">Trabajamos por fases claras</h3>
                     <p className="text-sm sm:text-base text-gray-300 leading-relaxed text-center md:text-left">Proyectos estructurados con entregables definidos. Sabes exactamente qué recibirás en cada etapa y cuándo.</p>
                   </div>
-                  
-                  {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#4F7FFF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
 
               {/* Razón 4 */}
-              <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20 hover:border-[#9747FF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>
+              <div>
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20">
                   <div className="relative z-10">
-                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#9747FF]/20 to-[#9747FF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
+                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#9747FF]/20 to-[#9747FF]/10 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#9747FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
                       </svg>
@@ -1563,17 +1554,14 @@ const Hero: React.FC = () => {
                     <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white text-center md:text-left">Ofrecemos soporte continuo</h3>
                     <p className="text-sm sm:text-base text-gray-300 leading-relaxed text-center md:text-left">No te dejamos solo después de la implementación. Monitoreamos, ajustamos y mejoramos tus sistemas de forma continua.</p>
                   </div>
-                  
-                  {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#9747FF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
 
               {/* Razón 5 */}
-              <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20 hover:border-[#4F7FFF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>
+              <div>
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 bg-gradient-to-br from-[#4F7FFF]/5 to-transparent border-[#4F7FFF]/20">
                   <div className="relative z-10">
-                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#4F7FFF]/20 to-[#4F7FFF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
+                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#4F7FFF]/20 to-[#4F7FFF]/10 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#4F7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                       </svg>
@@ -1581,17 +1569,14 @@ const Hero: React.FC = () => {
                     <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white text-center md:text-left">Priorizamos estabilidad y eficiencia</h3>
                     <p className="text-sm sm:text-base text-gray-300 leading-relaxed text-center md:text-left">No nos dejamos llevar por modas. Construimos sistemas robustos que funcionan día a día, sin complicaciones innecesarias.</p>
                   </div>
-                  
-                  {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#4F7FFF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
 
               {/* Razón 6 */}
-              <div className="group">
-                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 transition-colors transition-shadow transition-transform duration-500 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20 hover:border-[#9747FF]/50 hover:shadow-xl hover:-translate-y-1" style={{ willChange: 'transform, border-color' }}>
+              <div>
+                <div className="relative h-full p-6 sm:p-8 rounded-2xl border-2 bg-gradient-to-br from-[#9747FF]/5 to-transparent border-[#9747FF]/20">
                   <div className="relative z-10">
-                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#9747FF]/20 to-[#9747FF]/10 group-hover:scale-110 transition-transform duration-500 md:inline-flex">
+                    <div className="flex justify-center md:justify-start p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 bg-gradient-to-br from-[#9747FF]/20 to-[#9747FF]/10 md:inline-flex">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#9747FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -1600,9 +1585,6 @@ const Hero: React.FC = () => {
                     <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white text-center md:text-left">Entregamos sistemas fáciles de mantener</h3>
                     <p className="text-sm sm:text-base text-gray-300 leading-relaxed text-center md:text-left">Construimos con código limpio y documentación clara. Tus sistemas serán fáciles de entender, modificar y escalar cuando lo necesites.</p>
                   </div>
-                  
-                  {/* Animated line */}
-                  <div className="absolute bottom-0 left-4 h-1 w-0 group-hover:w-full transition-[width] duration-500 bg-gradient-to-r from-[#9747FF] to-transparent" style={{ willChange: 'width' }} />
                 </div>
               </div>
             </div>
