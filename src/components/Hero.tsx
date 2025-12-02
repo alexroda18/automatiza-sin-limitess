@@ -824,10 +824,10 @@ const Hero: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
               <button
                 onClick={() => setActiveServiceTab("automation")}
-                className={`p-4 sm:p-6 rounded-xl border transition-colors transition-transform duration-300 text-center flex flex-col items-center justify-center ${
+                className={`p-4 sm:p-6 rounded-xl border text-center flex flex-col items-center justify-center ${
                   activeServiceTab === "automation"
-                    ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20 scale-105"
-                    : "border-white/5 bg-white/5 hover:border-[#4F7FFF]/50"
+                    ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20"
+                    : "border-white/5 bg-white/5"
                 }`}
               >
                 <Workflow className={`w-6 h-6 sm:w-8 sm:h-8 mb-2 sm:mb-3 ${activeServiceTab === "automation" ? "text-[#4F7FFF]" : "text-gray-400"}`} />
@@ -836,10 +836,10 @@ const Hero: React.FC = () => {
 
               <button
                 onClick={() => setActiveServiceTab("chatbots")}
-                className={`p-4 sm:p-6 rounded-xl border transition-colors transition-transform duration-300 text-center flex flex-col items-center justify-center ${
+                className={`p-4 sm:p-6 rounded-xl border text-center flex flex-col items-center justify-center ${
                   activeServiceTab === "chatbots"
-                    ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20 scale-105"
-                    : "border-white/5 bg-white/5 hover:border-[#4F7FFF]/50"
+                    ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20"
+                    : "border-white/5 bg-white/5"
                 }`}
               >
                 <MessageSquare className={`w-6 h-6 sm:w-8 sm:h-8 mb-2 sm:mb-3 ${activeServiceTab === "chatbots" ? "text-[#4F7FFF]" : "text-gray-400"}`} />
@@ -848,10 +848,10 @@ const Hero: React.FC = () => {
 
               <button
                 onClick={() => setActiveServiceTab("voice")}
-                className={`p-4 sm:p-6 rounded-xl border transition-colors transition-transform duration-300 text-center flex flex-col items-center justify-center ${
+                className={`p-4 sm:p-6 rounded-xl border text-center flex flex-col items-center justify-center ${
                   activeServiceTab === "voice"
-                    ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20 scale-105"
-                    : "border-white/5 bg-white/5 hover:border-[#4F7FFF]/50"
+                    ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20"
+                    : "border-white/5 bg-white/5"
                 }`}
               >
                 <Phone className={`w-6 h-6 sm:w-8 sm:h-8 mb-2 sm:mb-3 ${activeServiceTab === "voice" ? "text-[#4F7FFF]" : "text-gray-400"}`} />
@@ -860,10 +860,10 @@ const Hero: React.FC = () => {
 
               <button
                 onClick={() => setActiveServiceTab("support")}
-                className={`p-4 sm:p-6 rounded-xl border transition-colors transition-transform duration-300 text-center flex flex-col items-center justify-center ${
+                className={`p-4 sm:p-6 rounded-xl border text-center flex flex-col items-center justify-center ${
                   activeServiceTab === "support"
-                    ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20 scale-105"
-                    : "border-white/5 bg-white/5 hover:border-[#4F7FFF]/50"
+                    ? "border-[#4F7FFF] bg-gradient-to-br from-[#4F7FFF]/20 to-[#9747FF]/20"
+                    : "border-white/5 bg-white/5"
                 }`}
               >
                 <Wrench className={`w-6 h-6 sm:w-8 sm:h-8 mb-2 sm:mb-3 ${activeServiceTab === "support" ? "text-[#4F7FFF]" : "text-gray-400"}`} />
@@ -874,7 +874,7 @@ const Hero: React.FC = () => {
             {/* Content */}
             <div
               key={activeServiceTab}
-              className="rounded-2xl border border-[#4F7FFF]/20 bg-white/5  p-6 sm:p-8 md:p-12 animate-fadeIn"
+              className="rounded-2xl border border-[#4F7FFF]/20 bg-white/5  p-6 sm:p-8 md:p-12"
             >
               {activeServiceTab === "automation" && (
                 <div className="mb-6">
@@ -913,7 +913,7 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <Button 
-                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
+                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white border-none font-medium uppercase"
                       asChild
                     >
                       <a 
@@ -965,7 +965,7 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <Button 
-                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
+                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white border-none font-medium uppercase"
                       asChild
                     >
                       <a 
@@ -1017,7 +1017,7 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <Button 
-                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
+                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white border-none font-medium uppercase"
                       asChild
                     >
                       <a 
@@ -1069,7 +1069,7 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <Button 
-                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase"
+                      className="px-8 py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white border-none font-medium uppercase"
                       asChild
                     >
                       <a 
@@ -1112,10 +1112,10 @@ const Hero: React.FC = () => {
                       <button
                         key={useCase.id}
                         onClick={() => setActiveUseCase(index)}
-                        className={`px-3 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-medium transition-colors transition-transform duration-300 rounded-lg text-center lg:text-left ${
+                        className={`px-3 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-medium rounded-lg text-center lg:text-left ${
                           activeUseCase === index
                             ? 'bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white shadow-lg'
-                            : 'text-gray-400 hover:text-white hover:bg-white/5'
+                            : 'text-gray-400'
                         }`}
                       >
                         {useCase.category.replace('CASO ', '')}
@@ -1128,10 +1128,10 @@ const Hero: React.FC = () => {
               {/* Contenido a la derecha */}
               <div className="lg:col-span-3">
                 <div 
-                  className="bg-[#0A0A1B]/60  rounded-2xl border border-[#1E1E4A] overflow-hidden transition-opacity duration-300"
+                  className="bg-[#0A0A1B]/60  rounded-2xl border border-[#1E1E4A] overflow-hidden"
                 >
                   {useCases[activeUseCase] && (
-                    <div className="flex flex-col animate-fadeIn">
+                    <div className="flex flex-col">
                       {/* Contenido */}
                       <div className="p-6 sm:p-8 md:p-12 flex flex-col">
                         <p className="text-xs font-semibold tracking-[0.1em] sm:tracking-[0.2em] text-[#A5B4FC] mb-3">
@@ -1168,7 +1168,7 @@ const Hero: React.FC = () => {
 
                         <div className="mt-6 sm:mt-8 flex justify-center">
                           <Button
-                            className="px-8 py-3 sm:px-10 sm:py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white transition-opacity transition-transform duration-200 hover:opacity-90 active:scale-[0.98] hover:-translate-y-0.5 border-none font-medium uppercase text-sm sm:text-base"
+                            className="px-8 py-3 sm:px-10 sm:py-4 bg-gradient-to-r from-[#9747FF] to-[#4F7FFF] text-white border-none font-medium uppercase text-sm sm:text-base"
                             asChild
                           >
                             <a href={useCases[activeUseCase].calendarLink} target="_blank" rel="noopener noreferrer">
@@ -1425,7 +1425,7 @@ const Hero: React.FC = () => {
             <div className="flex justify-center items-center gap-4 mt-8">
               <button
                 onClick={() => setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
-                className="w-12 h-12 bg-[#0A0A1B] border border-[#1E1E4A] rounded-full flex items-center justify-center text-white hover:border-[#4F7FFF]/50 transition-colors duration-300"
+                className="w-12 h-12 bg-[#0A0A1B] border border-[#1E1E4A] rounded-full flex items-center justify-center text-white"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -1436,10 +1436,10 @@ const Hero: React.FC = () => {
                   <button
                     key={i}
                     onClick={() => setCurrentTestimonial(i)}
-                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                    className={`w-3 h-3 rounded-full ${
                       currentTestimonial === i 
-                        ? 'bg-[#4F7FFF] scale-125' 
-                        : 'bg-[#1E1E4A] hover:bg-[#4F7FFF]/50'
+                        ? 'bg-[#4F7FFF]' 
+                        : 'bg-[#1E1E4A]'
                     }`}
                   />
                 ))}
@@ -1447,7 +1447,7 @@ const Hero: React.FC = () => {
               
               <button
                 onClick={() => setCurrentTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
-                className="w-12 h-12 bg-[#0A0A1B] border border-[#1E1E4A] rounded-full flex items-center justify-center text-white hover:border-[#4F7FFF]/50 transition-colors duration-300"
+                className="w-12 h-12 bg-[#0A0A1B] border border-[#1E1E4A] rounded-full flex items-center justify-center text-white"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
