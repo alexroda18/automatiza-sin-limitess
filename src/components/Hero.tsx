@@ -497,7 +497,7 @@ const Hero: React.FC = () => {
               <div className="p-1 bg-[#12123A]/80 rounded-2xl shadow-xl border border-[#1E1E4A] overflow-hidden">
                 <div className="relative overflow-hidden rounded-xl aspect-video">
                   <iframe 
-                    src="https://www.youtube.com/embed/IyC3pfyOZDk?rel=0" 
+                    src="https://www.youtube.com/embed/O04gBradXqA?si=zfafav8zYDmd3g7O" 
                     title="Tutorial de Automatizaciones"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowFullScreen
